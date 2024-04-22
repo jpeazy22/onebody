@@ -1,38 +1,218 @@
 .App {
   text-align: center;
+  background-color: #ffffff;
 }
-
-.App-logo {
-  height: 40vmin;
+.App a {
+	color: #
+}
+.App-logo-nav {
+  height: 10vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App a {
+	color: #4b90cd;
+    text-decoration: none;
+}
+.App a:hover {
+	color: #fdb827;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App a:active {
+	color: #000000;
 }
 
-.App-link {
-  color: #61dafb;
+.Home {
+	height: auto;
+	padding: 50px 0px;
+	background-image: url(./assets/blue-background.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.Home .Container {
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 155px;
+}
+.Home section {
+	display: inline-block;
+	width: 49%;
+	height: auto;
+	vertical-align: top;
+	align-items: stretch;
+}
+.Home img {
+	position: relative;
+	text-align: left;
+	height: 38vmin;
+}
+.Home .ServiceList {
+	border-bottom: 1px solid #ffffff;
+	text-align: left;
+	width: 400px;
+	margin: 30px auto;
+	height: 100px;
+}
+.Home .Icon {
+	width: 75px;
+	height: 75px;
+	background-color: #4b90cd;
+	display: inline-block;
+	margin-left: 20px;
+}
+.Home .Icon p {
+	padding-left: 30px;
+	color: #ffffff;
+}
+.Home .Description {
+	display: inline-block;
+	padding-left: 30px;
+}
+.Home p {
+	font-size:22px;
+	color: #ffffff;
+	padding-left: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Fitness {
+	width: 100%;
+	height: auto;
+	background-color: #ffffff;
+}
+
+.Fitness .Scan {
+	/* background-image: url(./assets/VintageDust3.jpg); */
+	background-image: url(./assets/group-of-runners.jpg);
+	background-size: cover;
+}
+
+.Fitness section {
+	display: block;
+	vertical-align: top;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 50px 5px;
+	text-align: center;
+	color: #002d62;
+}
+
+.Rates {
+	/* background-image: url(./assets/group-of-runners.jpg); */
+	/* background-size: cover; */
+	
+}
+.Rates .Container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.Rates .InfoBlock {
+	display: inline-block;
+	border: solid 1px #bbbbbb;
+	width: 45%;
+	margin: 0px 10px;
+	height: 600px;
+	margin: 1%;
+	padding: 0px 0px 20px 0px;
+	box-shadow: 1px 2px 2px #bbbbbb;	
+}
+.InfoBlock .fitnessRateImage {
+	max-width: 100%;
+	max-height: 206px;
+}
+.InfoBlock h2 {
+	text-align: left;
+	font-weight: 100;
+	padding-left: 20px;
+}
+.InfoBlock h4 {
+	text-align: left;
+	font-weight: 100;
+	padding-left: 15px;
+	font-size:20px;
+}
+.InfoBlock h4 span {
+	text-align: right;
+	background-color: #fdb827;
+	float: right;
+	margin-top: -5px;
+	margin-right: 15px;
+	padding: 5px 15px;
+}
+.InfoBlock h4 span a {
+	color: #ffffff;
+}
+.InfoBlock h4 span a:hover {
+	color: #002d62;
+}
+.InfoBlock ol {
+	border-bottom: solid 1px #dddddd;
+	height:250px;
+}
+.InfoBlock ol li {
+	list-style-type: circle;
+	text-align: left;
+}
+.InfoBlock ul li, .Schedules ul li {
+	list-style-type: none;
+	text-align: left;
+}
+.Schedules {
+	/* border: solid 5px #fdb827; */
+	/* border-radius: 10px; */
+}
+.Schedules img {
+	display: block;
+	margin: 0 auto;
+}
+.Schedules div {
+	display: inline-block;
+	width: 15%;
+	padding: 10px 2px;
+	vertical-align: top;
+	border-right: solid 2px #fdb827;
+	height: 350px;
+	margin-top: 70px;
+	background: rgba(255, 255, 255, .7); 
+}
+.Schedules h2 {
+	height: 70px;
+	font-size: 18px;
+	border-bottom: solid 2px #fdb827;
+}
+
+img.imageTitle {
+	max-width: 400px;
+	position: relative;
+}
+img.qrCode {
+	max-width: 200px;
+	position: relative;
+}
+img.scheduleTitle {
+	max-width: 600px;
+}
+
+.TestimonialSlider {
+	border: solid 1px red;
+	height: 400px;
+}
+/* ======================================
+			MEDIA QUERIES
+====================================== */
+
+@media screen and (min-width: 576px) {
+	
+}
+@media screen and (min-width: 768px) {
+	
+}
+@media screen and (max-width: 992px) {
+	.Home section {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	
 }
