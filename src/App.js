@@ -271,7 +271,7 @@ const Fitness = () => {
 				</section>
 				<section className="SchedulesTwo">
 					<div>
-						<h2>Mentality Monday</h2>
+						<h2>Mentality Mondaysssss</h2>
 						<p>@Peter Pan Park -Trainer: Gabriel Times: <span>5am</span><span>6:30am</span><span>9am</span><span>6pm</span></p>
 					</div>
 					<div>
