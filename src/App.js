@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import { Button } from 'react'
 import logo from './assets/obLogo.png'
 import { NavLink } from 'react-router-dom'
-import { ReactComponent as Hamburger } from './assets/obLogo.png'
-import { ReactComponent as Brand } from './assets/logo.svg'
 import { BrowserRouter } from 'react-router-dom'
 import whiteLogo from './assets/obLogo-white.png'
-import headerBackground from './assets/blue-background.jpg'
 import titleText from './assets/groupFitnesstext-horizontal.png'
 import rateText from './assets/rateText.png'
 import scheduleText from './assets/fitnessScheduleText.png'
@@ -125,7 +121,7 @@ const Fitness = () => {
 				<img src={titleText} className="imageTitle" alt="titleText" />
 				<p>With NASM Certified Professional Trainer</p>
 				<h4>COACH GABRIEL GABALDON</h4>
-				<h2><a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">Click Here</a> or Scan Below for 3 Free Classes</h2>
+				<h2><a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Click Here</a> or Scan Below for 3 Free Classes</h2>
 				<img src={qrCode} className="qrCode" alt="qrCode" />
 			</section>
 		
@@ -147,7 +143,7 @@ const Fitness = () => {
 						</ol>
 						<h4><b>$89.00/</b>month
 							<span>
-								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">Enroll Now</a>
+								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
 							</span>
 						</h4>
 							{/* <li>⁃	$69/ mo- spouse discount </li>
@@ -166,7 +162,7 @@ const Fitness = () => {
 						</ol>
 						<h4><b>$25/</b>session
 							<span>
-								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">Enroll Now</a>
+								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
 							</span>
 						</h4>
 						{/*<h2>Punch Pass</h2>
@@ -190,7 +186,7 @@ const Fitness = () => {
 						</ol>
 						<h4><b>Varies/</b>session
 							<span>
-								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">Sign Up</a>
+								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Sign Up</a>
 							</span>
 						</h4>
 					</section>
@@ -203,7 +199,7 @@ const Fitness = () => {
 						</ol>
 						<h4><b>$30/plan</b>
 							<span>
-								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">Get Started</a>
+								<a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Get Started</a>
 							</span>
 						</h4>
 					</section>
@@ -271,7 +267,7 @@ const Fitness = () => {
 				</section>
 				<section className="SchedulesTwo">
 					<div>
-						<h2>Mentality Mondaysssss</h2>
+						<h2>Mentality Monday</h2>
 						<p>@Peter Pan Park -Trainer: Gabriel Times: <span>5am</span><span>6:30am</span><span>9am</span><span>6pm</span></p>
 					</div>
 					<div>
