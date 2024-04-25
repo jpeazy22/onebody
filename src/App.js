@@ -12,6 +12,7 @@ import fit3 from './assets/personalTraining.png'
 import icon1 from './assets/deadlift.png'
 import icon2 from './assets/personal-trainer.png'
 import icon3 from './assets/lotus.png'
+import massage from './assets/black-zen-stones.jpg'
 import './App.css';
 import './Nav.css';
 
@@ -112,94 +113,99 @@ const Home = () => {
 const Fitness = () => {
     return (
         <div className="Fitness">
-        <section className="Scan">
-        <img src={titleText} className="imageTitle" alt="titleText" />
-        <p>With NASM Certified Professional Trainer</p>
-        <h4>COACH GABRIEL GABALDON</h4>
-        <h2><a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Click Here</a> or Scan Below for 3 Free Classes</h2>
-        <img src={qrCode} className="qrCode" alt="qrCode" />
-        </section>
-        
-        <div className="Rates">
-        <div className="Container">
-        <section>
-        <img src={rateText} className="imageTitle" alt="rateText" />
-        </section>
-        <section className="InfoBlock">
-        <img src={fit1} className="fitnessRateImage" alt="" />
-        <h2>MONTHLY MEMBER</h2>
-        <ol>
-        <li>4 days/week program</li>
-        <li>Multiple class times available</li>
-        <li>Custom workout for home or gym</li>
-        <li>Lead by Professional Trainer</li>
-        <li>Drop-in for non-members: $25</li>
-        <li>Punch pass options available</li>
-        </ol>
-        <h4><b>$89.00/</b>month
-        <span>
-        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
-        </span>
-        </h4>
-        {/* <li>⁃	$69/ mo- spouse discount </li>
-            <li>⁃	$59/ mo- senior discount (65+ years old)</li>
-            <li>⁃	$49/ mo- child discount (14-19 years old)</li> */}
+            <section className="Scan">
+                <img src={titleText} className="imageTitle" alt="titleText" />
+                <p>With NASM Certified Professional Trainer</p>
+                <h4>COACH GABRIEL GABALDON</h4>
+                <h2>
+                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Click Here</a> or Scan Below for 3 Free Classes
+                </h2>
+                <img src={qrCode} className="qrCode" alt="qrCode" />
             </section>
-            <section className="InfoBlock">
-            <img src={fit2} className="fitnessRateImage" alt="" />
-            <h2>NEXT LEVEL TRAINING</h2>
-            <ol>
-            <li>Train with elite athletes</li>
-            <li>Increased Intensity</li>
-            <li>Drop in when you can</li>
-            <li>Schedule Varies</li>
-            <li>Donation based for members</li>
-            </ol>
-            <h4><b>$25/</b>session
-            <span>
-            <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
-            </span>
-            </h4>
-            {/*<h2>Punch Pass</h2>
-                <ul>
-                <li>⁃	5 sessions/ $20= $100- exp 2 mo</li>
-                <li>⁃	10 sessions/ $15= $150- exp 4 mo</li>
-                <li>⁃	20 sessions/ $10= $200- exp 8 mo</li>
-                </ul>*/}
-                </section>
-                <section className="InfoBlock">
-                <img src={fit3} className="fitnessRateImage" alt="" />
-                <h2>1 ON 1 PERSONAL TRAINING</h2>
-                <ol>
-                <li>$70/hr </li>
-                <li>$60/hr - pack of 4= $240</li>
-                <li>$50/hr - pack of 8= $400</li>
-                <li>$45/hr - pack of 12= $540</li>
-                <li>$40/hr - pack of 16= $640</li>
-                <li>$40/hr - intro session </li>
-                <li>$40/hr - Monthly Members</li>
-                </ol>
-                <h4><b>Varies/</b>session
-                <span>
-                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Sign Up</a>
-                </span>
-                </h4>
-                </section>
-                <section className="InfoBlock">
-                <img src={fit3} className="fitnessRateImage" alt="" />
-                <h2>INDIVIDUAL WORKOUT PLAN</h2>
-                <ol>
-                <li>3 Day personalized written workout plan</li>
-                <li>This is for guidance and something simple you can do on your own.</li>
-                </ol>
-                <h4><b>$30/plan</b>
-                <span>
-                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Get Started</a>
-                </span>
-                </h4>
-                </section>
+        
+            <div className="Rates">
+                <div className="Container">
+                    <section>
+                        <img src={rateText} className="imageTitle" alt="rateText" />
+                    </section>
+                    <section className="InfoBlock">
+                        <img src={fit1} className="fitnessRateImage" alt="" />
+                        <h2>MONTHLY MEMBER</h2>
+                        <ol>
+                            <li>4 days/week program</li>
+                            <li>Multiple class times available</li>
+                            <li>Custom workout for home or gym</li>
+                            <li>Lead by Professional Trainer</li>
+                            <li>Drop-in for non-members: $25</li>
+                            <li>Punch pass options available</li>
+                        </ol>
+                        <h4><b>$89.00/</b>month
+                            <span>
+                                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
+                            </span>
+                        </h4>
+                {/* <li>⁃	$69/ mo- spouse discount </li>
+                    <li>⁃	$59/ mo- senior discount (65+ years old)</li>
+                    <li>⁃	$49/ mo- child discount (14-19 years old)</li> */}
+                    </section>
+                    <section className="InfoBlock">
+                        <img src={fit2} className="fitnessRateImage" alt="" />
+                        <h2>NEXT LEVEL TRAINING</h2>
+                        <ol>
+                            <li>Train with elite athletes</li>
+                            <li>Increased Intensity</li>
+                            <li>Drop in when you can</li>
+                            <li>Schedule Varies</li>
+                            <li>Donation based for members</li>
+                        </ol>
+                        <h4><b>$25/</b>session
+                            <span>
+                                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
+                            </span>
+                        </h4>
+                    {/*<h2>Punch Pass</h2>
+                        <ul>
+                        <li>⁃	5 sessions/ $20= $100- exp 2 mo</li>
+                        <li>⁃	10 sessions/ $15= $150- exp 4 mo</li>
+                        <li>⁃	20 sessions/ $10= $200- exp 8 mo</li>
+                        </ul>*/}
+                    </section>
+                    <section className="InfoBlock">
+                        <img src={fit3} className="fitnessRateImage" alt="" />
+                        <h2>1 ON 1 PERSONAL TRAINING</h2>
+                        <ol>
+                            <li>$70/hr </li>
+                            <li>$60/hr - pack of 4= $240</li>
+                            <li>$50/hr - pack of 8= $400</li>
+                            <li>$45/hr - pack of 12= $540</li>
+                            <li>$40/hr - pack of 16= $640</li>
+                            <li>$40/hr - intro session </li>
+                            <li>$40/hr - Monthly Members</li>
+                            <li>$30 - Individual Workout Plan</li>
+                        </ol>
+                        <h4><b>Varies/</b>session
+                            <span>
+                                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Sign Up</a>
+                            </span>
+                        </h4>
+                    </section>
+                        {/* <section className="InfoBlock">
+                        <img src={fit3} className="fitnessRateImage" alt="" />
+                        <h2>INDIVIDUAL WORKOUT PLAN</h2>
+                        <ol>
+                        <li>3 Day personalized written workout plan</li>
+                        <li>This is for guidance and something simple you can do on your own.</li>
+                        </ol>
+                        <h4><b>$30/plan</b>
+                        <span>
+                        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Get Started</a>
+                        </span>
+                        </h4>
+                        </section> */}
                 </div>
-                <section className="Schedules">
+            </div>
+            <div className="Schedule">
+                {/* <section className="Schedules">
                 <img src={scheduleText} className="scheduleTitle" alt="scheduleText" />
                 <div>
                 <h2>Mentality Monday</h2>
@@ -259,8 +265,9 @@ const Fitness = () => {
                 <li>⁃	9am</li>
                 </ul>
                 </div>
-                </section>
+                </section> */}
                 <section className="SchedulesTwo">
+                <img src={scheduleText} className="scheduleTitle" alt="scheduleText" />
                 <div>
                 <h2>Mentality Monday</h2>
                 <p>@Peter Pan Park -Trainer: Gabriel Times: <span>5am</span><span>6:30am</span><span>9am</span><span>6pm</span></p>
@@ -329,66 +336,39 @@ const Fitness = () => {
         const Massage = () => {
             return (
                 <div className="Massage">
-                <section>
-                <h3>Massage</h3>
-                </section>
-                <section>
-                Massage Rates
-                ⁃	$80/ hour 
-                ⁃	$95/ 75 min 
-                ⁃	$110/ 90 min 
-                ⁃	$140/ 2 hour 
-                •	Tips not expected or required, but of course appreciated
-                •	10% off to my fitness clients, 15% if they rebook within a month of their previous session 
-                </section>
+                    <section className="MassageHeader">
+                        <h1>Massage</h1>
+                    </section>
+                    <section className="column">
+                        <h2>Describe what you do/offer</h2>
+                        <p>something, something, I'm the best</p>
+                        <h2>Location</h2>
+                    </section>
+                    <section className="column">
+                        <h2>Massage Rates</h2>
+                        <ul>
+                            <li>⁃	$80/ hour </li>
+                            <li>⁃	$95/ 75 min </li>
+                            <li>⁃	$110/ 90 min </li>
+                            <li>⁃	$140/ 2 hour </li>
+                        </ul>
+                        <p>•	Tips not expected or required</p>
+                        <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
+                    </section>
                 </div>
             )
         }
+        
         const Test = () => {
-            const Testimonials = [
-                {
-                    id: 1,
-                    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.",
-                    author: "John Doe",
-                    image: "https://via.placeholder.com/150"
-                },
-                {
-                    id: 2,
-                    quote: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-                    author: "Jane Smith",
-                    image: "https://via.placeholder.com/150"
-                },
-                // Add more testimonials as needed
-            ]
-            
-            const TestimonialSlider = () => {
-                const [currentTestimonial, setCurrentTestimonial] = useState(0)
+            return (
+                <div className="Testimonials">
+                <section>
+                <h2>Testimonials</h2>
+                </section>
+                </div>
                 
-                const nextTestimonial = () => {
-                    setCurrentTestimonial((currentTestimonial + 1) % Testimonials.length);
-                }
-                
-                const prevTestimonial = () => {
-                    setCurrentTestimonial((currentTestimonial - 1 + Testimonials.length) % Testimonials.length);
-                }
-                return (
-                    <div className="TestimonialSlider">
-                    <h1>TESTimonial slider section</h1>
-                    <div className="Testimonial">
-                    <img src={Testimonials[currentTestimonial].image} alt="Testimonial" />
-                    <blockquote>{Testimonials[currentTestimonial].quote}</blockquote>
-                    <cite>- {Testimonials[currentTestimonial].author}</cite>
-                    </div>
-                    <div className="controls">
-                    <button onClick={prevTestimonial}>Previous</button>
-                    <button onClick={nextTestimonial}>Next</button>
-                    </div>
-                    </div>
-                )
-            }
+            )
         }
-        
-        
         const About = () => {
             return (
                 <div className="About">

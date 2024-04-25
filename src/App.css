@@ -99,6 +99,7 @@ html {
 .Rates {
 	background-image: url(./assets/group-of-runners.jpg);
 	background-size: cover;
+    background-position: bottom;
     padding-top: 70px;
 }
 .Rates .Container {
@@ -109,15 +110,15 @@ html {
     background-color: #ffffff;
 	display: inline-block;
 	border: solid 1px #bbbbbb;
-	width: 22%;
+	width: 32%;
 	margin: 50px 5px;
-	height: 650px;
+	height: 600px;
     vertical-align: top;
 	box-shadow: 1px 2px 2px #bbbbbb;	
 }
 .InfoBlock .fitnessRateImage {
-	width: 100%;
-	height: 180px;
+	margin-top:30px;
+    height: 180px;
 }
 .InfoBlock h2 {
 	text-align: center;
@@ -148,7 +149,7 @@ html {
 }
 .InfoBlock ol {
 	border-bottom: solid 1px #dddddd;
-	height:250px;
+	height:200px;
 }
 .InfoBlock ol li {
 	list-style-type: circle;
@@ -158,9 +159,8 @@ html {
 	list-style-type: none;
 	text-align: left;
 }
-.Schedules {
-	/* border: solid 5px #fdb827; */
-	/* border-radius: 10px; */
+.Schedule {
+	padding-top: 50px;
 }
 .Schedules img {
 	display: block;
@@ -193,11 +193,27 @@ img.qrCode {
 img.scheduleTitle {
 	max-width: 600px;
 }
-
-.TestimonialSlider {
-	border: solid 1px red;
-	height: 400px;
+.Massage {
+    background-image: url(./assets/black-zen-stones.jpg);
+	background-size: cover;
+    background-position: bottom;
+    padding: 50px 0px;
 }
+.Massage .MassageHeader {
+    max-width: 1200px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+}
+.Massage .column {
+    vertical-align: top;
+    display: inline-block;
+    width: 40%;
+    color: #ffffff;
+    text-align: left;
+}
+
+
 /* ======================================
 			MEDIA QUERIES
 ====================================== */
@@ -211,7 +227,7 @@ img.scheduleTitle {
         display: inline-block;
         width: 45%;
         margin: 50px 5px;
-        height: 650px;
+        height: 600px;
     }
 }
 @media screen and (max-width: 992px) {
@@ -222,11 +238,19 @@ img.scheduleTitle {
 	}
 }
 @media screen and (max-width: 768px) {
+    .Home {
+        padding: 10px 0px;
+    }
+    .Rates {
+        padding-bottom: 50px;
+    }
     .Rates .InfoBlock {
     	display: block;
     	width: 80%;
-    	margin: 50px auto;
-    	height: 650px;
+    	margin: 30px auto;
+    }
+    img.scheduleTitle {
+    	width: 90%;
     }
 }
 @media screen and (min-width: 576px) {
