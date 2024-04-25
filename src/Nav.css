@@ -31,12 +31,14 @@ nav {
 	width: 60px;
 }
 
-.nav-elements img {
+.nav-elements img.App-logo-nav {
 	display: flex;
     justify-content: space-between;
 	float:left;
 }
-
+.NavContainer img.App-logo-nav-mobile {
+	display: none;
+}
 .nav-elements ul {
   display: flex;
   justify-content: space-between;
@@ -71,23 +73,30 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
+    nav {
+    	height: 75px;
+    }
+    .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
 	text-align: right;
   }
-}
-
-@media (max-width: 600px) {
   .menu-icon {
     display: block;
     cursor: pointer;
+  }
+  .nav-elements img.App-logo-nav {
+  	display: none;
+  }
+  .NavContainer img.App-logo-nav-mobile {
+  	display: inline-block;
+    height: 60px;
   }
   #nav-icon {
     width: 60px;
     height: 45px;
     position: fixed;
-	top: 8px;
-	right: 10px;
+	top: 15px;
+	right: 15px;
     margin: 0px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);

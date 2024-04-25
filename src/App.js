@@ -2,13 +2,16 @@ import { useState } from 'react'
 import { NavLink, BrowserRouter } from 'react-router-dom'
 import logo from './assets/obLogo.png'
 import whiteLogo from './assets/obLogo-white.png'
-import titleText from './assets/groupFitnesstext-horizontal.png'
-import rateText from './assets/rateText.png'
+import titleText from './assets/groupFitnesstextblue.png'
+import rateText from './assets/fitnessRatesBlue.png'
 import scheduleText from './assets/fitnessScheduleText.png'
 import qrCode from './assets/ob-qrcode.png'
 import fit1 from './assets/monthlyMember.png'
 import fit2 from './assets/nextLevel.png'
 import fit3 from './assets/personalTraining.png'
+import icon1 from './assets/deadlift.png'
+import icon2 from './assets/personal-trainer.png'
+import icon3 from './assets/lotus.png'
 import './App.css';
 import './Nav.css';
 
@@ -42,6 +45,7 @@ const Navbar = () => {
     return (
         <nav>
         <div className="NavContainer">
+        <img src={logo} className="App-logo-nav-mobile" alt="logo" />
         <div className="menu-icon" onClick={handleShowNavbar}>
         <div id="nav-icon" className={showNavbar ? "open" : ""}>
         <span></span>
@@ -70,37 +74,37 @@ const Navbar = () => {
 const Home = () => {
     return (
         <div className="Home">
-        <div className="Container">
-        <section>
-        <img src={whiteLogo} className="App-logo" alt="logo" />
-        </section>
-        <section>
-        <div className="ServiceList">
-        <div className="Icon">
-        <p>X</p>
-        </div>
-        <div className="Description">
-        <p>Outdoor Group Fitness</p>
-        </div>
-        </div>
-        <div className="ServiceList">
-        <div className="Icon">
-        <p>X</p>
-        </div>
-        <div className="Description">
-        <p>Personal Training</p>
-        </div>
-        </div>
-        <div className="ServiceList">
-        <div className="Icon">
-        <p>X</p>
-        </div>
-        <div className="Description">
-        <p>Massage Therapy</p>
-        </div>
-        </div>
-        </section>
-        </div>
+            <div className="Container">
+                <section>
+                    <img src={whiteLogo} className="App-logo" alt="logo" />
+                </section>
+                <section>
+                    <div className="ServiceList">
+                        <div className="Icon">
+                            <img src={icon1} className="icons" alt="icon" />
+                        </div>
+                        <div className="Description">
+                            <p>Outdoor Group Fitness</p>
+                        </div>
+                    </div>
+                    <div className="ServiceList">
+                        <div className="Icon">
+                            <img src={icon2} className="icons" alt="icon" />
+                        </div>
+                        <div className="Description">
+                            <p>Personal Training</p>
+                        </div>
+                    </div>
+                    <div className="ServiceList">
+                        <div className="Icon">
+                            <img src={icon3} className="icons" alt="icon" />
+                        </div>
+                        <div className="Description">
+                            <p>Massage Therapy</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     )
 }

@@ -64,16 +64,18 @@ html {
 	display: inline-block;
 	margin-left: 20px;
 }
-.Home .Icon p {
-	padding-left: 30px;
-	color: #ffffff;
+.Home .Icon img {
+    height: 50px;
+	padding: 12px 14px;
 }
 .Home .Description {
 	display: inline-block;
-	padding-left: 30px;
+	padding-left: 15px;
+    vertical-align: top;
 }
 .Home p {
 	font-size:22px;
+    font-weight: bold;
 	color: #ffffff;
 	padding-left: 15px;
 }
@@ -200,27 +202,24 @@ img.scheduleTitle {
 			MEDIA QUERIES
 ====================================== */
 
-@media screen and (min-width: 576px) {
-	
+@media screen and (min-width: 1200px) {
+    
 }
 
+@media screen and (max-width: 1199px) {
+    .Rates .InfoBlock {
+        display: inline-block;
+        width: 45%;
+        margin: 50px 5px;
+        height: 650px;
+    }
+}
 @media screen and (max-width: 992px) {
 	.Home section {
 		display: block;
 		margin: 0 auto;
 		width: 100%;
 	}
-}
-@media screen and (max-width: 1199px) {
-    .Rates .InfoBlock {
-    	display: inline-block;
-    	width: 45%;
-    	margin: 50px 5px;
-    	height: 650px;
-    }
-}
-@media screen and (min-width: 1200px) {
-	
 }
 @media screen and (max-width: 768px) {
     .Rates .InfoBlock {
@@ -229,4 +228,7 @@ img.scheduleTitle {
     	margin: 50px auto;
     	height: 650px;
     }
+}
+@media screen and (min-width: 576px) {
+    
 }
