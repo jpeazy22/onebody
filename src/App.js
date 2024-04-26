@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, BrowserRouter } from 'react-router-dom'
 import logo from './assets/obLogo.png'
 import whiteLogo from './assets/obLogo-white.png'
 import titleText from './assets/groupFitnesstextblue.png'
 import rateText from './assets/fitnessRatesBlue.png'
-import scheduleText from './assets/fitnessScheduleText.png'
+import scheduleText from './assets/scheduleTextBlue.png'
 import qrCode from './assets/ob-qrcode.png'
 import fit1 from './assets/monthlyMember.png'
 import fit2 from './assets/nextLevel.png'
@@ -204,132 +204,55 @@ const Fitness = () => {
                         </section> */}
                 </div>
             </div>
-            <div className="Schedule">
-                {/* <section className="Schedules">
-                <img src={scheduleText} className="scheduleTitle" alt="scheduleText" />
-                <div>
-                <h2>Mentality Monday</h2>
-                <p>@Peter Pan Park</p>
-                <ul>
-                <li>•	Trainer Gabriel</li>
-                <li>⁃	5am</li>
-                <li>⁃	6:30am</li>
-                <li>⁃	9am</li>
-                <li>⁃	6pm</li>
-                </ul>
-                </div>
-                <div>
-                <h2>Tiny Tuesday</h2>
-                <p>@Peter Pan Park</p>
-                <ul>
-                <li>•	Trainer Gabriel</li>
-                <li>⁃	5am</li>
-                <li>⁃	6:30am</li>
-                <li>⁃	9am</li>
-                <li>⁃	6pm</li>
-                </ul>
-                </div>
-                <div>
-                <h2>Washboard Ab Wednesday</h2>
-                <p>@Peter Pan Park</p>
-                <ul>
-                <li>•	Trainer Chris</li>
-                <li>⁃	5:15am</li>
-                <li>⁃	6pm</li>
-                </ul>
-                </div>
-                <div>
-                <h2>Thickboy Thursday</h2>
-                <p>@Peter Pan Park</p>
-                <ul>
-                <li>•	Trainer Gabriel</li>
-                <li>⁃	5am</li>
-                <li>⁃	6:30am</li>
-                <li>⁃	9am</li>
-                <li>⁃	6pm</li>
-                </ul>
-                </div>
-                <div>
-                <h2>Freestyle Friday</h2>
-                <p>@Peter Pan Park</p>
-                <ul>
-                <li>⁃	5:15am- Trainer Chris </li>
-                <li>⁃	6:30am- Trainer Chris</li>
-                <li>⁃	9am- Trainer Gabriel</li>
-                </ul>
-                </div>
-                <div>
-                <h2>Stair Saturday</h2>
-                <p>@Westminster City Park</p>
-                <ul>
-                <li>⁃	9am</li>
-                </ul>
-                </div>
-                </section> */}
-                <section className="SchedulesTwo">
-                <img src={scheduleText} className="scheduleTitle" alt="scheduleText" />
-                <div>
-                <h2>Mentality Monday</h2>
-                <p>@Peter Pan Park -Trainer: Gabriel Times: <span>5am</span><span>6:30am</span><span>9am</span><span>6pm</span></p>
-                </div>
-                <div>
-                <h2>Tiny Tuesday</h2>
-                <p>@Peter Pan Park -Trainer: Gabriel Times: <span>5am</span><span>6:30am</span><span>9am</span><span>6pm</span></p>
-                </div>
-                <div>
-                <h2>Washboard Ab Wednesday</h2>
-                <p>@Peter Pan Park -Trainer: Chris Times: <span>5:15am</span><span>6pm</span></p>
-                </div>
-                <div>
-                <h2>Thickboy Thursday</h2>
-                <p>@Peter Pan Park -Trainer: Gabriel Times: <span>5am</span><span>6:30am</span><span>9am</span><span>6am</span></p>
-                </div>
-                <div>
-                <h2>Freestyle Friday</h2>
-                <p>@Peter Pan Park -Trainer: Chris Times: <span>5:15am</span><span>6:30am</span></p>
-                <p>@Peter Pan Park -Trainer: Gabriel Times: <span>9am</span></p>
-                </div>
-                <div>
-                <h2>Stair Saturday</h2>
-                <p>@Westminster City Park -Trainer: Gabriel Times: <span>9am</span></p>
-                </div>
-                </section>
-                <section>
-                <h2>LOCATIONS</h2>
-                <p>
-                Indoor- November- March
-                Outdoor April-October 
-                </p>
-                <p>
-                Weekday Location
-                Peter Pan Park 
-                4801 W 92nd Ave
-                Westminster, CO 80031
-                </p>
-                <p>
-                Saturday Location 
-                Westminster City Park
-                10455 Sheridan Blvd
-                Westminster, CO 80020
-                </p>
-                <p>
-                Rain Location 
-                Squires Park
-                3450 W 99th Ave
-                Westminster, CO  80031
-                </p>
-                <p>
-                Indoor Location 
-                Legacy Event Center
-                9051 N Harlan St
-                Westminster, CO 80031
-                </p>
-                <p>
-                Nutrition Coaching
-                ⁃	coming Fall 2024
-                </p>
-                </section>
-                </div>
+            <div className="schedule-container">
+  <section className="schedule-section">
+    <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
+    <div className="daily-schedule">
+      <h2>Mentality Monday</h2>
+      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">5am</span> <span className="time">6:30am</span> <span className="time">9am</span> <span className="time">6pm</span></p>
+    </div>
+    <div className="daily-schedule">
+      <h2>Tiny Tuesday</h2>
+      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">5am</span> <span className="time">6:30am</span> <span className="time">9am</span> <span className="time">6pm</span></p>
+    </div>
+    <div className="daily-schedule">
+      <h2>Washboard Ab Wednesday</h2>
+      <p>@Westminster Center Park - Trainer: Chris <span className="time">5:15am</span> <span className="time">6pm</span></p>
+    </div>
+    <div className="daily-schedule">
+      <h2>Thickboy Thursday</h2>
+      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">5am</span> <span className="time">6:30am</span> <span className="time">9am</span> <span className="time">6pm</span></p>
+    </div>
+    <div className="daily-schedule">
+      <h2>Freestyle Friday</h2>
+      <p>@Westminster Center Park - Trainer: Chris <span className="time">5:15am</span> <span className="time">6:30am</span></p>
+      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">9am</span></p>
+    </div>
+    <div className="daily-schedule">
+      <h2>Stair Saturday</h2>
+      <p>@Westminster City Park - Trainer: Gabriel <span className="time">9am</span></p>
+    </div>
+  </section>
+  <section className="location-section">
+    <h2>LOCATIONS</h2>
+    <p>Indoor- November- March Outdoor April-October</p>
+    <p>Weekday Location: Westminster Center Park, 4801 W 92nd Ave, Westminster, CO 80031</p>
+    <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
+          width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+    <p>Saturday Location: Westminster City Park, 10455 Sheridan Blvd, Westminster, CO 80020</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
+        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Rain Location: Squires Park, 3450 W 99th Ave, Westminster, CO 80031</p>
+    <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12247.690829664329!2d-105.0322845!3d39.8759692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89e03ccd4b93%3A0x92b4c7c229f9a4a8!2sSquires%20Park!5e0!3m2!1sen!2sus!4v1714090322560!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Indoor Location: Legacy Event Center, 9051 N Harlan St, Westminster, CO 80031</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12250.573568310565!2d-105.065387!3d39.859824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89ba5d7d0d9d%3A0x1a4fe67d2975b370!2sLegacy%20Event%20Center!5e0!3m2!1sen!2sus!4v1714090385320!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Nutrition Coaching - coming Fall 2024</p>
+  </section>
+</div>
+
                 </div>
             )
         }
@@ -359,16 +282,33 @@ const Fitness = () => {
             )
         }
         
-        const Test = () => {
-            return (
-                <div className="Testimonials">
-                <section>
-                <h2>Testimonials</h2>
-                </section>
-                </div>
-                
-            )
-        }
+        
+        const testimonials = [
+          { id: 1, text: "This is the best service ever. Totally recommend to everyone!", author: "John Doe" },
+          { id: 2, text: "Incredible results and fantastic support!", author: "Jane Smith" },
+          { id: 3, text: "Very professional and highly skilled. Loved it!", author: "Alice Johnson" }
+        ];
+
+const Test = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 3000); // Change testimonial every 3 seconds
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="testimonial-slider">
+      <div className="testimonial-item">
+        <p>"{testimonials[currentIndex].text}"</p>
+        <p className="author">- {testimonials[currentIndex].author}</p>
+      </div>
+    </div>
+  );
+};
+
         const About = () => {
             return (
                 <div className="About">
