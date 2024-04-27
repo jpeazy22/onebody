@@ -5,6 +5,7 @@ import whiteLogo from './assets/obLogo-white.png'
 import titleText from './assets/groupFitnesstextblue.png'
 import rateText from './assets/fitnessRatesBlue.png'
 import scheduleText from './assets/scheduleTextBlue.png'
+import massageText from './assets/massageText.png'
 import qrCode from './assets/ob-qrcode.png'
 import fit1 from './assets/monthlyMember.png'
 import fit2 from './assets/nextLevel.png'
@@ -21,10 +22,11 @@ function App() {
         <div className="App">
         <Navbar />
         <div id="home"><Home /></div>
-        <div id="fitness"><Fitness /></div>
-        <div id="massage"><Massage /></div>
-        <div id="testimonials"><Test /></div>
         <div id="about"><About /></div>
+        <div id="fitness"><Fitness /></div>
+        <div id="schedule"><Schedule /></div>
+        <div id="testimonials"><Test /></div>
+        <div id="massage"><Massage /></div>
         <div id="contact"><Contact /></div>
         </div>
     );
@@ -61,10 +63,11 @@ const Navbar = () => {
         <img src={logo} className="App-logo-nav" alt="logo" />
         <ul>
         <li><a href="#home" onClick={() => handleScroll('home')}>Home</a></li>
+        <li><a href="#about" onClick={() => handleScroll('about')}>What to Expect</a></li>
+        <li><a href="#schedule" onClick={() => handleScroll('schedule')}>Workout Schedule</a></li>
         <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
         <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
         <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
-        <li><a href="#about" onClick={() => handleScroll('about')}>About</a></li>
         <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
         </ul>
         </div>
@@ -110,6 +113,16 @@ const Home = () => {
     )
 }
 
+const About = () => {
+    return (
+        <div className="About">
+        <section>
+        <h2>What to Expect</h2>
+        </section>
+        </div>
+        
+    )
+}
 const Fitness = () => {
     return (
         <div className="Fitness">
@@ -204,68 +217,113 @@ const Fitness = () => {
                         </section> */}
                 </div>
             </div>
-            <div className="schedule-container">
-  <section className="schedule-section">
-    <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
-    <div className="daily-schedule">
-      <h2>Mentality Monday</h2>
-      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">5am</span> <span className="time">6:30am</span> <span className="time">9am</span> <span className="time">6pm</span></p>
-    </div>
-    <div className="daily-schedule">
-      <h2>Tiny Tuesday</h2>
-      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">5am</span> <span className="time">6:30am</span> <span className="time">9am</span> <span className="time">6pm</span></p>
-    </div>
-    <div className="daily-schedule">
-      <h2>Washboard Ab Wednesday</h2>
-      <p>@Westminster Center Park - Trainer: Chris <span className="time">5:15am</span> <span className="time">6pm</span></p>
-    </div>
-    <div className="daily-schedule">
-      <h2>Thickboy Thursday</h2>
-      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">5am</span> <span className="time">6:30am</span> <span className="time">9am</span> <span className="time">6pm</span></p>
-    </div>
-    <div className="daily-schedule">
-      <h2>Freestyle Friday</h2>
-      <p>@Westminster Center Park - Trainer: Chris <span className="time">5:15am</span> <span className="time">6:30am</span></p>
-      <p>@Westminster Center Park - Trainer: Gabriel <span className="time">9am</span></p>
-    </div>
-    <div className="daily-schedule">
-      <h2>Stair Saturday</h2>
-      <p>@Westminster City Park - Trainer: Gabriel <span className="time">9am</span></p>
-    </div>
-  </section>
-  <section className="location-section">
-    <h2>LOCATIONS</h2>
-    <p>Indoor- November- March Outdoor April-October</p>
-    <p>Weekday Location: Westminster Center Park, 4801 W 92nd Ave, Westminster, CO 80031</p>
-    <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
-          width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-    <p>Saturday Location: Westminster City Park, 10455 Sheridan Blvd, Westminster, CO 80020</p>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
-        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p>Rain Location: Squires Park, 3450 W 99th Ave, Westminster, CO 80031</p>
-    <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12247.690829664329!2d-105.0322845!3d39.8759692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89e03ccd4b93%3A0x92b4c7c229f9a4a8!2sSquires%20Park!5e0!3m2!1sen!2sus!4v1714090322560!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p>Indoor Location: Legacy Event Center, 9051 N Harlan St, Westminster, CO 80031</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12250.573568310565!2d-105.065387!3d39.859824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89ba5d7d0d9d%3A0x1a4fe67d2975b370!2sLegacy%20Event%20Center!5e0!3m2!1sen!2sus!4v1714090385320!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p>Nutrition Coaching - coming Fall 2024</p>
-  </section>
-</div>
-
-                </div>
+        </div>
+        )
+    }
+            const Schedule = () => {
+                return (
+                    <div className="Schedule">
+                        <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
+                        <section>
+                            <div className="workoutLocations">
+                                <p>PETER PAN PARK / WESTMINSTER CENTER PARK</p>
+                                <p>4801 W. 92nd Ave.<br/>
+                                Westminster, CO 80031</p>
+                                <p>
+                                    <span className="day">Monday -</span>
+                                    <span className="times">5am</span> 
+                                    <span className="times">6:30am</span> 
+                                    <span className="times">9am</span> 
+                                    <span className="times">6pm</span>
+                                </p>
+                                <p>
+                                    <span className="day">Tuesday -</span>
+                                    <span className="times">5am</span> 
+                                    <span className="times">6:30am</span> 
+                                    <span className="times">9am</span> 
+                                    <span className="times">6pm</span>
+                                </p>
+                                <p>
+                                    <span className="day">Wednesday -</span>
+                                    <span className="times">5:15am</span>
+                                    <span className="times"></span>
+                                    <span className="times"></span>
+                                    <span className="times">6pm</span>
+                                </p>
+                                <p>
+                                    <span className="day">Thursday -</span>
+                                    <span className="times">5am</span> 
+                                    <span className="times">6:30am</span> 
+                                    <span className="times">9am</span> 
+                                    <span className="times">6pm</span>
+                                </p>
+                                <p>
+                                    <span className="day">Friday -</span>
+                                    <span className="times">5:15am</span> 
+                                    <span className="times">6:30am</span>
+                                    <span className="times">9am</span>
+                                    <span className="times"></span>
+                                </p>
+                            </div>
+                            <div className="dailySchedule">
+                                <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
+                                width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div className="workoutLocations">
+                                <p>WESTMINSTER CITY PARK</p>
+                                <p>10455 Sheridan Blvd.<br/>
+                                Westminster, CO 80020</p>
+                                <p>
+                                    <span className="day">Saturday -</span>
+                                    <span className="times"></span> 
+                                    <span className="times"></span> 
+                                    <span className="times">9am</span> 
+                                    <span className="times"></span>
+                                </p>
+                            </div>
+                            <div className="dailySchedule">
+                                <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
+                                width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </section>
+                        {/* <div>
+                        <section className="location-section">
+                        <h2>LOCATIONS</h2>
+                        <p>Indoor- November- March Outdoor April-October</p>
+                        <p>Weekday Location: Westminster Center Park, 4801 W 92nd Ave, Westminster, CO 80031</p>
+                        <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
+                        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <p>Saturday Location: Westminster City Park, 10455 Sheridan Blvd, Westminster, CO 80020</p>
+                        <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
+                        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p>Rain Location: Squires Park, 3450 W 99th Ave, Westminster, CO 80031</p>
+                        <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12247.690829664329!2d-105.0322845!3d39.8759692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89e03ccd4b93%3A0x92b4c7c229f9a4a8!2sSquires%20Park!5e0!3m2!1sen!2sus!4v1714090322560!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p>Indoor Location: Legacy Event Center, 9051 N Harlan St, Westminster, CO 80031</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12250.573568310565!2d-105.065387!3d39.859824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89ba5d7d0d9d%3A0x1a4fe67d2975b370!2sLegacy%20Event%20Center!5e0!3m2!1sen!2sus!4v1714090385320!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p>Nutrition Coaching - coming Fall 2024</p>
+                        </section>
+                        </div>*/}
+                    </div>
             )
         }
         const Massage = () => {
             return (
                 <div className="Massage">
                     <section className="MassageHeader">
-                        <h1>Massage</h1>
+                        <img src={massageText} alt="massageText" />
                     </section>
                     <section className="column">
                         <h2>Describe what you do/offer</h2>
                         <p>something, something, I'm the best</p>
                         <h2>Location</h2>
+                        <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </section>
                     <section className="column">
                         <h2>Massage Rates</h2>
@@ -275,7 +333,6 @@ const Fitness = () => {
                             <li>⁃	$110/ 90 min </li>
                             <li>⁃	$140/ 2 hour </li>
                         </ul>
-                        <p>•	Tips not expected or required</p>
                         <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
                     </section>
                 </div>
@@ -309,17 +366,42 @@ const Test = () => {
   );
 };
 
-        const About = () => {
-            return (
-                <div className="About">
-                <section>
-                <h2>About</h2>
-                </section>
+const Contact = () => {
+    return (
+        <div className="Contact">
+            <div className="ContactContainer">
+                {/*<div className="LeftColumn">
+                    <h2>Contact Us</h2>
+                    <form className="ContactForm">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label htmlFor="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </div>*/}
+                <div className="RightColumn">
+                    <h2>Stay Connected</h2>
+                    <p>Follow us on social media for the latest updates and offers!</p>
+                    <div className="SocialLinks">
+                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
                 </div>
-                
-            )
-        }
-        const Contact = () => <h2>Contact</h2>;
+                <div className="ImageWithText">
+                    <img src="path_to_your_image.jpg" alt="Our Office" className="ContactImage" />
+                    <h3>Our Office</h3>
+                    <p>A glimpse into our daily operations.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    );
+}
         
         
         

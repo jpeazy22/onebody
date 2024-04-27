@@ -29,7 +29,7 @@ html {
 .Home {
 	height: auto;
 	padding: 50px 0px;
-	background-image: url(./assets/VintageDust3.jpg);
+	background-image: url(./assets/slider2-bg.jpg);
 	background-size: cover;
 	background-position: top;
     /* background-color: #f0f0f0; */
@@ -81,7 +81,10 @@ html {
 	color: #ffffff;
 	padding-left: 15px;
 }
-
+.About {
+    background-color: #fdb827;
+    height: 400px;
+}
 .Fitness {
 	width: 100%;
 	height: auto;
@@ -170,6 +173,23 @@ html {
 .schedule-section h2 {
     color: #4b90cd;
 }
+.scheduleSectionTwo {
+    max-width: 1200px;
+    margin: 50px auto 0px auto;
+}
+.workoutLocations, .dailySchedule {
+    display: inline-block;
+    width: 48%;
+    margin: 0 auto;
+    vertical-align: top;
+    border-top: solid 1px #fdb827;
+    height: 400px;
+    padding-top: 30px;
+}
+.dailySchedule iframe {
+    padding-top: 20px;
+    max-width: 90%;
+}
 .schedule-section, .location-section {
   width: 100%;
   max-width: 960px;
@@ -182,22 +202,20 @@ html {
   margin-bottom: 20px;
 }
 
-.daily-schedule {
-  /* background: #f0f0f0; */
-  padding: 10px;
-  border-top: 1px solid #fdb827;
-  border-bottom: 1px solid #fdb827;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.day {
+    display: inline-block;
+    text-align: left;
+    width: 130px;
 }
-
-.time {
+.times {
   display: inline-block;
+  width: 60px;
   background: #fdb827;
   color: white;
-  padding: 5px 10px;
+  padding: 4px 8px;
   margin-right: 5px;
   border-radius: 5px;
+  text-align: right;
 }
 
 h2 {
@@ -228,18 +246,13 @@ img.scheduleTitle {
     padding: 30px 0px;
 }
 .Massage {
-    /* background-image: url(./assets/black-zen-stones.jpg);
+    background-image: url(./assets/massagebg-1.png);
 	background-size: cover;
-    background-position: bottom; */
+    background-position: bottom;
     padding: 50px 0px;
-    background-color: #4b90cd;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
-.Massage .MassageHeader {
-    max-width: 1200px;
-    color: #ffffff;
-    text-align: center;
-    margin: 0 auto;
+.MassageHeader img {
+    width: 600px;
 }
 .Massage .column {
     vertical-align: top;
@@ -248,9 +261,12 @@ img.scheduleTitle {
     color: #ffffff;
     text-align: left;
 }
+.Massage .column h2 {
+    color: #4b90cd;
+}
 
 .testimonial-slider {
-  width: 100%;
+  max-width: 100%;
   height: 200px;
   background-color: #f0f0f0;
   display: flex;
@@ -272,6 +288,96 @@ img.scheduleTitle {
   font-weight: bold;
   color: #666;
 }
+
+.Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f9fa;
+}
+
+.ContactContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.LeftColumn, .RightColumn {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004085;
+}
+
+.SocialLinks a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.SocialLinks a:hover {
+    text-decoration: underline;
+}
+
+.ImageWithText {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ImageWithText img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ImageWithText h3 {
+    margin-top: 8px;
+}
+
+.ImageWithText p {
+    color: #666;
+    font-size: 14px;
+}
+
 
 
 
@@ -297,6 +403,10 @@ img.scheduleTitle {
 		margin: 0 auto;
 		width: 100%;
 	}
+    .workoutLocations, .dailySchedule {
+        display: block;
+        width: 90%;
+    }
 }
 @media screen and (max-width: 768px) {
     .Home {
@@ -314,6 +424,25 @@ img.scheduleTitle {
     	width: 90%;
     }
 }
-@media screen and (min-width: 576px) {
-    
+@media screen and (max-width: 576px) {
+    .workoutLocations {
+        height: auto;
+    }
+    .day {
+        display: block;
+    }
+    .times {
+        display: inline-block;
+        width: 58px;
+        padding: 4px 4px;
+        margin-right: 3px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .MassageHeader img, img.imageTitle {
+        width: 340px;
+    }
+    iframe {
+        max-width: 90%;
+    }
 }
