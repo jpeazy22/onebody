@@ -1,21 +1,34 @@
-import { useState, useEffect } from 'react'
-import { NavLink, BrowserRouter } from 'react-router-dom'
-import logo from './assets/obLogo.png'
-import whiteLogo from './assets/obLogo-white.png'
-import titleText from './assets/groupFitnesstextblue.png'
-import rateText from './assets/fitnessRatesBlue.png'
-import scheduleText from './assets/scheduleTextBlue.png'
-import massageText from './assets/massageText.png'
-import qrCode from './assets/ob-qrcode.png'
-import fit1 from './assets/monthlyMember.png'
-import fit2 from './assets/nextLevel.png'
-import fit3 from './assets/personalTraining.png'
-import icon1 from './assets/deadlift.png'
-import icon2 from './assets/personal-trainer.png'
-import icon3 from './assets/lotus.png'
-import massage from './assets/black-zen-stones.jpg'
+// React and Router Imports
+import { useState, useEffect } from 'react';
+import { NavLink, BrowserRouter } from 'react-router-dom';
+
+// Style Imports
 import './App.css';
 import './Nav.css';
+
+// Logo and QR Code Image Imports
+import logo from './assets/logo/obLogo.png';
+import whiteLogo from './assets/logo/obLogo-white.png';
+import qrCode from './assets/ob-qrcode.png';
+
+// Header Text Image Imports
+import titleText from './assets/headerText/groupFitnesstextblue.png';
+import rateText from './assets/headerText/fitnessRatesBlue.png';
+import scheduleText from './assets/headerText/scheduleTextBlue.png';
+import massageText from './assets/headerText/massageText.png';
+
+// Fitness Program Image Imports
+import fit1 from './assets/monthlyMember.png';
+import fit2 from './assets/nextLevel.png';
+import fit3 from './assets/personalTraining.png';
+
+// Icon Image Imports
+import icon1 from './assets/icons/deadlift.png';
+import icon2 from './assets/icons/personal-trainer.png';
+import icon3 from './assets/icons/lotus.png';
+import facebook from './assets/icons/facebook.png';
+import instagram from './assets/icons/instagram.png';
+
 
 function App() {
     return (
@@ -36,46 +49,68 @@ const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(false);
     
     const handleShowNavbar = () => {
-        setShowNavbar(!showNavbar)
+        setShowNavbar(!showNavbar);
     };
+
+    const handleScroll = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const scrollToPosition = () => {
+                const rect = section.getBoundingClientRect();
+                const absoluteTop = rect.top + window.pageYOffset;
+                const offsetPosition = absoluteTop - 150;  // Offset for the fixed header
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            };
+
+            // Ensure we are in sync with the browser's rendering
+            requestAnimationFrame(() => {
+                requestAnimationFrame(scrollToPosition);
+            });
+        }
+    };
+    
+    return (
+        <nav>
+            <div className="NavContainer">
+                <img src={logo} className="App-logo-nav-mobile" alt="logo" />
+                <div className="menu-icon" onClick={handleShowNavbar}>
+                    <div id="nav-icon" className={showNavbar ? "open" : ""}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div className={`nav-elements ${showNavbar ? 'active' : ''}`}>
+                    <img src={logo} className="App-logo-nav" alt="logo" />
+                    <ul>
+                        <li><a href="#home" onClick={() => handleScroll('home')}>Home</a></li>
+                        <li><a href="#about" onClick={() => handleScroll('about')}>What to Expect</a></li>
+                        <li><a href="#schedule" onClick={() => handleScroll('schedule')}>Workout Schedule</a></li>
+                        <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
+                        <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
+                        <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
+                        <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    );
+};
+
+const Home = () => {
     const handleScroll = (id) => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     };
-    
-    return (
-        <nav>
-        <div className="NavContainer">
-        <img src={logo} className="App-logo-nav-mobile" alt="logo" />
-        <div className="menu-icon" onClick={handleShowNavbar}>
-        <div id="nav-icon" className={showNavbar ? "open" : ""}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        </div>
-        </div>
-        <div className={`nav-elements ${showNavbar ? 'active' : ''}`}>
-        <img src={logo} className="App-logo-nav" alt="logo" />
-        <ul>
-        <li><a href="#home" onClick={() => handleScroll('home')}>Home</a></li>
-        <li><a href="#about" onClick={() => handleScroll('about')}>What to Expect</a></li>
-        <li><a href="#schedule" onClick={() => handleScroll('schedule')}>Workout Schedule</a></li>
-        <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
-        <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
-        <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
-        <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
-        </ul>
-        </div>
-        </div>
-        </nav>
-    );
-};
-const Home = () => {
     return (
         <div className="Home">
             <div className="Container">
@@ -84,28 +119,34 @@ const Home = () => {
                 </section>
                 <section>
                     <div className="ServiceList">
-                        <div className="Icon">
-                            <img src={icon1} className="icons" alt="icon" />
-                        </div>
-                        <div className="Description">
-                            <p>Outdoor Group Fitness</p>
-                        </div>
+                        <a href="#about" onClick={() => handleScroll('about')}>
+                            <div className="Icon">
+                                <img src={icon1} className="icons" alt="icon" />
+                            </div>
+                            <div className="Description">
+                                <p>Outdoor Group Fitness</p>
+                            </div>
+                        </a>
                     </div>
                     <div className="ServiceList">
-                        <div className="Icon">
-                            <img src={icon2} className="icons" alt="icon" />
-                        </div>
-                        <div className="Description">
-                            <p>Personal Training</p>
-                        </div>
+                        <a href="#fitness" onClick={() => handleScroll('fitness')}>
+                            <div className="Icon">
+                                <img src={icon2} className="icons" alt="icon" />
+                            </div>
+                            <div className="Description">
+                                <p>Personal Training</p>
+                            </div>
+                        </a>
                     </div>
                     <div className="ServiceList">
-                        <div className="Icon">
-                            <img src={icon3} className="icons" alt="icon" />
-                        </div>
-                        <div className="Description">
-                            <p>Massage Therapy</p>
-                        </div>
+                        <a href="#massage" onClick={() => handleScroll('massage')}>
+                            <div className="Icon">
+                                <img src={icon3} className="icons" alt="icon" />
+                            </div>
+                            <div className="Description">
+                                <p>Massage Therapy</p>
+                            </div>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -286,7 +327,7 @@ const Fitness = () => {
                             <div className="dailySchedule">
                                 <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
-                                width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </section>
                         {/* <div>
@@ -300,12 +341,12 @@ const Fitness = () => {
                         <p>Saturday Location: Westminster City Park, 10455 Sheridan Blvd, Westminster, CO 80020</p>
                         <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
-                        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <p>Rain Location: Squires Park, 3450 W 99th Ave, Westminster, CO 80031</p>
                         <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12247.690829664329!2d-105.0322845!3d39.8759692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89e03ccd4b93%3A0x92b4c7c229f9a4a8!2sSquires%20Park!5e0!3m2!1sen!2sus!4v1714090322560!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12247.690829664329!2d-105.0322845!3d39.8759692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89e03ccd4b93%3A0x92b4c7c229f9a4a8!2sSquires%20Park!5e0!3m2!1sen!2sus!4v1714090322560!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <p>Indoor Location: Legacy Event Center, 9051 N Harlan St, Westminster, CO 80031</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12250.573568310565!2d-105.065387!3d39.859824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89ba5d7d0d9d%3A0x1a4fe67d2975b370!2sLegacy%20Event%20Center!5e0!3m2!1sen!2sus!4v1714090385320!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12250.573568310565!2d-105.065387!3d39.859824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89ba5d7d0d9d%3A0x1a4fe67d2975b370!2sLegacy%20Event%20Center!5e0!3m2!1sen!2sus!4v1714090385320!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                         <p>Nutrition Coaching - coming Fall 2024</p>
                         </section>
                         </div>*/}
@@ -323,7 +364,7 @@ const Fitness = () => {
                         <p>something, something, I'm the best</p>
                         <h2>Location</h2>
                         <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </section>
                     <section className="column">
                         <h2>Massage Rates</h2>
@@ -370,7 +411,7 @@ const Contact = () => {
     return (
         <div className="Contact">
             <div className="ContactContainer">
-                {/*<div className="LeftColumn">
+                <div className="LeftColumn">
                     <h2>Contact Us</h2>
                     <form className="ContactForm">
                         <label htmlFor="name">Name:</label>
@@ -384,19 +425,18 @@ const Contact = () => {
 
                         <button type="submit">Send</button>
                     </form>
-                </div>*/}
+                </div>
                 <div className="RightColumn">
                     <h2>Stay Connected</h2>
                     <p>Follow us on social media for the latest updates and offers!</p>
                     <div className="SocialLinks">
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-                </div>
-                <div className="ImageWithText">
-                    <img src="path_to_your_image.jpg" alt="Our Office" className="ContactImage" />
-                    <h3>Our Office</h3>
-                    <p>A glimpse into our daily operations.</p>
-                </div>
+                        <a href="https://www.facebook.com/gabriel.gabaldon.1" target="_blank" rel="noreferrer">
+                            <img src={facebook} alt="facebook" className="social-icons" />
+                        </a>
+                        <a href="https://www.instagram.com/one_body_303/" target="_blank" rel="noreferrer">
+                            <img src={instagram} alt="instagram" className="social-icons" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

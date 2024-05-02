@@ -25,20 +25,20 @@ html {
 .App a:active {
 	color: #000000;
 }
-
 .Home {
+    margin-top: 150px;
 	height: auto;
 	padding: 50px 0px;
-	background-image: url(./assets/slider2-bg.jpg);
+	background-image: url(./assets/bg/slider2-bg.jpg);
 	background-size: cover;
 	background-position: top;
-    /* background-color: #f0f0f0; */
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 .Home .Container {
 	max-width: 1200px;
 	margin: 0 auto;
-	margin-top: 155px;
+}
+.Home .Container a:hover .Icon {
+    color: #fdb827;
 }
 .Home section {
 	display: inline-block;
@@ -50,7 +50,7 @@ html {
 .Home img {
 	position: relative;
 	text-align: left;
-	height: 38vmin;
+	height: 410px;
 }
 .Home .ServiceList {
 	border-bottom: 1px solid #ffffff;
@@ -89,9 +89,6 @@ html {
 	width: 100%;
 	height: auto;
 	background-color: #ffffff;
-    /* background-image: url(./assets/blue-background.jpg); */
-	/* background-image: url(./assets/VintageDust3.jpg); */
-	/* background-image: url(./assets/group-of-runners.jpg); */
 	background-size: cover;
 	display: block;
 	vertical-align: top;
@@ -102,7 +99,7 @@ html {
 }
 
 .Rates {
-	background-image: url(./assets/group-of-runners.jpg);
+	background-image: url(./assets/bg/group-of-runners.jpg);
 	background-size: cover;
     background-position: bottom;
     padding-top: 70px;
@@ -246,10 +243,10 @@ img.scheduleTitle {
     padding: 30px 0px;
 }
 .Massage {
-    background-image: url(./assets/massagebg-1.png);
+    background-image: url(./assets/bg/massagebg-1.png);
 	background-size: cover;
     background-position: bottom;
-    padding: 50px 0px;
+    padding: 300px 0px;
 }
 .MassageHeader img {
     width: 600px;
@@ -273,7 +270,7 @@ img.scheduleTitle {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
+  padding: 150px 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   transition: all 0.5s ease;
 }
@@ -376,6 +373,9 @@ button:hover {
 .ImageWithText p {
     color: #666;
     font-size: 14px;
+}
+.SocialLinks .social-icons {
+    width: 75px;
 }
 
 
