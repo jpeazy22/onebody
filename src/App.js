@@ -16,6 +16,7 @@ import titleText from './assets/headerText/groupFitnesstextblue.png';
 import rateText from './assets/headerText/fitnessRatesBlue.png';
 import scheduleText from './assets/headerText/scheduleTextBlue.png';
 import massageText from './assets/headerText/massageText.png';
+import taglineWhite from './assets/taglineWhite.png';
 
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
@@ -35,7 +36,7 @@ function App() {
         <div className="App">
         <Navbar />
         <div id="home"><Home /></div>
-        <div id="about"><About /></div>
+        {/*<div id="about"><About /></div>*/}
         <div id="fitness"><Fitness /></div>
         <div id="schedule"><Schedule /></div>
         <div id="testimonials"><Test /></div>
@@ -76,7 +77,9 @@ const Navbar = () => {
     return (
         <nav>
             <div className="NavContainer">
-                <img src={logo} className="App-logo-nav-mobile" alt="logo" />
+                <a href="#home" onClick={() => handleScroll('home')}>
+                    <img src={logo} className="App-logo-nav-mobile" alt="logo" />
+                </a>
                 <div className="menu-icon" onClick={handleShowNavbar}>
                     <div id="nav-icon" className={showNavbar ? "open" : ""}>
                         <span></span>
@@ -88,14 +91,16 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className={`nav-elements ${showNavbar ? 'active' : ''}`}>
-                    <img src={logo} className="App-logo-nav" alt="logo" />
+                    <a href="#home" onClick={() => handleScroll('home')}>
+                        <img src={logo} className="App-logo-nav" alt="logo" />
+                    </a>
                     <ul>
                         <li><a href="#home" onClick={() => handleScroll('home')}>Home</a></li>
-                        <li><a href="#about" onClick={() => handleScroll('about')}>What to Expect</a></li>
-                        <li><a href="#schedule" onClick={() => handleScroll('schedule')}>Workout Schedule</a></li>
+                        {/*<li><a href="#about" onClick={() => handleScroll('about')}>About</a></li>*/}
                         <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
-                        <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
+                        {/* <li><a href="#schedule" onClick={() => handleScroll('schedule')}>Workout Schedule</a></li> */}
                         <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
+                        <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
                         <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
                     </ul>
                 </div>
@@ -118,6 +123,9 @@ const Home = () => {
                     <img src={whiteLogo} className="App-logo" alt="logo" />
                 </section>
                 <section>
+                    <img src={taglineWhite} className="Tagline" alt="tagline" />
+                </section>
+                <section className="Services">
                     <div className="ServiceList">
                         <a href="#about" onClick={() => handleScroll('about')}>
                             <div className="Icon">
@@ -154,7 +162,7 @@ const Home = () => {
     )
 }
 
-const About = () => {
+{/* const About = () => {
     return (
         <div className="About">
         <section>
@@ -163,12 +171,19 @@ const About = () => {
         </div>
         
     )
-}
+} */}
 const Fitness = () => {
     return (
         <div className="Fitness">
             <section className="Scan">
                 <img src={titleText} className="imageTitle" alt="titleText" />
+            </section>
+            <section className="column">
+                <h2>What To Expect</h2>
+                <p>A group (functional) workout consisting of a blend of strength, cardio, and high intensity using various fitness equipment, body weight, and dumbbells.</p><br />
+                <p> All fitness levels are welcome into this supportive community backed by a passionate trainer. </p>
+            </section>
+            <section className="column">
                 <p>With NASM Certified Professional Trainer</p>
                 <h4>COACH GABRIEL GABALDON</h4>
                 <h2>

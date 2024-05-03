@@ -42,22 +42,30 @@ html {
 }
 .Home section {
 	display: inline-block;
-	width: 49%;
 	height: auto;
-	vertical-align: top;
+	vertical-align: middle;
 	align-items: stretch;
+}
+.Home img.App-logo, .Home img.Tagline {
+    width: 520px;
 }
 .Home img {
 	position: relative;
 	text-align: left;
-	height: 410px;
+	height: auto;
+    max-width: 520px;
 }
+
 .Home .ServiceList {
-	border-bottom: 1px solid #ffffff;
+	border-top: 1px solid #ffffff;
+    display: inline-block;
 	text-align: left;
-	width: 400px;
 	margin: 30px auto;
 	height: 100px;
+    padding-top: 50px;
+}
+.Home .Services {
+    display: inline-block;
 }
 .Home .Icon {
 	width: 75px;
@@ -65,6 +73,7 @@ html {
 	background-color: #4b90cd;
 	display: inline-block;
 	margin-left: 20px;
+    border-radius: 40px;
 }
 .Home .Icon img {
     height: 50px;
@@ -85,23 +94,45 @@ html {
     background-color: #fdb827;
     height: 400px;
 }
+#fitness {
+    background-image: url(./assets/bg/group-of-runners.jpg);
+	background-size: cover;
+    background-position: bottom;
+}
 .Fitness {
-	width: 100%;
+	max-width: 1200px;
+    width: 100%;
 	height: auto;
-	background-color: #ffffff;
+	/* background-color: #ffffff; */
 	background-size: cover;
 	display: block;
 	vertical-align: top;
 	margin: 0 auto;
-	padding: 50px 5px;
+	padding: 100px 5px;
 	text-align: center;
 	color: #002d62;
 }
+.Fitness h2 {
+    color: #4b90cd;
+    font-size: 30px;
+}
+.Fitness p {
+    font-size: 24px;
+}
+.Fitness .column {
+    display: inline-block;
+    width: 42%;
+    margin: 50px 15px;
+    vertical-align: top;
+    padding: 0px 10px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
 
 .Rates {
-	background-image: url(./assets/bg/group-of-runners.jpg);
-	background-size: cover;
-    background-position: bottom;
+	
     padding-top: 70px;
 }
 .Rates .Container {
@@ -111,12 +142,13 @@ html {
 .Rates .InfoBlock {
     background-color: #ffffff;
 	display: inline-block;
-	border: solid 1px #bbbbbb;
-	width: 32%;
+	width: 30%;
 	margin: 50px 5px;
 	height: 600px;
     vertical-align: top;
-	box-shadow: 1px 2px 2px #bbbbbb;	
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;	
 }
 .InfoBlock .fitnessRateImage {
 	margin-top:30px;
@@ -214,21 +246,6 @@ html {
   border-radius: 5px;
   text-align: right;
 }
-
-h2 {
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  .time {
-    margin-bottom: 5px;
-  }
-
-  .schedule-section, .location-section {
-    padding: 10px;
-  }
-}
-
 
 img.imageTitle {
 	max-width: 400px;
@@ -396,6 +413,23 @@ button:hover {
         margin: 50px 5px;
         height: 600px;
     }
+    .Home section {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
+    .Home img.Tagline {
+        max-width: 390px;
+        padding: 80px 0px;
+    }
+    .Home .ServiceList {
+        display: block;
+        width: 60%;
+    }
+    .Home .ServiceList:last-child {
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+    }
 }
 @media screen and (max-width: 992px) {
 	.Home section {
@@ -403,11 +437,21 @@ button:hover {
 		margin: 0 auto;
 		width: 100%;
 	}
+    .Home .ServiceList {
+        display: block;
+        width: 70%;
+        max-width: 450px;
+    }
     .workoutLocations, .dailySchedule {
         display: block;
         width: 90%;
     }
+    .Fitness .column {
+        width: 85%;
+        margin: 25px 0px;
+    }
 }
+
 @media screen and (max-width: 768px) {
     .Home {
         padding: 10px 0px;
@@ -444,5 +488,25 @@ button:hover {
     }
     iframe {
         max-width: 90%;
+    }
+    .Home .ServiceList {
+        width: 95%;
+    }
+    .Home img.App-logo, .Home img.Tagline {
+        width: 280px;
+    }
+    .Home .Icon img {
+        height: 30px;
+    }
+    .Home .Icon {
+        width: 58px;
+        height: 58px;
+        margin-left: 0px;
+    }
+    .Home .Description {
+        padding-left: 5px;
+    }
+    .Home p {
+        font-size: 18px;
     }
 }
