@@ -59,7 +59,7 @@ const Navbar = () => {
             const scrollToPosition = () => {
                 const rect = section.getBoundingClientRect();
                 const absoluteTop = rect.top + window.pageYOffset;
-                const offsetPosition = absoluteTop - 150;  // Offset for the fixed header
+                const offsetPosition = absoluteTop - 130;  // Offset for the fixed header
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -345,26 +345,6 @@ const Fitness = () => {
                                 width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </section>
-                        {/* <div>
-                        <section className="location-section">
-                        <h2>LOCATIONS</h2>
-                        <p>Indoor- November- March Outdoor April-October</p>
-                        <p>Weekday Location: Westminster Center Park, 4801 W 92nd Ave, Westminster, CO 80031</p>
-                        <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
-                        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        <p>Saturday Location: Westminster City Park, 10455 Sheridan Blvd, Westminster, CO 80020</p>
-                        <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
-                        width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        <p>Rain Location: Squires Park, 3450 W 99th Ave, Westminster, CO 80031</p>
-                        <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12247.690829664329!2d-105.0322845!3d39.8759692!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89e03ccd4b93%3A0x92b4c7c229f9a4a8!2sSquires%20Park!5e0!3m2!1sen!2sus!4v1714090322560!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        <p>Indoor Location: Legacy Event Center, 9051 N Harlan St, Westminster, CO 80031</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12250.573568310565!2d-105.065387!3d39.859824!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89ba5d7d0d9d%3A0x1a4fe67d2975b370!2sLegacy%20Event%20Center!5e0!3m2!1sen!2sus!4v1714090385320!5m2!1sen!2sus" width="300" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        <p>Nutrition Coaching - coming Fall 2024</p>
-                        </section>
-                        </div>*/}
                     </div>
             )
         }
@@ -377,11 +357,6 @@ const Fitness = () => {
                     <section className="column">
                         <h2>Describe what you do/offer</h2>
                         <p>something, something, I'm the best</p>
-                        <h2>Location</h2>
-                        <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    </section>
-                    <section className="column">
                         <h2>Massage Rates</h2>
                         <ul>
                             <li>⁃	$80/ hour </li>
@@ -390,6 +365,25 @@ const Fitness = () => {
                             <li>⁃	$140/ 2 hour </li>
                         </ul>
                         <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
+                    </section>
+                    <section className="column">
+                        
+                        <h2>Contact us using this form to book your appointment and discover our latest specials!</h2>
+                        <form className="ContactForm">
+                            <label htmlFor="name">Name:</label>
+                            <input type="text" id="name" name="name" required />
+
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" id="email" name="email" required />
+
+                            <label htmlFor="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+                            <button type="submit">Send</button>
+                        </form>
+                        <h2>Location</h2>
+                        <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </section>
                 </div>
             )

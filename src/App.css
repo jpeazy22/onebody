@@ -7,10 +7,10 @@ html {
   background-color: #ffffff;
 }
 .App a {
-	color: #
+	color: #fdb827;
 }
 .App-logo-nav {
-  height: 10vmin;
+  height: 140px;
   pointer-events: none;
 }
 
@@ -26,9 +26,9 @@ html {
 	color: #000000;
 }
 .Home {
-    margin-top: 150px;
+    margin-top: 130px;
 	height: auto;
-	padding: 50px 0px;
+	padding: 90px 0px;
 	background-image: url(./assets/bg/slider2-bg.jpg);
 	background-size: cover;
 	background-position: top;
@@ -55,29 +55,34 @@ html {
 	height: auto;
     max-width: 520px;
 }
-
+.Home .Services {
+    display: inline-block;
+    width: 1200px;
+    padding-top: 50px;
+}
 .Home .ServiceList {
 	border-top: 1px solid #ffffff;
     display: inline-block;
 	text-align: left;
-	margin: 30px auto;
+    width: 32%;
+	margin: 30px 8px;
 	height: 100px;
     padding-top: 50px;
-}
-.Home .Services {
-    display: inline-block;
 }
 .Home .Icon {
 	width: 75px;
 	height: 75px;
 	background-color: #4b90cd;
 	display: inline-block;
-	margin-left: 20px;
+	margin-left: 5px;
     border-radius: 40px;
 }
 .Home .Icon img {
     height: 50px;
 	padding: 12px 14px;
+}
+.Home .ServiceList:nth-child(2) .Icon img {
+	padding: 12px 17px;
 }
 .Home .Description {
 	display: inline-block;
@@ -259,11 +264,15 @@ img.scheduleTitle {
 	max-width: 600px;
     padding: 30px 0px;
 }
-.Massage {
+#massage {
     background-image: url(./assets/bg/massagebg-1.png);
 	background-size: cover;
     background-position: bottom;
-    padding: 300px 0px;
+    padding: 80px 0px;
+}
+.Massage {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .MassageHeader img {
     width: 600px;
@@ -422,9 +431,14 @@ button:hover {
         max-width: 390px;
         padding: 80px 0px;
     }
+    .Home .Services {
+        margin: 0 auto;
+        max-width: 100%;
+    }
     .Home .ServiceList {
         display: block;
-        width: 60%;
+        margin: 0 auto;
+        width: 45%;
     }
     .Home .ServiceList:last-child {
         border-bottom: 1px solid #ffffff;
@@ -454,7 +468,7 @@ button:hover {
 
 @media screen and (max-width: 768px) {
     .Home {
-        padding: 10px 0px;
+        padding: 30px 0px;
     }
     .Rates {
         padding-bottom: 50px;
