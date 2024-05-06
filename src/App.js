@@ -16,7 +16,7 @@ import titleText from './assets/headerText/groupFitnesstextblue.png';
 import rateText from './assets/headerText/fitnessRatesBlue.png';
 import scheduleText from './assets/headerText/scheduleTextBlue.png';
 import massageText from './assets/headerText/massageText.png';
-import taglineWhite from './assets/taglineWhite.png';
+import taglineWhite from './assets/oneBody_tagline.png';
 
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
@@ -27,6 +27,7 @@ import fit3 from './assets/personalTraining.png';
 import icon1 from './assets/icons/deadlift.png';
 import icon2 from './assets/icons/personal-trainer.png';
 import icon3 from './assets/icons/lotus.png';
+import icon4 from './assets/icons/jumping_hires.png';
 import facebook from './assets/icons/facebook.png';
 import instagram from './assets/icons/instagram.png';
 
@@ -132,7 +133,7 @@ const Home = () => {
                                 <img src={icon1} className="icons" alt="icon" />
                             </div>
                             <div className="Description">
-                                <p>Outdoor Group Fitness</p>
+                                <p>Outdoor Bootcamps</p>
                             </div>
                         </a>
                     </div>
@@ -153,6 +154,16 @@ const Home = () => {
                             </div>
                             <div className="Description">
                                 <p>Massage Therapy</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div className="ServiceList">
+                        <a href="#about" onClick={() => handleScroll('about')}>
+                            <div className="Icon">
+                                <img src={icon4} className="icons" alt="icon" />
+                            </div>
+                            <div className="Description">
+                                <p>Social Events</p>
                             </div>
                         </a>
                     </div>
@@ -227,9 +238,9 @@ const Fitness = () => {
                             <li>Schedule Varies</li>
                             <li>Donation based for members</li>
                         </ol>
-                        <h4><b>$25/</b>session
+                        <h4>
                             <span>
-                                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
+                                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">More Info</a>
                             </span>
                         </h4>
                     {/*<h2>Punch Pass</h2>
@@ -281,9 +292,9 @@ const Fitness = () => {
                     <div className="Schedule">
                         <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
                         <section>
-                            <div className="workoutLocations">
-                                <p>PETER PAN PARK / WESTMINSTER CENTER PARK</p>
-                                <p>4801 W. 92nd Ave.<br/>
+                            <div className="dailySchedule">
+                                <h3>PETER PAN PARK / WESTMINSTER CENTER PARK</h3>
+                                <p className="border">4801 W. 92nd Ave.<br/>
                                 Westminster, CO 80031</p>
                                 <p>
                                     <span className="day">Monday -</span>
@@ -313,33 +324,29 @@ const Fitness = () => {
                                     <span className="times">9am</span> 
                                     <span className="times">6pm</span>
                                 </p>
-                                <p>
+                                <p className="border">
                                     <span className="day">Friday -</span>
                                     <span className="times">5:15am</span> 
                                     <span className="times">6:30am</span>
                                     <span className="times">9am</span>
                                     <span className="times"></span>
                                 </p>
-                            </div>
-                            <div className="dailySchedule">
                                 <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
                                 width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
                                 </iframe>
                             </div>
-                            <div className="workoutLocations">
-                                <p>WESTMINSTER CITY PARK</p>
-                                <p>10455 Sheridan Blvd.<br/>
+                            <div className="dailySchedule">
+                                <h3>WESTMINSTER CITY PARK</h3>
+                                <p className="border">10455 Sheridan Blvd.<br/>
                                 Westminster, CO 80020</p>
-                                <p>
+                                <p className="border">
                                     <span className="day">Saturday -</span>
                                     <span className="times"></span> 
                                     <span className="times"></span> 
                                     <span className="times">9am</span> 
                                     <span className="times"></span>
                                 </p>
-                            </div>
-                            <div className="dailySchedule">
                                 <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
                                 width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
@@ -354,9 +361,16 @@ const Fitness = () => {
                     <section className="MassageHeader">
                         <img src={massageText} alt="massageText" />
                     </section>
+                    <section>
+                        <h2>Your Expert in Personalized Therapeutic Massage</h2>
+                        {/*<p>
+                            Gabriel Gabaldon had a natural talent for massage long before he became a licensed therapist. After being frequently praised for his intuitive touch and perfect pressure, he pursued formal training at the renowned Denver School of Massage Therapy, graduating in May 2012. Gabriel honed his skills at Massage Envy from 2012 to 2018, where he earned the Mountain Regional Massage Therapist of the Year award in 2017. Following his distinguished tenure, he launched his own private practice.
+                        </p>*/}
+                        <p>
+                            Today, Gabriel offers personalized massage sessions tailored to each client's needs, employing techniques like Sports Massage, Structural Integration, Swedish (relaxing or deep tissue), and Trigger Point Therapy. With Colorado being an active state, take advantage of routine maintenance whether you’re looking for a session for injury prevention, to increase performance to prepare for a competition, or simply to relax from the stressors of life, be confident in booking your massage at One Body today and experience the difference dedicated, professional care can make!
+                        </p>
+                    </section>
                     <section className="column">
-                        <h2>Describe what you do/offer</h2>
-                        <p>something, something, I'm the best</p>
                         <h2>Massage Rates</h2>
                         <ul>
                             <li>⁃	$80/ hour </li>
@@ -365,9 +379,11 @@ const Fitness = () => {
                             <li>⁃	$140/ 2 hour </li>
                         </ul>
                         <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
+                        <h2>Location</h2>
+                        <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="300" height="200" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </section>
                     <section className="column">
-                        
                         <h2>Contact us using this form to book your appointment and discover our latest specials!</h2>
                         <form className="ContactForm">
                             <label htmlFor="name">Name:</label>
@@ -381,9 +397,6 @@ const Fitness = () => {
 
                             <button type="submit">Send</button>
                         </form>
-                        <h2>Location</h2>
-                        <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </section>
                 </div>
             )

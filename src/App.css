@@ -37,6 +37,10 @@ html {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+.Home .Container section {
+    width: 45%;
+    margin: 5px;
+}
 .Home .Container a:hover .Icon {
     color: #fdb827;
 }
@@ -46,16 +50,13 @@ html {
 	vertical-align: middle;
 	align-items: stretch;
 }
-.Home img.App-logo, .Home img.Tagline {
+.Home img.App-logo {
+    width: 410px;
+}
+.Home img.Tagline {
     width: 520px;
 }
-.Home img {
-	position: relative;
-	text-align: left;
-	height: auto;
-    max-width: 520px;
-}
-.Home .Services {
+.Home .Container section.Services {
     display: inline-block;
     width: 1200px;
     padding-top: 50px;
@@ -63,19 +64,16 @@ html {
 .Home .ServiceList {
 	border-top: 1px solid #ffffff;
     display: inline-block;
-	text-align: left;
-    width: 32%;
-	margin: 30px 8px;
-	height: 100px;
+    width: 23%;
+	margin: 30px 0px;
     padding-top: 50px;
 }
 .Home .Icon {
 	width: 75px;
 	height: 75px;
 	background-color: #4b90cd;
-	display: inline-block;
-	margin-left: 5px;
     border-radius: 40px;
+    margin: 0 auto;
 }
 .Home .Icon img {
     height: 50px;
@@ -83,11 +81,6 @@ html {
 }
 .Home .ServiceList:nth-child(2) .Icon img {
 	padding: 12px 17px;
-}
-.Home .Description {
-	display: inline-block;
-	padding-left: 15px;
-    vertical-align: top;
 }
 .Home p {
 	font-size:22px;
@@ -100,7 +93,7 @@ html {
     height: 400px;
 }
 #fitness {
-    background-image: url(./assets/bg/group-of-runners.jpg);
+    /* background-image: url(./assets/bg/group-of-runners.jpg); */
 	background-size: cover;
     background-position: bottom;
 }
@@ -108,7 +101,6 @@ html {
 	max-width: 1200px;
     width: 100%;
 	height: auto;
-	/* background-color: #ffffff; */
 	background-size: cover;
 	display: block;
 	vertical-align: top;
@@ -118,8 +110,13 @@ html {
 	color: #002d62;
 }
 .Fitness h2 {
+    color: #002d62;
+    font-size: 22px;
+    text-align: left;
+    transition: color 1s ease-out 100ms;
+}
+.Fitness h2:hover {
     color: #4b90cd;
-    font-size: 30px;
 }
 .Fitness p {
     font-size: 24px;
@@ -132,8 +129,7 @@ html {
     padding: 0px 10px;
     background-color: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .Rates {
@@ -149,22 +145,25 @@ html {
 	display: inline-block;
 	width: 30%;
 	margin: 50px 5px;
-	height: 600px;
+	height: 550px;
     vertical-align: top;
     padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;	
+    border: 1px solid #e6e6e6;
+    border-bottom-width: 4px;
+    transition: border 1s ease-out 100ms;
+}
+.Rates .InfoBlock:hover {
+    border: 1px solid #4b90cd;
+    border-bottom-width: 4px;
 }
 .InfoBlock .fitnessRateImage {
 	margin-top:30px;
     height: 180px;
 }
 .InfoBlock h2 {
-	text-align: center;
 	font-weight: 100;
     margin-top: 4px;
-    height: 75px;
-    border-bottom: solid 1px #dddddd;
+    height: 35px;
 }
 .InfoBlock h4 {
 	text-align: left;
@@ -178,17 +177,25 @@ html {
 	float: right;
 	margin-top: -5px;
 	margin-right: 15px;
-	padding: 5px 15px;
+	padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 .InfoBlock h4 span a {
 	color: #ffffff;
+    transition: color 1s ease-out 100ms;
 }
 .InfoBlock h4 span a:hover {
 	color: #002d62;
+    transition: color 1s ease-out 100ms;
 }
 .InfoBlock ol {
 	border-bottom: solid 1px #dddddd;
 	height:200px;
+    transition: border 1s ease-out 100ms;
+}
+.InfoBlock ol:hover {
+	border-bottom: solid 1px #4b90cd;
 }
 .InfoBlock ol li {
 	list-style-type: circle;
@@ -198,55 +205,52 @@ html {
 	list-style-type: none;
 	text-align: left;
 }
-.schedule-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-.schedule-section h2 {
-    color: #4b90cd;
-}
-.scheduleSectionTwo {
+.Schedule {
     max-width: 1200px;
-    margin: 50px auto 0px auto;
+    margin: 50px auto;
 }
-.workoutLocations, .dailySchedule {
+.dailySchedule {
+    color: #002d62;
     display: inline-block;
-    width: 48%;
-    margin: 0 auto;
+    width: 45%;
+    margin: 10px 2%;
     vertical-align: top;
     border-top: solid 1px #fdb827;
-    height: 400px;
     padding-top: 30px;
+    border: 1px solid #e6e6e6;
+    border-bottom-width: 4px;
+    transition: border 1s ease-out 100ms;
+}
+.dailySchedule:hover {
+    border: 1px solid #fdb827;
+    border-bottom-width: 4px;
+    transition: border 1s ease-out 100ms;
+}
+.dailySchedule .border {
+    border-bottom: 1px solid #e6e6e6;
+    transition: border 1s ease-out 100ms;
+    padding-bottom: 20px;
+}
+.dailySchedule .border:hover {
+    border-bottom: 1px solid #fdb827;
+    transition: border 1s ease-out 100ms;
 }
 .dailySchedule iframe {
-    padding-top: 20px;
+    padding: 30px 0px;
     max-width: 90%;
 }
-.schedule-section, .location-section {
-  width: 100%;
-  max-width: 960px;
-  margin-bottom: 20px;
-}
-
-.schedule-title {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
 .day {
     display: inline-block;
-    text-align: left;
+    text-align: right;
+    padding-right: 10px;
     width: 130px;
 }
 .times {
   display: inline-block;
   width: 60px;
-  background: #fdb827;
+  background: #4b90cd;
   color: white;
-  padding: 4px 8px;
+  padding: 2px 6px;
   margin-right: 5px;
   border-radius: 5px;
   text-align: right;
@@ -265,7 +269,7 @@ img.scheduleTitle {
     padding: 30px 0px;
 }
 #massage {
-    background-image: url(./assets/bg/massagebg-1.png);
+    background-image: url(./assets/bg/massagebg-2.jpg);
 	background-size: cover;
     background-position: bottom;
     padding: 80px 0px;
@@ -277,18 +281,22 @@ img.scheduleTitle {
 .MassageHeader img {
     width: 600px;
 }
+.Massage {
+    color: #002d62;
+}
+.Massage h2 {
+    color: #4b90cd;
+}
 .Massage .column {
     vertical-align: top;
     display: inline-block;
     width: 40%;
-    color: #ffffff;
     text-align: left;
 }
-.Massage .column h2 {
-    color: #4b90cd;
-}
-
 .testimonial-slider {
+  background-image: url(./assets/bg/testimonialbg_2.png);
+  background-size: cover;
+  background-position: center;
   max-width: 100%;
   height: 200px;
   background-color: #f0f0f0;
@@ -422,6 +430,10 @@ button:hover {
         margin: 50px 5px;
         height: 600px;
     }
+    .Home .Container section {
+        margin: 0 auto;
+        width: 100%;
+    }
     .Home section {
 		display: block;
 		margin: 0 auto;
@@ -459,6 +471,7 @@ button:hover {
     .workoutLocations, .dailySchedule {
         display: block;
         width: 90%;
+        margin: 10px auto;
     }
     .Fitness .column {
         width: 85%;
@@ -515,7 +528,6 @@ button:hover {
     .Home .Icon {
         width: 58px;
         height: 58px;
-        margin-left: 0px;
     }
     .Home .Description {
         padding-left: 5px;
