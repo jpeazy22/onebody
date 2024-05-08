@@ -31,6 +31,11 @@ import icon4 from './assets/icons/jumping_hires.png';
 import facebook from './assets/icons/facebook.png';
 import instagram from './assets/icons/instagram.png';
 
+// Testimonial Image Imports
+import carolyn from './assets/testimonials/carolynM.jpg';
+import cecile from './assets/testimonials/Dumbbells.jpg';
+import lawrence from './assets/testimonials/before_after.png';
+
 
 function App() {
     return (
@@ -163,7 +168,7 @@ const Home = () => {
                                 <img src={icon4} className="icons" alt="icon" />
                             </div>
                             <div className="Description">
-                                <p>Social Events</p>
+                                <p>Community</p>
                             </div>
                         </a>
                     </div>
@@ -404,9 +409,24 @@ const Fitness = () => {
         
         
         const testimonials = [
-          { id: 1, text: "This is the best service ever. Totally recommend to everyone!", author: "John Doe" },
-          { id: 2, text: "Incredible results and fantastic support!", author: "Jane Smith" },
-          { id: 3, text: "Very professional and highly skilled. Loved it!", author: "Alice Johnson" }
+          { 
+              id: 1, 
+              text: "Gabe has been my Trainor since 2020 and has kept me on track and accountable in my fitness journey for 4 years. I started off with CG Games Individual in 2022 reaching the semi-finals to finally winning the CG Games Teams Division 50 + last year. I'm 60 this year and feel like I'm in the best shape I have ever been. It is because of the socials, fun workout games and the community aspect that I continue with Gabe as my trainor.", 
+              author: "Carolyn M.", 
+              image: carolyn
+          },
+          { 
+              id: 2, 
+              text: "I can't speak highly enough of my experience with Gabriel. I joined his outdoor bootcamp classes over a year ago, as I was approaching the big 5-0, after nearly two decades without regular exercise. Since then, I've been attending his classes 4-5 times a week, and I can honestly say I look forward to them each time. When you join One Body, you join a community of people of different ages and physical abilities that support each other. His approach is motivating and empowering, pushing me beyond what I thought possible while ensuring proper technique and safety. Thanks to his guidance, I've not only regained my fitness, but surpassed my own expectations. I feel stronger, healthier, and more energized than ever before. If you're looking for a trainer who will challenge and inspire you to reach your goals, look no further than Gabriel. I couldn't recommend him highly enough.", 
+              author: "Cecile F.", 
+              image: cecile
+          },
+          { 
+              id: 3, 
+              text: "Gabe has guided me to a level of athleticism that I would never have imagined, he’s been a real coach and friend.  He pushed me when I needed it but also compassionate when I needed it.  Thank you for all you do Gabe!", 
+              author: "Lawrence G.",
+              image: lawrence
+           }
         ];
 
 const Test = () => {
@@ -415,17 +435,18 @@ const Test = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 3000); // Change testimonial every 3 seconds
+  }, 5000); // Change testimonial every 3 seconds
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="testimonial-slider">
-      <div className="testimonial-item">
-        <p>"{testimonials[currentIndex].text}"</p>
-        <p className="author">- {testimonials[currentIndex].author}</p>
-      </div>
-    </div>
+      <div className="testimonial-slider">
+       <div className="testimonial-item">
+         <img src={testimonials[currentIndex].image} alt={`Testimonial from ${testimonials[currentIndex].author}`} className="testimonial-image" />
+         <p>"{testimonials[currentIndex].text}"</p>
+         <p className="author">- {testimonials[currentIndex].author}</p>
+       </div>
+     </div>
   );
 };
 
