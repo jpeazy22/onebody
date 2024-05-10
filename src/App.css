@@ -4,7 +4,6 @@ html {
 
 .App {
   text-align: center;
-  background-color: #ffffff;
 }
 .App a {
 	color: #fdb827;
@@ -26,12 +25,23 @@ html {
 	color: #000000;
 }
 .Home {
+    position: relative;
+    overflow: hidden;
     margin-top: 130px;
 	height: auto;
 	padding: 90px 0px;
-	background-image: url(./assets/bg/slider2-bg.jpg);
+	/* background-image: url(./assets/bg/slider2-bg.jpg);
 	background-size: cover;
-	background-position: top;
+	background-position: top; */
+}
+.BackgroundVideo {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Keep the video behind other content */
 }
 .Home .Container {
 	max-width: 1200px;
@@ -62,7 +72,7 @@ html {
     padding-top: 50px;
 }
 .Home .ServiceList {
-	border-top: 1px solid #ffffff;
+	border-top: 1px solid #fdb827;
     display: inline-block;
     width: 23%;
 	margin: 30px 0px;
@@ -74,11 +84,11 @@ html {
 	background-color: #4b90cd;
     border-radius: 40px;
     margin: 0 auto;
-    transition: background 1s ease-out 150ms;
+    transition: background 0.5s ease-out 150ms;
 }
 .Home .Icon:hover {
 	background-color: #fdb827;
-    transition: background 1s ease-out 150ms;
+    transition: background 0.5s ease-out 150ms;
 }
 .Home .Icon img {
     height: 50px;
@@ -93,7 +103,7 @@ html {
 .Home p {
 	font-size:22px;
     font-weight: bold;
-	color: #ffffff;
+	color: #4b90cd;
 	padding-left: 15px;
 }
 .About {
@@ -101,19 +111,18 @@ html {
     height: 400px;
 }
 #fitness {
-    background-image: url(./assets/bg/group-of-runners.jpg);
-	background-size: cover;
-    background-position: bottom;
+    /* background-image: url(./assets/bg/testimonialbg_2.png); */
+	/* background-size: cover; */
+    /* background-position: bottom; */
 }
 .Fitness {
-	max-width: 1200px;
     width: 100%;
+    background-color: #002d62;
 	height: auto;
-	background-size: cover;
 	display: block;
 	vertical-align: top;
-	margin: 0 auto;
-	padding: 100px 5px;
+	margin: 0px auto;
+	/* padding: 100px 5px; */
 	text-align: center;
 	color: #002d62;
 }
@@ -131,12 +140,12 @@ html {
 }
 .Fitness .column {
     display: inline-block;
-    width: 42%;
-    margin: 50px 15px;
+    width: 400px;
+    margin: 50px 0px;
+    height: 350px;
     vertical-align: top;
-    padding: 0px 10px;
     background-color: white;
-    padding: 20px;
+    padding: 0px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
@@ -214,24 +223,28 @@ html {
 	text-align: left;
 }
 .Schedule {
-    max-width: 1200px;
-    margin: 50px auto;
+    background-image: url(./assets/bg/group-of-runners.jpg);
+	background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    padding: 50px 0px 100px 0px;
+    margin: 0px auto;
 }
 .dailySchedule {
     color: #002d62;
+    background-color: #ffffff;
     display: inline-block;
-    width: 45%;
+    width: 550px;
     margin: 10px 2%;
     vertical-align: top;
-    border-top: solid 1px #fdb827;
     padding-top: 30px;
-    border: 1px solid #e6e6e6;
-    border-bottom-width: 4px;
+    border: 3px solid #e6e6e6;
+    border-bottom-width: 6px;
     transition: border 1s ease-out 100ms;
 }
 .dailySchedule:hover {
-    border: 1px solid #fdb827;
-    border-bottom-width: 4px;
+    border: 3px solid #fdb827;
+    border-bottom-width: 6px;
     transition: border 1s ease-out 100ms;
 }
 .dailySchedule .border {
@@ -277,7 +290,7 @@ img.scheduleTitle {
     padding: 30px 0px;
 }
 #massage {
-    background-image: url(./assets/bg/massagebg-2.jpg);
+    background-image: url(./assets/bg/massagebg-1.png);
 	background-size: cover;
     background-position: bottom;
     padding: 80px 0px;
@@ -290,7 +303,7 @@ img.scheduleTitle {
     width: 600px;
 }
 .Massage {
-    color: #002d62;
+    color: #ffffff;
 }
 .Massage h2 {
     color: #4b90cd;
@@ -299,6 +312,7 @@ img.scheduleTitle {
     vertical-align: top;
     display: inline-block;
     width: 40%;
+    padding: 10px;
     text-align: left;
 }
 .testimonial-slider {
@@ -336,19 +350,18 @@ p.author {
   font-weight: bold;
   color: #fdb827;
 }
-
+#contact {
+    background-image: url(./assets/bg/testimonialbg_2.png);
+    background-size: cover;
+    background-position: center;
+}
 .Contact {
-    display: flex;
-    justify-content: center;
     align-items: center;
     padding: 50px;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
 }
 
 .ContactContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
     max-width: 1200px;
     width: 100%;
 }
@@ -361,20 +374,20 @@ p.author {
 }
 
 h2 {
-    color: #333;
+    color: #4b90cd;
     margin-bottom: 15px;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    color: #666;
+    color: #fdb827;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -404,29 +417,14 @@ button:hover {
 
 .SocialLinks a:hover {
     text-decoration: underline;
-}
-
-.ImageWithText {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.ImageWithText img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.ImageWithText h3 {
-    margin-top: 8px;
-}
-
-.ImageWithText p {
-    color: #666;
-    font-size: 14px;
+    color: red;
 }
 .SocialLinks .social-icons {
-    width: 75px;
+    width: 50px;
+}
+.SocialLinks .social-icons:hover {
+    border-radius: 30px;
+    transition: border 0.3s ease;
 }
 
 
@@ -493,6 +491,10 @@ button:hover {
     .Fitness .column {
         width: 85%;
         margin: 25px 0px;
+    }
+    .Massage .column {
+        width: 70%;
+        padding: 10px;
     }
 }
 
