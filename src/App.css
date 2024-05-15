@@ -231,6 +231,10 @@ html {
 	padding-left: 15px;
 	font-size:20px;
 }
+h2.signUp {
+    text-align: right;
+    text-transform: uppercase;
+}
 span.individualButton {
     margin:0px;
     text-transform: uppercase;
@@ -336,7 +340,7 @@ img.imageTitle {
 	max-width: 400px;
 	position: relative;
 }
-.img.photoCollage {
+img.photoCollage {
     max-width: 1200px;
 }
 img.qrCode {
@@ -602,7 +606,7 @@ button:hover {
         border-bottom: 1px solid #ffffff;
         padding-bottom: 10px;
     }
-    .img.photoCollage {
+    img.photoCollage {
         max-width: 100%;
     }
     h2.signUp {
