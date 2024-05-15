@@ -10,7 +10,6 @@ html {
 }
 .App-logo-nav {
   height: 140px;
-  pointer-events: none;
 }
 
 .App a {
@@ -30,9 +29,6 @@ html {
     margin-top: 130px;
 	height: auto;
 	padding: 40px 0px;
-	/* background-image: url(./assets/bg/slider2-bg.jpg);
-	background-size: cover;
-	background-position: top; */
 }
 .BackgroundVideo {
     position: absolute;
@@ -442,9 +438,6 @@ img.scheduleTitle {
     text-align: left;
 }
 .testimonial-slider {
-  /* background-image: url(./assets/bg/testimonialbg_2.png);
-  background-size: cover;
-  background-position: center; */
   max-width: 100%;
   height: auto;
   background-color: #4b90cd;
@@ -476,15 +469,10 @@ p.author {
   font-weight: bold;
   color: #fdb827;
 }
-/* #contact {
-    background-image: url(./assets/bg/testimonialbg_2.png);
-    background-size: cover;
-    background-position: center;
-} */
+
 .Contact {
     align-items: center;
     padding: 20px 0px;    
-    /* background-color: #f8f9fa; */
 }
 
 .ContactContainer {
@@ -565,8 +553,6 @@ button:hover {
     transition: border 0.3s ease;
     /* border: solid 1px #fdb827; */
 }
-
-
 
 
 /* ======================================

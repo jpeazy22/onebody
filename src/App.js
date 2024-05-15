@@ -112,9 +112,8 @@ const Navbar = () => {
                     </a>
                     <ul>
                         <li><a href="#home" onClick={() => handleScroll('home')}>Home</a></li>
-                        {/*<li><a href="#about" onClick={() => handleScroll('about')}>About</a></li>*/}
                         <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
-                        {/* <li><a href="#schedule" onClick={() => handleScroll('schedule')}>Workout Schedule</a></li> */}
+                        <li><a href="#Calendar" onClick={() => handleScroll('Calendar')}>Schedule</a></li>
                         <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
                         <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
                         <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
@@ -147,7 +146,7 @@ const Home = () => {
                 </section>
                 <section className="Services">
                     <div className="ServiceList">
-                        <a href="#about" onClick={() => handleScroll('about')}>
+                        <a href="#fitness" onClick={() => handleScroll('fitness')}>
                             <div className="Icon">
                                 <img src={icon1} className="icons" alt="icon" />
                             </div>
@@ -157,7 +156,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div className="ServiceList">
-                        <a href="#fitness" onClick={() => handleScroll('fitness')}>
+                        <a href="#personalTraining" onClick={() => handleScroll('personalTraining')}>
                             <div className="Icon">
                                 <img src={icon2} className="icons" alt="icon" />
                             </div>
@@ -177,7 +176,7 @@ const Home = () => {
                         </a>
                     </div>
                     <div className="ServiceList">
-                        <a href="#about" onClick={() => handleScroll('about')}>
+                        <a href="#Calendar" onClick={() => handleScroll('Calendar')}>
                             <div className="Icon">
                                 <img src={icon4} className="icons" alt="icon" />
                             </div>
@@ -292,7 +291,7 @@ const Fitness = () => {
                             </span>
                         </h4>
                     </section>
-                    <section className="InfoBlock">
+                    <section id="personalTraining" className="InfoBlock">
                         <img src={fit3} className="fitnessRateImage" alt="" />
                         <h2>1 ON 1 PERSONAL TRAINING</h2>
                         <ol>
