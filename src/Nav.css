@@ -67,7 +67,7 @@ nav {
   background-color: #002d62;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     nav {
     	height: 130px;
     }

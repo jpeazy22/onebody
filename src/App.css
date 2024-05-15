@@ -227,12 +227,15 @@ html {
 	padding-left: 15px;
 	font-size:20px;
 }
-h2.signUp {
+.signUp {
+    max-width: 100%;
     text-align: right;
+    padding: 10px;
     text-transform: uppercase;
+    font-size: 14px;
 }
 span.individualButton {
-    margin:0px;
+    margin:0px 0px 0px 5px;
     text-transform: uppercase;
 }
 .InfoBlock h4 span, .individualButton {
@@ -589,15 +592,11 @@ button:hover {
         width: 43%;
     }
     .Home .ServiceList:last-child {
-        border-bottom: 1px solid #ffffff;
+        border-bottom: none;
         padding-bottom: 10px;
     }
     img.photoCollage {
         max-width: 100%;
-    }
-    h2.signUp {
-        text-align: right;
-        text-transform: uppercase;
     }
     .features-table {
         width: 90%;
@@ -671,6 +670,18 @@ button:hover {
         padding: 20px 0px;
         margin: 0 auto;
     }
+    .signUp {
+        padding: 10px;
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+    .signUp h2 {
+        padding-top: 5px;
+    }
+    span.individualButton {
+        margin: -5px 20px 0px 5px;
+        text-transform: uppercase;
+    }
     .header, .days {
         font-size: smaller;
     }
@@ -693,6 +704,8 @@ button:hover {
 @media screen and (max-width: 576px) {
     .day {
         display: block;
+        text-align: center;
+        width: 100%;
     }
     .times {
         display: inline-block;

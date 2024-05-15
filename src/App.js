@@ -17,7 +17,7 @@ import rateText from './assets/headerText/fitnessRatesBlue.png';
 import scheduleText from './assets/headerText/scheduleTextBlue.png';
 import massageText from './assets/headerText/massageText.png';
 import taglineWhite from './assets/oneBody_tagline.png';
-import taglineBlue from './assets/taglineBlue.png';
+import taglineBlue from './assets/taglineWhite.png';
 
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
@@ -51,9 +51,7 @@ function App() {
         <div className="App">
         <Navbar />
         <div id="home"><Home /></div>
-        {/*<div id="about"><About /></div>*/}
         <div id="fitness"><Fitness /></div>
-        {/*<div id="schedule"><Schedule /></div>*/}
         <div id="Calendar"><Calendar /></div>
         <div id="testimonials"><Test /></div>
         <div id="massage"><Massage /></div>
@@ -139,7 +137,7 @@ const Home = () => {
             </video>
             <div className="Container">
                 <section>
-                    <img src={whiteLogo} className="App-logo" alt="logo" />
+                    <img src={logo} className="App-logo" alt="logo" />
                 </section>
                 <section>
                     <img src={taglineBlue} className="Tagline" alt="tagline" />
@@ -252,11 +250,13 @@ const Fitness = () => {
                         </div>
                     ))}
                 </div>
-                <h2 className="signUp">Sign up now and start your free trial - 
-                    <span className="individualButton">
-                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Sign Up!</a>
-                    </span>
-                </h2>
+                <div className="signUp">
+                    <h2>Sign up now and start your free trial - 
+                        <span className="individualButton">
+                        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Sign Up!</a>
+                        </span>
+                    </h2>
+                </div>
         </div>
                     {/*<section className="InfoBlock">
                         <img src={fit1} className="fitnessRateImage" alt="" />
