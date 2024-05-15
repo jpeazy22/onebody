@@ -109,11 +109,6 @@ html {
     background-color: #fdb827;
     height: 400px;
 }
-#fitness {
-    /* background-image: url(./assets/bg/testimonialbg_2.png); */
-	/* background-size: cover; */
-    /* background-position: bottom; */
-}
 .Fitness {
     width: 100%;
     background-color: #002d62;
@@ -154,17 +149,61 @@ html {
 }
 
 .Rates {
-	
     padding-top: 70px;
 }
 .Rates .Container {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+/* ======================= */
+.features-table {
+    display: table;
+    width: 100%;
+    margin-top: 50px;
+    padding: 0px 10px;
+    border-collapse: collapse;
+}
+
+.header-row, .feature-row {
+    display: table-row;
+}
+
+.feature-header, .option-header, .feature-name, .feature-option {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.feature-header {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.option-header {
+    background-color: #4b90cd;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.feature-name {
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.feature-option {
+    text-align: center;
+}
+
+/* ============================= */
+
+
 .Rates .InfoBlock {
     background-color: #ffffff;
 	display: inline-block;
-	width: 30%;
+	width: 47%;
 	margin: 50px 5px;
 	height: 550px;
     vertical-align: top;
@@ -226,6 +265,7 @@ html {
 	list-style-type: none;
 	text-align: left;
 }
+/* ================================ */
 .Schedule {
     background-image: url(./assets/bg/group-of-runners.jpg);
 	background-size: cover;
@@ -234,14 +274,20 @@ html {
     padding: 50px 0px 100px 0px;
     margin: 0px auto;
 }
+.Schedule section {
+    display: inline-block;
+    vertical-align: top;
+}
+.Schedule img {
+    display: block;
+    margin: 0 auto;
+}
 .dailySchedule {
     color: #002d62;
     background-color: #ffffff;
     display: inline-block;
     width: 550px;
-    margin: 10px 2%;
     vertical-align: top;
-    padding-top: 30px;
     border: 3px solid #e6e6e6;
     border-bottom-width: 6px;
     transition: border 1s ease-out 100ms;
@@ -266,9 +312,9 @@ html {
 }
 .day {
     display: inline-block;
-    text-align: right;
+    text-align: left;
     padding-right: 10px;
-    width: 130px;
+    width: 110px;
 }
 .times {
   display: inline-block;
@@ -293,6 +339,72 @@ img.scheduleTitle {
 	max-width: 600px;
     padding: 30px 0px;
 }
+/* ===================================== */
+.calendar {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+.calendar .calendar-header h3 {
+    color: #002d62;
+}
+
+.header, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-header, .daytime {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.day-header {
+    background-color: #f0f0f0;
+}
+
+.empty {
+    background-color: #eaeaea;
+}
+
+.activity {
+    margin-top: 5px;
+    padding: 3px;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.key {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.key-item {
+    margin-right: 10px;
+    align-items: center;
+    width: 33%;
+}
+.address span {
+    display: inline-block;
+    width: 33%;
+    
+}
+
+.key-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+/* ====================================== */
 #massage {
     background-image: url(./assets/bg/massagebg-1.png);
 	background-size: cover;
@@ -471,6 +583,11 @@ button:hover {
         border-bottom: 1px solid #ffffff;
         padding-bottom: 10px;
     }
+    .features-table {
+        width: 90%;
+        margin: 0 auto;
+        border-collapse: collapse;
+    }
 }
 @media screen and (max-width: 992px) {
 	.Home section {
@@ -522,6 +639,12 @@ button:hover {
     }
     img.scheduleTitle {
     	width: 90%;
+    }
+    .calendar {
+        max-width: 95%;
+        width: 95%;
+        padding: 30px 0px;
+        margin: 0 auto;
     }
 }
 @media screen and (max-width: 576px) {

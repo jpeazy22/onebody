@@ -52,7 +52,8 @@ function App() {
         <div id="home"><Home /></div>
         {/*<div id="about"><About /></div>*/}
         <div id="fitness"><Fitness /></div>
-        <div id="schedule"><Schedule /></div>
+        {/*<div id="schedule"><Schedule /></div>*/}
+        <div id="Calendar"><Calendar /></div>
         <div id="testimonials"><Test /></div>
         <div id="massage"><Massage /></div>
         <div id="contact"><Contact /></div>
@@ -132,10 +133,10 @@ const Home = () => {
     };
     return (
         <div className="Home">
-            {/*<video autoPlay muted loop className="BackgroundVideo">
+            <video autoPlay muted loop className="BackgroundVideo">
                 <source src={skyVideo} type="video/mp4" />
                 Your browser does not support the video tag.
-            </video>*/}
+            </video>
             <div className="Container">
                 <section>
                     <img src={whiteLogo} className="App-logo" alt="logo" />
@@ -190,17 +191,27 @@ const Home = () => {
     )
 }
 
-{/* const About = () => {
-    return (
-        <div className="About">
-        <section>
-        <h2>What to Expect</h2>
-        </section>
-        </div>
-        
-    )
-} */}
 const Fitness = () => {
+    
+    const features = [
+        "6 days/week program",
+        "Multiple class times available",
+        "Lead by Professional Trainer",
+        "All Community Socials",
+        "Unlimited check ins per month",
+        "8 check ins per month",
+        "4 check ins per month",
+        "Yoga",
+        "Run Club"
+    ];
+
+    // Assuming all options include all features
+    const options = {
+        option1: [true, true, true, true, true, true, true, true, true],
+        option2: [false, true, true, true, false, true, false, false, false],
+        option3: [false, true, true, true, false, false, true, false, false]
+    };
+    
     return (
         <div className="FitnessContainer">
             <section className="Fitness">
@@ -223,11 +234,29 @@ const Fitness = () => {
                     <section>
                         <img src={titleText} className="imageTitle" alt="rateText" />
                     </section>
-                    <section className="InfoBlock">
+                    <div className="membership-grid">
+                    <div className="features-table">
+                    <div className="header-row">
+                        <div className="feature-header"></div> {/* Empty top-left cell */}
+                        <div className="option-header">Unlimited $89/mo</div>
+                        <div className="option-header">Mid-Tier $79/mo</div>
+                        <div className="option-header">Starter Pack $59/mo</div>
+                    </div>
+                    {features.map((feature, index) => (
+                        <div key={feature} className="feature-row">
+                            <div className="feature-name">{feature}</div>
+                            <div className="feature-option">{options.option1[index] ? "✔️" : ""}</div>
+                            <div className="feature-option">{options.option2[index] ? "✔️" : ""}</div>
+                            <div className="feature-option">{options.option3[index] ? "✔️" : ""}</div>
+                        </div>
+                    ))}
+                </div>
+        </div>
+                    {/*<section className="InfoBlock">
                         <img src={fit1} className="fitnessRateImage" alt="" />
                         <h2>MONTHLY MEMBER</h2>
                         <ol>
-                            <li>4 days/week program</li>
+                            <li>6 days/week program</li>
                             <li>Multiple class times available</li>
                             <li>Custom workout for home or gym</li>
                             <li>Lead by Professional Trainer</li>
@@ -239,10 +268,7 @@ const Fitness = () => {
                                 <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
                             </span>
                         </h4>
-                {/* <li>⁃	$69/ mo- spouse discount </li>
-                    <li>⁃	$59/ mo- senior discount (65+ years old)</li>
-                    <li>⁃	$49/ mo- child discount (14-19 years old)</li> */}
-                    </section>
+                    </section>*/}
                     <section className="InfoBlock">
                         <img src={fit2} className="fitnessRateImage" alt="" />
                         <h2>NEXT LEVEL TRAINING</h2>
@@ -258,12 +284,6 @@ const Fitness = () => {
                                 <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">More Info</a>
                             </span>
                         </h4>
-                    {/*<h2>Punch Pass</h2>
-                        <ul>
-                        <li>⁃	5 sessions/ $20= $100- exp 2 mo</li>
-                        <li>⁃	10 sessions/ $15= $150- exp 4 mo</li>
-                        <li>⁃	20 sessions/ $10= $200- exp 8 mo</li>
-                        </ul>*/}
                     </section>
                     <section className="InfoBlock">
                         <img src={fit3} className="fitnessRateImage" alt="" />
@@ -276,7 +296,6 @@ const Fitness = () => {
                             <li>$40/hr - pack of 16= $640</li>
                             <li>$40/hr - intro session </li>
                             <li>$40/hr - Monthly Members</li>
-                            <li>$30 - Individual Workout Plan</li>
                         </ol>
                         <h4><b>Varies/</b>session
                             <span>
@@ -284,164 +303,270 @@ const Fitness = () => {
                             </span>
                         </h4>
                     </section>
-                        {/* <section className="InfoBlock">
-                        <img src={fit3} className="fitnessRateImage" alt="" />
-                        <h2>INDIVIDUAL WORKOUT PLAN</h2>
-                        <ol>
-                        <li>3 Day personalized written workout plan</li>
-                        <li>This is for guidance and something simple you can do on your own.</li>
-                        </ol>
-                        <h4><b>$30/plan</b>
-                        <span>
-                        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Get Started</a>
-                        </span>
-                        </h4>
-                        </section> */}
                 </div>
             </div>
         </div>
         )
     }
-        const Schedule = () => {
-            return (
-                <div className="Schedule">
-                    <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
-                    <section>
-                        <div className="dailySchedule">
-                            <h3>PETER PAN PARK / WESTMINSTER CENTER PARK</h3>
-                            <p className="border">4801 W. 92nd Ave.<br/>
-                            Westminster, CO 80031</p>
-                            <p>
-                                <span className="day">Monday -</span>
-                                <span className="times">5am</span> 
-                                <span className="times">6:30am</span> 
-                                <span className="times">9am</span> 
-                                <span className="times">6pm</span>
-                            </p>
-                            <p>
-                                <span className="day">Tuesday -</span>
-                                <span className="times">5am</span> 
-                                <span className="times">6:30am</span> 
-                                <span className="times">9am</span> 
-                                <span className="times">6pm</span>
-                            </p>
-                            <p>
-                                <span className="day">Wednesday -</span>
-                                <span className="times">5:15am</span>
-                                <span className="times"></span>
-                                <span className="times"></span>
-                                <span className="times">6pm</span>
-                            </p>
-                            <p>
-                                <span className="day">Thursday -</span>
-                                <span className="times">5am</span> 
-                                <span className="times">6:30am</span> 
-                                <span className="times">9am</span> 
-                                <span className="times">6pm</span>
-                            </p>
-                            <p className="border">
-                                <span className="day">Friday -</span>
-                                <span className="times">5:15am</span> 
-                                <span className="times">6:30am</span>
-                                <span className="times">9am</span>
-                                <span className="times"></span>
-                            </p>
-                            <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.537072759645!2d-105.05196448429264!3d39.86392097943769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b89c439559c29%3A0x41f6c336186e8a3b!2sWestminster%20Center%20Park!5e0!3m2!1sen!2sus!4v1714089580274" 
-                            width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
-                            </iframe>
+    {/*const Schedule = () => {
+        return (
+            <div className="Schedule">
+                <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
+                <section>
+                    <div className="dailySchedule">
+                        <h3>PETER PAN PARK / McFall Park Amphitheater</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7">4801 W. 92nd Ave.<br/>
+                        Westminster, CO 80031</a>
+                        </p>
+                        <p>
+                            <span className="day">Monday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Tuesday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Wednesday -</span>
+                            <span className="times">5am</span>
+                            <span className="times"></span>
+                            <span className="times"></span>
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Thursday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                                        <p className="border">
+                            <span className="day">Friday -</span>
+                            <span className="times"></span> 
+                            <span className="times">6:30am</span>
+                            <span className="times">9am</span>
+                            <span className="times"></span>
+                        </p>            
+                        <h3>WESTMINSTER CITY PARK</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/yM92ZppaXvTxZd2P9">10455 Sheridan Blvd.<br/>
+                        Westminster, CO 80020</a>
+                        </p>
+                        <p className="border">
+                            <span className="day">Saturday -</span>
+                            <span className="times"></span> 
+                            <span className="times"></span> 
+                            <span className="times">9am</span> 
+                            <span className="times"></span>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        )
+    }*/}
+    const activities = {
+        "1": [{ activity: "8:30am - Manitou Incline", location: "Social" }],
+        "2": [{ activity: "6:00pm", location: "Run Club" }],
+        "7": [{ activity: "6:00pm", location: "Yoga" }],
+        "9": [{ activity: "7:00am", location: "Run Club" }],
+        "14": [{ activity: "9:00am", location: "Yoga" }],
+        "16": [{ activity: "7:00am", location: "Run Club" }],
+        "21": [{ activity: "6:00pm", location: "Yoga" }],
+        "23": [{ activity: "6:00pm", location: "Run Club" }],
+        "28": [{ activity: "8:30am", location: "Yoga" }],
+        "30": [{ activity: "7:00am", location: "Run Club" }],
+            // Add other activities as needed
+    };
+
+    const locations = {
+        "Run Club": "#fdb827",
+        "Yoga": "#4b90cd",
+        "Social": "#002d62"
+    };
+
+    const Calendar = () => {
+        const days = Array.from({ length: 30 }, (_, i) => i + 1);
+        const emptyDays = Array.from({ length: 6 }).fill(null); // June starts on a Wednesday in 2024
+
+        return (
+            <div className="Schedule">
+                <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
+                <section>
+                    <div className="dailySchedule">
+                        <h2>Weekly Workout Schedule</h2> 
+                        <h3>PETER PAN PARK / McFall Park Amphitheater</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7">4801 W. 92nd Ave.<br/>
+                        Westminster, CO 80031</a>
+                        </p>
+                        <p>
+                            <span className="day">Monday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Tuesday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Wednesday -</span>
+                            <span className="times">5am</span>
+                            <span className="times"></span>
+                            <span className="times"></span>
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Thursday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p className="border">
+                            <span className="day">Friday -</span>
+                            <span className="times"></span> 
+                            <span className="times">6:30am</span>
+                            <span className="times">9am</span>
+                            <span className="times"></span>
+                        </p>            
+                        <h3>WESTMINSTER CITY PARK</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/yM92ZppaXvTxZd2P9">10455 Sheridan Blvd.<br/>
+                        Westminster, CO 80020</a>
+                        </p>
+                        <p className="border">
+                            <span className="day">Saturday -</span>
+                            <span className="times"></span> 
+                            <span className="times"></span> 
+                            <span className="times">9am</span> 
+                            <span className="times"></span>
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <div className="calendar">
+                        <header className="calendar-header">
+                            <h2>June 2024 - Run Club, Yoga & Social Events</h2> 
+                            <h3>*Social Events Open to All!</h3>
+                            <h3>*Run Club & Yoga Included w/ Unlimited Memebership</h3>
+                        </header>
+                        <div className="header">
+                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                                <div key={day} className="day-header">{day}</div>
+                            ))}
                         </div>
-                        <div className="dailySchedule">
-                            <h3>WESTMINSTER CITY PARK</h3>
-                            <p className="border">10455 Sheridan Blvd.<br/>
-                            Westminster, CO 80020</p>
-                            <p className="border">
-                                <span className="day">Saturday -</span>
-                                <span className="times"></span> 
-                                <span className="times"></span> 
-                                <span className="times">9am</span> 
-                                <span className="times"></span>
-                            </p>
-                            <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.3832043644225!2d-105.0589299!3d39.8880519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b898a5b759f83%3A0xb614968b3ea1dfa6!2sWestminster%20City%20Park!5e0!3m2!1sen!2sus!4v1714090185591!5m2!1sen!2sus" 
-                            width="400" height="300" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <div className="days">
+                            {emptyDays.map((_, index) => (
+                                <div key={`empty-${index}`} className="daytime empty"></div>
+                            ))}
+                            {days.map(day => (
+                                <div key={day} className="daytime">
+                                    {day}
+                                    {activities[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: locations[event.location] }}>
+                                            {event.activity}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
                         </div>
-                    </section>
-                </div>
+                        <div className="key">
+                            {Object.entries(locations).map(([location, color]) => (
+                                <div key={location} className="key-item">
+                                    <span className="key-color" style={{ backgroundColor: color }}></span> {location}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="address">
+                            <span><a href="https://maps.app.goo.gl/uLkYNDwPKQdzhB6s9" target="_blank">9737 Wadsworth Pkwy <br />Westminster, CO 80021</a></span>
+                            <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
+                            <span><a href="https://maps.app.goo.gl/etWndSAs7gRAB7zH8" target="_blank">Manitou Springs, <br />Colorado 80829</a></span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        );
+    };
+        
+    const Massage = () => {
+        return (
+            <div className="Massage">
+                <section className="MassageHeader">
+                    <img src={massageText} alt="massageText" />
+                </section>
+                <section className="column">
+                    <h2>Your Expert in Personalized Therapeutic Massage</h2>
+                    <p>
+                        At One Body, Gabriel provides tailored massage therapies including:
+                    </p>
+                    <ul>
+                        <li>Sports Massage</li>
+                        <li>Structural Integration</li>
+                        <li>Swedish</li>
+                        <li>Trigger Point Therapy</li>
+                    </ul>
+                    <p>
+                        Ideal for Colorado’s active lifestyle, these sessions enhance performance, aid in injury prevention, and relieve stress.<br /> Experience professional care that makes a difference!
+                    </p>
+                    <h2>Location</h2>
+                    <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="300" height="200" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+                <section className="column">
+                    <h2>Massage Rates</h2>
+                    <ul>
+                        <li>⁃	$80/ hour </li>
+                        <li>⁃	$95/ 75 min </li>
+                        <li>⁃	$110/ 90 min </li>
+                        <li>⁃	$140/ 2 hour </li>
+                    </ul>
+                    <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
+                    <h2>Contact us to book your appointment and explore our exclusive offers!</h2>
+                    <form className="ContactForm">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label htmlFor="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Send</button>
+                    </form>
+                </section>
+            </div>
         )
     }
-        const Massage = () => {
-            return (
-                <div className="Massage">
-                    <section className="MassageHeader">
-                        <img src={massageText} alt="massageText" />
-                    </section>
-                    <section className="column">
-                        <h2>Your Expert in Personalized Therapeutic Massage</h2>
-                        <p>
-                            At One Body, Gabriel provides tailored massage therapies including:
-                        </p>
-                        <ul>
-                            <li>Sports Massage</li>
-                            <li>Structural Integration</li>
-                            <li>Swedish</li>
-                            <li>Trigger Point Therapy</li>
-                        </ul>
-                        <p>
-                            Ideal for Colorado’s active lifestyle, these sessions enhance performance, aid in injury prevention, and relieve stress.<br /> Experience professional care that makes a difference!
-                        </p>
-                        <h2>Location</h2>
-                        <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="300" height="200" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-                    </section>
-                    <section className="column">
-                        <h2>Massage Rates</h2>
-                        <ul>
-                            <li>⁃	$80/ hour </li>
-                            <li>⁃	$95/ 75 min </li>
-                            <li>⁃	$110/ 90 min </li>
-                            <li>⁃	$140/ 2 hour </li>
-                        </ul>
-                        <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
-                        <h2>Contact us to book your appointment and explore our exclusive offers!</h2>
-                        <form className="ContactForm">
-                            <label htmlFor="name">Name:</label>
-                            <input type="text" id="name" name="name" required />
-
-                            <label htmlFor="email">Email:</label>
-                            <input type="email" id="email" name="email" required />
-
-                            <label htmlFor="message">Message:</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-
-                            <button type="submit">Send</button>
-                        </form>
-                    </section>
-                </div>
-            )
-        }
         
-        
-        const testimonials = [
-          { 
-              id: 1, 
-              text: "Gabe has been my Trainor since 2020 and has kept me on track and accountable in my fitness journey for 4 years. I started off with CG Games Individual in 2022 reaching the semi-finals to finally winning the CG Games Teams Division 50 + last year. I'm 60 this year and feel like I'm in the best shape I have ever been. It is because of the socials, fun workout games and the community aspect that I continue with Gabe as my trainor.", 
-              author: "Carolyn M.", 
-              image: carolyn
-          },
-          { 
-              id: 2, 
-              text: "I can't speak highly enough of my experience with Gabriel. I joined his outdoor bootcamp classes over a year ago, as I was approaching the big 5-0, after nearly two decades without regular exercise. Since then, I've been attending his classes 4-5 times a week, and I can honestly say I look forward to them each time. When you join One Body, you join a community of people of different ages and physical abilities that support each other. His approach is motivating and empowering, pushing me beyond what I thought possible while ensuring proper technique and safety. Thanks to his guidance, I've not only regained my fitness, but surpassed my own expectations. I feel stronger, healthier, and more energized than ever before. If you're looking for a trainer who will challenge and inspire you to reach your goals, look no further than Gabriel. I couldn't recommend him highly enough.", 
-              author: "Cecile F.", 
-              image: cecile
-          },
-          { 
-              id: 3, 
-              text: "Gabe has guided me to a level of athleticism that I would never have imagined, he’s been a real coach and friend.  He pushed me when I needed it but also compassionate when I needed it.  Thank you for all you do Gabe!", 
-              author: "Lawrence G.",
-              image: lawrence
-           }
-        ];
+    const testimonials = [
+      { 
+          id: 1, 
+          text: "Gabe has been my Trainor since 2020 and has kept me on track and accountable in my fitness journey for 4 years. I started off with CG Games Individual in 2022 reaching the semi-finals to finally winning the CG Games Teams Division 50 + last year. I'm 60 this year and feel like I'm in the best shape I have ever been. It is because of the socials, fun workout games and the community aspect that I continue with Gabe as my trainor.", 
+          author: "Carolyn M.", 
+          image: carolyn
+      },
+      { 
+          id: 2, 
+          text: "I can't speak highly enough of my experience with Gabriel. I joined his outdoor bootcamp classes over a year ago, as I was approaching the big 5-0, after nearly two decades without regular exercise. Since then, I've been attending his classes 4-5 times a week, and I can honestly say I look forward to them each time. When you join One Body, you join a community of people of different ages and physical abilities that support each other. His approach is motivating and empowering, pushing me beyond what I thought possible while ensuring proper technique and safety. Thanks to his guidance, I've not only regained my fitness, but surpassed my own expectations. I feel stronger, healthier, and more energized than ever before. If you're looking for a trainer who will challenge and inspire you to reach your goals, look no further than Gabriel. I couldn't recommend him highly enough.", 
+          author: "Cecile F.", 
+          image: cecile
+      },
+      { 
+          id: 3, 
+          text: "Gabe has guided me to a level of athleticism that I would never have imagined, he’s been a real coach and friend.  He pushed me when I needed it but also compassionate when I needed it.  Thank you for all you do Gabe!", 
+          author: "Lawrence G.",
+          image: lawrence
+       }
+    ];
 
 const Test = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
