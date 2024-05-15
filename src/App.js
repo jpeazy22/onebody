@@ -26,6 +26,7 @@ import fit3 from './assets/personalTraining.png';
 import box1 from './assets/1.png';
 import box2 from './assets/2.png';
 import box3 from './assets/3.png';
+import photos from './assets/bg/testimonialbg.png';
 
 
 // Icon Image Imports
@@ -222,7 +223,7 @@ const Fitness = () => {
                     <img src={box1} className="box" alt="titleText" />
                 </section>
                 <section className="column">
-                    <img src={box2} className="box" alt="titleText" />
+                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank"><img src={box2} className="box" alt="titleText" /></a>
                 </section>
                 <section className="column">
                     <img src={box3} className="box" alt="titleText" />
@@ -233,6 +234,7 @@ const Fitness = () => {
                 <div className="Container">
                     <section>
                         <img src={titleText} className="imageTitle" alt="rateText" />
+                        <img src={photos} className="photoCollage" alt="" />
                     </section>
                     <div className="membership-grid">
                     <div className="features-table">
@@ -251,6 +253,11 @@ const Fitness = () => {
                         </div>
                     ))}
                 </div>
+                <h2 className="signUp">Sign up now and start your free trial - 
+                    <span className="individualButton">
+                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Sign Up!</a>
+                    </span>
+                </h2>
         </div>
                     {/*<section className="InfoBlock">
                         <img src={fit1} className="fitnessRateImage" alt="" />
@@ -593,12 +600,20 @@ const Contact = () => {
     return (
         <div className="Contact">
             <div className="ContactContainer">
-                <div className="LeftColumn">
-                    <h2><span>Contact Me
-                        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer"> HERE</a>!
-                    </span></h2>
-                    <h2>Follow for updates!</h2>
+                <div className="column">
+                    <img src={logo} className="App-logo-footer" alt="logo" />
+                </div>
+                <div className="column">
+                    <h2><span>Curious? Try it out for free.</span></h2>
+                    <p>Scan or Click QR Code to get started</p>
+                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">
+                        <img src={qrCode} alt="qrCode" className="qrCode" />
+                    </a>
+                </div>
+                <div className="column">
                     <div className="SocialLinks">
+                        <h2><span>Feeling Social?</span></h2>
+                        <p>Follow the action</p>
                         <a href="https://www.facebook.com/gabriel.gabaldon.1" target="_blank" rel="noreferrer">
                             <img src={facebook} alt="facebook" className="social-icons" />
                         </a>

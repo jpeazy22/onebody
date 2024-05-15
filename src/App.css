@@ -231,7 +231,11 @@ html {
 	padding-left: 15px;
 	font-size:20px;
 }
-.InfoBlock h4 span {
+span.individualButton {
+    margin:0px;
+    text-transform: uppercase;
+}
+.InfoBlock h4 span, .individualButton {
 	text-align: right;
 	background-color: #fdb827;
 	float: right;
@@ -240,12 +244,13 @@ html {
 	padding: 3px 10px;
     border-radius: 10px;
     font-size: 18px;
+    text-transform: uppercase;
 }
-.InfoBlock h4 span a {
+.InfoBlock h4 span a, .individualButton a {
 	color: #ffffff;
     transition: color 1s ease-out 100ms;
 }
-.InfoBlock h4 span a:hover {
+.InfoBlock h4 span a:hover, .individualButton a:hover {
 	color: #002d62;
     transition: color 1s ease-out 100ms;
 }
@@ -286,7 +291,7 @@ html {
     color: #002d62;
     background-color: #ffffff;
     display: inline-block;
-    width: 550px;
+    width: 500px;
     vertical-align: top;
     border: 3px solid #e6e6e6;
     border-bottom-width: 6px;
@@ -331,6 +336,9 @@ img.imageTitle {
 	max-width: 400px;
 	position: relative;
 }
+.img.photoCollage {
+    max-width: 1200px;
+}
 img.qrCode {
 	max-width: 200px;
 	position: relative;
@@ -341,8 +349,7 @@ img.scheduleTitle {
 }
 /* ===================================== */
 .calendar {
-    width: 100%;
-    max-width: 700px;
+    width: 600px;
     margin: 0 auto;
     border: 1px solid #ccc;
     background-color: #ffffff;
@@ -357,7 +364,6 @@ img.scheduleTitle {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
-
 .day-header, .daytime {
     padding: 10px;
     border: 1px solid #ddd;
@@ -466,27 +472,35 @@ p.author {
   font-weight: bold;
   color: #fdb827;
 }
-#contact {
+/* #contact {
     background-image: url(./assets/bg/testimonialbg_2.png);
     background-size: cover;
     background-position: center;
-}
+} */
 .Contact {
     align-items: center;
-    padding: 50px;
+    padding: 20px 0px;    
     /* background-color: #f8f9fa; */
 }
 
 .ContactContainer {
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
 }
-
-.LeftColumn, .RightColumn {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
+.ContactContainer .column {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+.App-logo-footer {
+    width: 300px;
+}
+.ContactContainer .column img.qrCode {
+    max-width: 100px;
+}
+.ContactContainer .column img.qrCode:hover {
+    border: solid 1px #fdb827;
 }
 
 h2 {
@@ -530,17 +544,22 @@ button:hover {
     color: #0056b3;
     text-decoration: none;
 }
-
 .SocialLinks a:hover {
     text-decoration: underline;
-    color: red;
+    color: #fdb827;
+}
+.SocialLinks p {
+    text-transform: uppercase;
+    color: #004085;
 }
 .SocialLinks .social-icons {
-    width: 50px;
+    padding: 10px;
+    width: 75px;
 }
 .SocialLinks .social-icons:hover {
-    border-radius: 30px;
+    border-radius: 60px;
     transition: border 0.3s ease;
+    /* border: solid 1px #fdb827; */
 }
 
 
@@ -583,10 +602,25 @@ button:hover {
         border-bottom: 1px solid #ffffff;
         padding-bottom: 10px;
     }
+    .img.photoCollage {
+        max-width: 100%;
+    }
+    h2.signUp {
+        text-align: right;
+        text-transform: uppercase;
+    }
     .features-table {
         width: 90%;
         margin: 0 auto;
         border-collapse: collapse;
+        font-size: smaller;
+    }
+    .dailySchedule {
+        width: 600px;
+        margin-bottom: 30px;
+    }
+    .calendar {
+        margin-left: 0px;
     }
 }
 @media screen and (max-width: 992px) {
@@ -599,11 +633,6 @@ button:hover {
         display: block;
         width: 70%;
         max-width: 450px;
-    }
-    .workoutLocations, .dailySchedule {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
     }
     .Fitness .column {
         width: 85%;
@@ -640,17 +669,38 @@ button:hover {
     img.scheduleTitle {
     	width: 90%;
     }
-    .calendar {
-        max-width: 95%;
+    .Schedule section {
+        display: block;
+    }
+    .dailySchedule {
         width: 95%;
-        padding: 30px 0px;
+        margin: 0px auto 30px auto;
+    }
+    .calendar {
+        width: 100%;
+        padding: 20px 0px;
+        margin: 0 auto;
+    }
+    .header, .days {
+        font-size: smaller;
+    }
+    .header, .address {
+        font-size: 9px;
+    }
+    .ContactContainer .column {
+        width: 90%;
+        display: block;
+        border-bottom: 1px solid #fdb827;
+        margin: 0 auto;
+    }
+    .ContactContainer .column:last-child {
+        width: 90%;
+        display: block;
+        border-bottom: none;
         margin: 0 auto;
     }
 }
 @media screen and (max-width: 576px) {
-    .workoutLocations {
-        height: auto;
-    }
     .day {
         display: block;
     }
