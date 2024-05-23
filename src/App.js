@@ -5,6 +5,10 @@ import { NavLink, BrowserRouter } from 'react-router-dom';
 // Style Imports
 import './App.css';
 import './Nav.css';
+import './Carousel.css';
+
+
+import MultiItemCarousel from './MultiItemCarousel.js';
 
 // Logo and QR Code Image Imports
 import logo from './assets/logo/obLogo.png';
@@ -12,12 +16,14 @@ import whiteLogo from './assets/logo/obLogo-white.png';
 import qrCode from './assets/ob-qrcode.png';
 
 // Header Text Image Imports
-import titleText from './assets/headerText/groupFitnesstextblue.png';
-import rateText from './assets/headerText/fitnessRatesBlue.png';
-import scheduleText from './assets/headerText/scheduleTextBlue.png';
+// import titleText from './assets/headerText/groupFitnesstextblue.png';
+import groupFitnessText from './assets/headerText/groupFitness1.png';
+import scheduleText from './assets/headerText/workout1.png';
 import massageText from './assets/headerText/massageText.png';
 import taglineWhite from './assets/oneBody_tagline.png';
-import taglineBlue from './assets/taglineWhite.png';
+import testimonial from './assets/headerText/testimonials1.png';
+// import taglineBlue from './assets/taglineWhite.png';
+
 
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
@@ -27,6 +33,7 @@ import box1 from './assets/1.png';
 import box2 from './assets/2.png';
 import box3 from './assets/3.png';
 import photos from './assets/bg/testimonialbg.png';
+import massage from './assets/bg/massagebg-1.png';
 
 
 // Icon Image Imports
@@ -49,16 +56,19 @@ import skyVideo from './assets/sky-background.mp4';
 function App() {
     return (
         <div className="App">
-        <Navbar />
-        <div id="home"><Home /></div>
-        <div id="fitness"><Fitness /></div>
-        <div id="Calendar"><Calendar /></div>
-        <div id="testimonials"><Test /></div>
-        <div id="massage"><Massage /></div>
-        <div id="contact"><Contact /></div>
+            <Navbar />
+            <div id="home"><Home /></div>
+            <div id="fitness"><Fitness /></div>
+            <div id="Calendar"><Calendar /></div>
+            <div id="testimonials"><Test /></div>
+            <div id="Carousel"><Carousel /></div>
+            <div id="massage"><Massage /></div>
+            <div id="contact"><Contact /></div>
+            
         </div>
     );
 }
+
 
 const Navbar = () => {
     const [showNavbar, setShowNavbar] = useState(false);
@@ -73,7 +83,7 @@ const Navbar = () => {
             const scrollToPosition = () => {
                 const rect = section.getBoundingClientRect();
                 const absoluteTop = rect.top + window.pageYOffset;
-                const offsetPosition = absoluteTop - 130;  // Offset for the fixed header
+                const offsetPosition = absoluteTop - 110;  // Offset for the fixed header
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -109,12 +119,11 @@ const Navbar = () => {
                         <img src={logo} className="App-logo-nav" alt="logo" />
                     </a>
                     <ul>
-                        <li><a href="#home" onClick={() => handleScroll('home')}>Home</a></li>
                         <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
                         <li><a href="#Calendar" onClick={() => handleScroll('Calendar')}>Schedule</a></li>
                         <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
                         <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
-                        <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
+                        <li><a href="#contact" onClick={() => handleScroll('contact')}>Connect</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,12 +132,28 @@ const Navbar = () => {
 };
 
 const Home = () => {
+    
     const handleScroll = (id) => {
         const section = document.getElementById(id);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            const scrollToPosition = () => {
+                const rect = section.getBoundingClientRect();
+                const absoluteTop = rect.top + window.pageYOffset;
+                const offsetPosition = absoluteTop - 110;  // Offset for the fixed header
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            };
+
+            // Ensure we are in sync with the browser's rendering
+            requestAnimationFrame(() => {
+                requestAnimationFrame(scrollToPosition);
+            });
         }
     };
+    
     return (
         <div className="Home">
             <video autoPlay muted loop className="BackgroundVideo">
@@ -140,7 +165,7 @@ const Home = () => {
                     <img src={logo} className="App-logo" alt="logo" />
                 </section>
                 <section>
-                    <img src={taglineBlue} className="Tagline" alt="tagline" />
+                    <img src={taglineWhite} className="Tagline" alt="tagline" />
                 </section>
                 <section className="Services">
                     <div className="ServiceList">
@@ -189,6 +214,7 @@ const Home = () => {
     )
 }
 
+
 const Fitness = () => {
     
     const features = [
@@ -211,11 +237,8 @@ const Fitness = () => {
     };
     
     return (
-        <div className="FitnessContainer">
+        <div className="FitnessContainer">        
             <section className="Fitness">
-                {/*<section className="Scan">
-                    <img src={titleText} className="imageTitle" alt="titleText" />
-                </section>*/}
                 <section className="column">
                     <img src={box1} className="box" alt="titleText" />
                 </section>
@@ -229,8 +252,8 @@ const Fitness = () => {
         
             <div className="Rates">
                 <div className="Container">
-                    <section>
-                        <img src={titleText} className="imageTitle" alt="rateText" />
+                <section>
+                    <img src={groupFitnessText} className="scheduleTitle" alt="sectionTitle" />
                         <img src={photos} className="photoCollage" alt="" />
                     </section>
                     <div className="membership-grid">
@@ -257,24 +280,8 @@ const Fitness = () => {
                         </span>
                     </h2>
                 </div>
-        </div>
-                    {/*<section className="InfoBlock">
-                        <img src={fit1} className="fitnessRateImage" alt="" />
-                        <h2>MONTHLY MEMBER</h2>
-                        <ol>
-                            <li>6 days/week program</li>
-                            <li>Multiple class times available</li>
-                            <li>Custom workout for home or gym</li>
-                            <li>Lead by Professional Trainer</li>
-                            <li>Drop-in for non-members: $25</li>
-                            <li>Punch pass options available</li>
-                        </ol>
-                        <h4><b>$89.00/</b>month
-                            <span>
-                                <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">Enroll Now</a>
-                            </span>
-                        </h4>
-                    </section>*/}
+            </div>
+            <div id="personalTraining" className="packages">
                     <section className="InfoBlock">
                         <img src={fit2} className="fitnessRateImage" alt="" />
                         <h2>NEXT LEVEL TRAINING</h2>
@@ -291,7 +298,7 @@ const Fitness = () => {
                             </span>
                         </h4>
                     </section>
-                    <section id="personalTraining" className="InfoBlock">
+                    <section className="InfoBlock">
                         <img src={fit3} className="fitnessRateImage" alt="" />
                         <h2>1 ON 1 PERSONAL TRAINING</h2>
                         <ol>
@@ -310,71 +317,12 @@ const Fitness = () => {
                         </h4>
                     </section>
                 </div>
+                </div>
             </div>
         </div>
         )
     }
-    {/*const Schedule = () => {
-        return (
-            <div className="Schedule">
-                <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
-                <section>
-                    <div className="dailySchedule">
-                        <h3>PETER PAN PARK / McFall Park Amphitheater</h3>
-                        <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7">4801 W. 92nd Ave.<br/>
-                        Westminster, CO 80031</a>
-                        </p>
-                        <p>
-                            <span className="day">Monday -</span>
-                            <span className="times">5am</span> 
-                            <span className="times">6:30am</span> 
-                            <span className="times">9am</span> 
-                            <span className="times">6pm</span>
-                        </p>
-                        <p>
-                            <span className="day">Tuesday -</span>
-                            <span className="times">5am</span> 
-                            <span className="times">6:30am</span> 
-                            <span className="times">9am</span> 
-                            <span className="times">6pm</span>
-                        </p>
-                        <p>
-                            <span className="day">Wednesday -</span>
-                            <span className="times">5am</span>
-                            <span className="times"></span>
-                            <span className="times"></span>
-                            <span className="times">6pm</span>
-                        </p>
-                        <p>
-                            <span className="day">Thursday -</span>
-                            <span className="times">5am</span> 
-                            <span className="times">6:30am</span> 
-                            <span className="times">9am</span> 
-                            <span className="times">6pm</span>
-                        </p>
-                                        <p className="border">
-                            <span className="day">Friday -</span>
-                            <span className="times"></span> 
-                            <span className="times">6:30am</span>
-                            <span className="times">9am</span>
-                            <span className="times"></span>
-                        </p>            
-                        <h3>WESTMINSTER CITY PARK</h3>
-                        <p className="border"><a href="https://maps.app.goo.gl/yM92ZppaXvTxZd2P9">10455 Sheridan Blvd.<br/>
-                        Westminster, CO 80020</a>
-                        </p>
-                        <p className="border">
-                            <span className="day">Saturday -</span>
-                            <span className="times"></span> 
-                            <span className="times"></span> 
-                            <span className="times">9am</span> 
-                            <span className="times"></span>
-                        </p>
-                    </div>
-                </section>
-            </div>
-        )
-    }*/}
+    
     const activities = {
         "1": [{ activity: "8:30am - Manitou Incline", location: "Social" }],
         "2": [{ activity: "6:00pm", location: "Run Club" }],
@@ -501,6 +449,14 @@ const Fitness = () => {
             </div>
         );
     };
+    const Carousel = () => {
+        return (
+            <div className="Carousel">
+                <img src={testimonial} className="scheduleTitle" alt="Schedule Title" />
+                <MultiItemCarousel />
+            </div>
+        )
+    }
         
     const Massage = () => {
         return (
@@ -510,42 +466,60 @@ const Fitness = () => {
                 </section>
                 <section className="column">
                     <h2>Your Expert in Personalized Therapeutic Massage</h2>
-                    <p>
+                    <h3>
                         At One Body, Gabriel provides tailored massage therapies including:
-                    </p>
+                    </h3>
                     <ul>
                         <li>Sports Massage</li>
                         <li>Structural Integration</li>
                         <li>Swedish</li>
                         <li>Trigger Point Therapy</li>
                     </ul>
+                    <h3>
+                        Ideal for Colorado’s active lifestyle, these sessions:
+                    </h3>
                     <p>
-                        Ideal for Colorado’s active lifestyle, these sessions enhance performance, aid in injury prevention, and relieve stress.<br /> Experience professional care that makes a difference!
+                        <ul>
+                            <li>Enhance Performance</li>
+                            <li>Aid in Injury Prevention</li>
+                            <li>Relieve Stress</li>
+                        </ul>
                     </p>
-                    <h2>Location</h2>
-                    <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="300" height="200" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    
                 </section>
                 <section className="column">
                     <h2>Massage Rates</h2>
+                    <img src={massage} alt="massage" />
                     <ul>
                         <li>⁃	$80/ hour </li>
                         <li>⁃	$95/ 75 min </li>
                         <li>⁃	$110/ 90 min </li>
                         <li>⁃	$140/ 2 hour </li>
                     </ul>
-                    <p>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </p>
+                    <p><em>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </em></p>
+                </section>
+                <section>
+                    <h3>
+                        Experience professional care that makes a difference!
+                    </h3>
+                </section>
+                <section className="column">
+                    <h2>Location</h2>
+                    <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> 
+                </section>
+                <section className="column">
                     <h2>Contact us to book your appointment and explore our exclusive offers!</h2>
                     <form className="ContactForm">
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
-
+                        
                         <label htmlFor="email">Email:</label>
                         <input type="email" id="email" name="email" required />
-
+                        
                         <label htmlFor="message">Message:</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
-
+                        
                         <button type="submit">Send</button>
                     </form>
                 </section>

@@ -8,7 +8,7 @@ body {
 }
 
 nav {
-	height: 130px;
+	height: 110px;
 	background-color: #ffffff;
 	position: fixed;
 	top: 0px;
@@ -20,15 +20,14 @@ nav {
 .NavContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
-  align-items: center;
-  height: 100%;
 }
 
 .nav-elements img.App-logo-nav {
 	display: flex;
     justify-content: space-between;
 	float:left;
+    height: 90px;
+    padding-top: 10px;
 }
 .NavContainer img.App-logo-nav-mobile {
 	display: none;
@@ -66,10 +65,14 @@ nav {
   height: 2px;
   background-color: #002d62;
 }
-
+@media screen and (max-width: 1199px) {
+    .NavContainer {
+        padding: 0px 20px;
+    }
+}
 @media (max-width: 992px) {
     nav {
-    	height: 130px;
+    	height: 110px;
     }
     .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
@@ -84,15 +87,16 @@ nav {
   }
   .NavContainer img.App-logo-nav-mobile {
   	display: inline-block;
-    height: 120px;
+    height: 90px;
+    padding-top: 10px;
     float:left;
   }
   #nav-icon {
     width: 60px;
     height: 45px;
     position: fixed;
-	top: 15px;
-	right: 15px;
+	top: 30px;
+	right: 30px;
     margin: 0px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -191,7 +195,7 @@ nav {
   .nav-elements {
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 80px;
     background-color: #ffffff;
     width: 0px;
     height: calc(100vh - 60px);

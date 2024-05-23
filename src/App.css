@@ -6,13 +6,6 @@ html {
   text-align: center;
 }
 .App a {
-	color: #fdb827;
-}
-.App-logo-nav {
-  height: 140px;
-}
-
-.App a {
 	color: #4b90cd;
     text-decoration: none;
 }
@@ -26,7 +19,7 @@ html {
 .Home {
     position: relative;
     overflow: hidden;
-    margin-top: 130px;
+    margin-top: 110px;
 	height: auto;
 	padding: 40px 0px;
 }
@@ -71,13 +64,13 @@ html {
     display: inline-block;
     width: 23%;
 	margin: 30px 0px;
-    padding-top: 50px;
+    padding: 50px 0px;
 }
 .Home .Icon {
-	width: 75px;
-	height: 75px;
+	width: 95px;
+	height: 95px;
 	background-color: #4b90cd;
-    border-radius: 40px;
+    border-radius: 60px;
     margin: 0 auto;
     transition: background 0.5s ease-out 150ms;
 }
@@ -87,13 +80,14 @@ html {
 }
 .Home .Icon img {
     height: 50px;
-	padding: 12px 14px;
+	padding: 21px 14px;
 }
 .Home .ServiceList:nth-child(2) .Icon img {
-	padding: 12px 17px;
+	padding: 21px 17px;
 }
 .Home .ServiceList:last-child .Icon img {
-	padding: 12px 17px 12px 10px;
+    height: 45px;
+	padding: 23px 17px 12px 10px;
 }
 .Home p {
 	font-size:22px;
@@ -112,7 +106,6 @@ html {
 	display: block;
 	vertical-align: top;
 	margin: 0px auto;
-	/* padding: 100px 5px; */
 	text-align: center;
 	color: #002d62;
 }
@@ -151,6 +144,12 @@ html {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+.packages {
+    margin: 0 auto;
+    width: 100%;
+    clear: both;
+    margin-top: 40px;
+}
 
 /* ======================= */
 .features-table {
@@ -170,6 +169,7 @@ html {
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
+    vertical-align: middle;
 }
 
 .feature-header {
@@ -196,7 +196,7 @@ html {
 /* ============================= */
 
 
-.Rates .InfoBlock {
+.InfoBlock {
     background-color: #ffffff;
 	display: inline-block;
 	width: 47%;
@@ -337,6 +337,7 @@ span.individualButton {
 
 img.imageTitle {
 	max-width: 400px;
+    margin-bottom: 40px;
 	position: relative;
 }
 img.photoCollage {
@@ -351,6 +352,9 @@ img.scheduleTitle {
     padding: 30px 0px;
 }
 /* ===================================== */
+#Calendar {
+    overflow: hidden;
+}
 .calendar {
     width: 600px;
     margin: 0 auto;
@@ -414,11 +418,17 @@ img.scheduleTitle {
     margin-right: 5px;
 }
 /* ====================================== */
+.Carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 800px;
+}
+/* ====================================== */
 #massage {
-    background-image: url(./assets/bg/massagebg-1.png);
+    background-image: url(./assets/bg/massagebg-3.png);
 	background-size: cover;
     background-position: bottom;
-    padding: 80px 0px;
+    padding: 40px 0px 80px 0px;
 }
 .Massage {
     max-width: 1200px;
@@ -428,10 +438,19 @@ img.scheduleTitle {
     width: 600px;
 }
 .Massage {
-    color: #ffffff;
+    color: #002d62;
 }
 .Massage h2 {
     color: #4b90cd;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    height: 70px;
+}
+.Massage h3 {
+    font-weight:600;
+    font-size: medium;
+    padding: 0px 30px;
 }
 .Massage .column {
     vertical-align: top;
@@ -439,6 +458,10 @@ img.scheduleTitle {
     width: 40%;
     padding: 10px;
     text-align: left;
+}
+.Massage .column img {
+    width: 300px;
+    text-align: center;
 }
 .testimonial-slider {
   max-width: 100%;
@@ -506,7 +529,7 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
-    color: #fdb827;
+    color: #002d62;
 }
 
 input[type="text"],
@@ -535,7 +558,6 @@ button:hover {
 
 .SocialLinks a {
     display: inline-block;
-    margin-right: 10px;
     color: #0056b3;
     text-decoration: none;
 }
@@ -567,11 +589,17 @@ button:hover {
 }
 
 @media screen and (max-width: 1199px) {
-    .Rates .InfoBlock {
-        display: inline-block;
-        width: 45%;
-        margin: 50px 5px;
-        height: 600px;
+    .packages {
+        width: 95%;
+        margin: 40px auto;
+    }
+    .InfoBlock {
+        width: 48%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .InfoBlock:first-child {
+        margin-right:2%;
     }
     .Home section {
 		display: inline-block;
@@ -583,23 +611,25 @@ button:hover {
         padding: 80px 0px;
     }
     .Home .Services {
+        display: flex;
+        flex-wrap: wrap;
         margin: 0 auto;
         max-width: 100%;
     }
     .Home .ServiceList {
         display: inline-block;
         margin: 0 auto;
-        width: 43%;
+        width: 50%;
     }
     .Home .ServiceList:last-child {
         border-bottom: none;
         padding-bottom: 10px;
     }
     img.photoCollage {
-        max-width: 100%;
+        width: 95%;
     }
     .features-table {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         border-collapse: collapse;
         font-size: smaller;
@@ -618,11 +648,6 @@ button:hover {
 		margin: 0 auto;
 		width: 100%;
 	}
-    .Home .ServiceList {
-        display: block;
-        width: 70%;
-        max-width: 450px;
-    }
     .Fitness .column {
         width: 85%;
         margin: 25px 0px;
@@ -650,13 +675,20 @@ button:hover {
     .Rates {
         padding-bottom: 50px;
     }
-    .Rates .InfoBlock {
-    	display: block;
-    	width: 80%;
-    	margin: 30px auto;
-    }
     img.scheduleTitle {
     	width: 90%;
+    }
+    .packages {
+        width: 95%;
+        margin: 40px auto;
+    }
+    .InfoBlock {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    .InfoBlock:first-child {
+        margin:0px 0px 30px 0px;
     }
     .Schedule section {
         display: block;
@@ -666,7 +698,7 @@ button:hover {
         margin: 0px auto 30px auto;
     }
     .calendar {
-        width: 100%;
+        width: 95%;
         padding: 20px 0px;
         margin: 0 auto;
     }
@@ -674,13 +706,15 @@ button:hover {
         padding: 10px;
         text-transform: uppercase;
         font-size: 10px;
+        text-align: center;
     }
     .signUp h2 {
-        padding-top: 5px;
+        padding-top: 0px;
     }
     span.individualButton {
-        margin: -5px 20px 0px 5px;
+        margin: 10px 5px 10px 5px;
         text-transform: uppercase;
+        vertical-align: middle;
     }
     .header, .days {
         font-size: smaller;
@@ -716,28 +750,31 @@ button:hover {
         text-align: center;
     }
     .MassageHeader img, img.imageTitle {
-        width: 340px;
+        width: 500px;
     }
     iframe {
         max-width: 90%;
     }
-    .Home .ServiceList {
-        width: 95%;
-    }
     .Home img.App-logo, .Home img.Tagline {
         width: 280px;
-    }
-    .Home .Icon img {
-        height: 30px;
-    }
-    .Home .Icon {
-        width: 58px;
-        height: 58px;
     }
     .Home .Description {
         padding-left: 5px;
     }
     .Home p {
         font-size: 18px;
+    }
+    .Home .ServiceList {
+        display: block;
+        width: 100%;
+        max-width: 450px;
+        padding: 20px 0px 0px 0px;
+    }
+    .Home .Icon {
+        width: 95px;
+        height: 95px;
+    }
+    .option-header {
+        font-size: 12px;
     }
 }
