@@ -22,6 +22,8 @@ import scheduleText from './assets/headerText/workout1.png';
 import massageText from './assets/headerText/massageText.png';
 import taglineWhite from './assets/taglineWhite.png';
 import testimonial from './assets/headerText/testimonials1.png';
+import connectText from './assets/headerText/connectText.png';
+
 // import taglineBlue from './assets/taglineWhite.png';
 
 
@@ -60,7 +62,7 @@ function App() {
             <div id="home"><Home /></div>
             <div id="fitness"><Fitness /></div>
             <div id="Calendar"><Calendar /></div>
-            <div id="testimonials"><Test /></div>
+            {/*<div id="testimonials"><Test /></div>*/}
             <div id="Carousel"><Carousel /></div>
             <div id="massage"><Massage /></div>
             <div id="contact"><Contact /></div>
@@ -121,7 +123,7 @@ const Navbar = () => {
                     <ul>
                         <li><a href="#fitness" onClick={() => handleScroll('fitness')}>Group Fitness</a></li>
                         <li><a href="#Calendar" onClick={() => handleScroll('Calendar')}>Schedule</a></li>
-                        <li><a href="#testimonials" onClick={() => handleScroll('testimonials')}>Testimonials</a></li>
+                        <li><a href="#Carousel" onClick={() => handleScroll('carousel')}>Testimonials</a></li>
                         <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
                         <li><a href="#contact" onClick={() => handleScroll('contact')}>Connect</a></li>
                     </ul>
@@ -485,6 +487,8 @@ const Fitness = () => {
                         </ul>
                     </p>
                     
+                    <h3>Location</h3>
+                    <p><a href="https://maps.app.goo.gl/wEVTP8CR142AYYD68" target="_blank">11178 Huron Suite 7 (upstairs) Northglenn CO</a></p>
                 </section>
                 <section className="column">
                     <h2>Massage Rates</h2>
@@ -503,25 +507,8 @@ const Fitness = () => {
                     </h3>
                 </section>
                 <section className="column">
-                    <h2>Location</h2>
-                    <p>11178 Huron Suite 7 (upstairs) Northglenn CO</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.881554769044!2d-104.9958001!3d39.899284099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c747f74ca257b%3A0xcdd60abb44bc41a4!2sDream%20Intentions%20Wellness%20Studio!5e0!3m2!1sen!2sus!4v1714138557957!5m2!1sen!2sus" width="400" height="300" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> 
                 </section>
-                <section className="column">
-                    <h2>Contact us to book your appointment and explore our exclusive offers!</h2>
-                    <form className="ContactForm">
-                        <label htmlFor="name">Name:</label>
-                        <input type="text" id="name" name="name" required />
-                        
-                        <label htmlFor="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
-                        
-                        <label htmlFor="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                        
-                        <button type="submit">Send</button>
-                    </form>
-                </section>
+                
             </div>
         )
     }
@@ -571,19 +558,37 @@ const Test = () => {
 const Contact = () => {
     return (
         <div className="Contact">
+            <img src={connectText} className="scheduleTitle" alt="Connect Text Header" />
             <div className="ContactContainer">
                 <div className="column">
                     <img src={logo} className="App-logo-footer" alt="logo" />
                 </div>
                 <div className="column">
-                    <h2><span>Curious? Try it out for free.</span></h2>
-                    <p>Scan or Click QR Code to get started</p>
-                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">
-                        <img src={qrCode} alt="qrCode" className="qrCode" />
-                    </a>
+                
+                    <h3>Contact us to book your appointment and explore our exclusive offers!</h3>
+                    <form className="ContactForm">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+                        
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                        
+                        <label htmlFor="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        
+                        <button type="submit">Send</button>
+                    </form>
+                
+                
+                
                 </div>
                 <div className="column">
                     <div className="SocialLinks">
+                        <h3><span>Curious? Try it out for free.</span></h3>
+                        <p>Scan or Click QR Code to get started</p>
+                        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">
+                        <img src={qrCode} alt="qrCode" className="qrCode" />
+                        </a>
                         <h2><span>Feeling Social?</span></h2>
                         <p>Follow the action</p>
                         <a href="https://www.facebook.com/gabriel.gabaldon.1" target="_blank" rel="noreferrer">

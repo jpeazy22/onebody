@@ -407,10 +407,18 @@ img.scheduleTitle {
 .calendar {
     width: 600px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    font-size: 13px;
+    border: 3px solid #e6e6e6;
+    border-bottom-width: 6px;
     background-color: #ffffff;
     padding-bottom: 20px;
     margin-left: 50px;
+    transition: border 1s ease-out 100ms;
+}
+.calendar:hover {
+    border: 3px solid #fdb827;
+    border-bottom-width: 6px;
+    transition: border 1s ease-out 100ms;
 }
 .calendar .calendar-header h3 {
     color: #002d62;
