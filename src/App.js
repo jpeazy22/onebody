@@ -20,7 +20,7 @@ import qrCode from './assets/ob-qrcode.png';
 import groupFitnessText from './assets/headerText/groupFitness1.png';
 import scheduleText from './assets/headerText/workout1.png';
 import massageText from './assets/headerText/massageText.png';
-import taglineWhite from './assets/oneBody_tagline.png';
+import taglineWhite from './assets/taglineWhite.png';
 import testimonial from './assets/headerText/testimonials1.png';
 // import taglineBlue from './assets/taglineWhite.png';
 
@@ -174,7 +174,7 @@ const Home = () => {
                                 <img src={icon1} className="icons" alt="icon" />
                             </div>
                             <div className="Description">
-                                <p>Outdoor Bootcamps</p>
+                                <h2>Outdoor Bootcamps</h2>
                             </div>
                         </a>
                     </div>
@@ -184,7 +184,7 @@ const Home = () => {
                                 <img src={icon2} className="icons" alt="icon" />
                             </div>
                             <div className="Description">
-                                <p>Personal Training</p>
+                                <h2>Personal Training</h2>
                             </div>
                         </a>
                     </div>
@@ -194,7 +194,7 @@ const Home = () => {
                                 <img src={icon3} className="icons" alt="icon" />
                             </div>
                             <div className="Description">
-                                <p>Massage Therapy</p>
+                                <h2>Massage Therapy</h2>
                             </div>
                         </a>
                     </div>
@@ -204,7 +204,7 @@ const Home = () => {
                                 <img src={icon4} className="icons" alt="icon" />
                             </div>
                             <div className="Description">
-                                <p>Community</p>
+                                <h2>Community</h2>
                             </div>
                         </a>
                     </div>
@@ -288,8 +288,7 @@ const Fitness = () => {
                         <ol>
                             <li>Train with elite athletes</li>
                             <li>Increased Intensity</li>
-                            <li>Drop in when you can</li>
-                            <li>Schedule Varies</li>
+                            <li>Schedule varied based on upcoming competitions</li>
                             <li>Donation based for members</li>
                         </ol>
                         <h4>
@@ -324,10 +323,10 @@ const Fitness = () => {
     }
     
     const activities = {
-        "1": [{ activity: "8:30am - Manitou Incline", location: "Social" }],
-        "2": [{ activity: "6:00pm", location: "Run Club" }],
+        "2": [{ activity: "7:00am", location: "Run Club" }],
         "7": [{ activity: "6:00pm", location: "Yoga" }],
-        "9": [{ activity: "7:00am", location: "Run Club" }],
+        "8": [{ activity: "8:30am - Manitou Incline", location: "Social" }],
+        "9": [{ activity: "6:00pm", location: "Run Club" }],
         "14": [{ activity: "9:00am", location: "Yoga" }],
         "16": [{ activity: "7:00am", location: "Run Club" }],
         "21": [{ activity: "6:00pm", location: "Yoga" }],
@@ -462,12 +461,12 @@ const Fitness = () => {
         return (
             <div className="Massage">
                 <section className="MassageHeader">
-                    <img src={massageText} alt="massageText" />
+                    <img src={massageText} className="scheduleTitle" alt="massageText" />
                 </section>
                 <section className="column">
                     <h2>Your Expert in Personalized Therapeutic Massage</h2>
                     <h3>
-                        At One Body, Gabriel provides tailored massage therapies including:
+                        At One Body, Gabriel provides tailored bodywork including:
                     </h3>
                     <ul>
                         <li>Sports Massage</li>

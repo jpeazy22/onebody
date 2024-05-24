@@ -1,7 +1,61 @@
 html {
   scroll-behavior: smooth;
 }
+h1 {
+    
+}
+h2 {
+    color: #4b90cd;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+h3 {
+    color: #002d62;
+    font-weight: 500;
+    font-size: 16px;
+}
+h4 {
+    font-weight: 100;
+    font-size: 18px;
+    color: #002d62;
+}
+p {
+    color: #002d62;
+    font-size: 14px;
+}
+a {
+    
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #002d62;
+}
 
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004085;
+}
 .App {
   text-align: center;
 }
@@ -137,9 +191,6 @@ html {
     height: 100%;
 }
 
-.Rates {
-    padding-top: 70px;
-}
 .Rates .Container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -180,13 +231,14 @@ html {
 .option-header {
     background-color: #4b90cd;
     color: white;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
 .feature-name {
     text-align: left;
     background-color: #f9f9f9;
+    color:  #002d62;
+    font-size: 14px;
 }
 
 .feature-option {
@@ -215,11 +267,6 @@ html {
 .InfoBlock .fitnessRateImage {
 	margin-top:30px;
     height: 180px;
-}
-.InfoBlock h2 {
-	font-weight: 100;
-    margin-top: 4px;
-    height: 35px;
 }
 .InfoBlock h4 {
 	text-align: left;
@@ -268,6 +315,8 @@ span.individualButton {
 .InfoBlock ol li {
 	list-style-type: circle;
 	text-align: left;
+    font-size: 14px;
+    color: #002d62;
 }
 .InfoBlock ul li, .Schedules ul li {
 	list-style-type: none;
@@ -279,7 +328,7 @@ span.individualButton {
 	background-size: cover;
     background-position: bottom;
     width: 100%;
-    padding: 50px 0px 100px 0px;
+    padding-bottom: 100px;
     margin: 0px auto;
 }
 .Schedule section {
@@ -349,7 +398,7 @@ img.qrCode {
 }
 img.scheduleTitle {
 	max-width: 600px;
-    padding: 30px 0px;
+    padding: 70px 0px;
 }
 /* ===================================== */
 #Calendar {
@@ -407,7 +456,7 @@ img.scheduleTitle {
 .address span {
     display: inline-block;
     width: 33%;
-    
+    font-size: 12px;
 }
 
 .key-color {
@@ -422,13 +471,14 @@ img.scheduleTitle {
     max-width: 1200px;
     margin: 0 auto;
     height: 800px;
+    overflow: hidden;
 }
 /* ====================================== */
 #massage {
     background-image: url(./assets/bg/massagebg-3.png);
 	background-size: cover;
     background-position: bottom;
-    padding: 40px 0px 80px 0px;
+    padding-bottom: 80px;
 }
 .Massage {
     max-width: 1200px;
@@ -441,8 +491,6 @@ img.scheduleTitle {
     color: #002d62;
 }
 .Massage h2 {
-    color: #4b90cd;
-    font-size: 20px;
     text-align: center;
     border-bottom: 1px solid #ffffff;
     height: 70px;
@@ -521,40 +569,6 @@ p.author {
     border: solid 1px #fdb827;
 }
 
-h2 {
-    color: #4b90cd;
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #002d62;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #004085;
-}
 
 .SocialLinks a {
     display: inline-block;
