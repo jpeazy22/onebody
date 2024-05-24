@@ -384,11 +384,6 @@ span.individualButton {
   text-align: right;
 }
 
-img.imageTitle {
-	max-width: 400px;
-    margin-bottom: 40px;
-	position: relative;
-}
 img.photoCollage {
     max-width: 1200px;
 }
@@ -678,6 +673,9 @@ p.author {
         width: 70%;
         padding: 10px;
     }
+    .Massage h2 {
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -699,6 +697,7 @@ p.author {
     }
     img.scheduleTitle {
     	width: 90%;
+        padding: 40px 0px;
     }
     .packages {
         width: 95%;
@@ -749,6 +748,7 @@ p.author {
         display: block;
         border-bottom: 1px solid #fdb827;
         margin: 0 auto;
+        padding-bottom: 10px;
     }
     .ContactContainer .column:last-child {
         width: 90%;
@@ -770,9 +770,6 @@ p.author {
         margin-right: 3px;
         border-radius: 5px;
         text-align: center;
-    }
-    .MassageHeader img, img.imageTitle {
-        width: 500px;
     }
     iframe {
         max-width: 90%;
