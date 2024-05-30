@@ -125,7 +125,7 @@ const Navbar = () => {
                         <li><a href="#Calendar" onClick={() => handleScroll('Calendar')}>Schedule</a></li>
                         <li><a href="#Carousel" onClick={() => handleScroll('carousel')}>Testimonials</a></li>
                         <li><a href="#massage" onClick={() => handleScroll('massage')}>Massage</a></li>
-                        <li><a href="#contact" onClick={() => handleScroll('contact')}>Connect</a></li>
+                        <li><a href="#contact" onClick={() => handleScroll('contact')}>Contact</a></li>
                     </ul>
                 </div>
             </div>

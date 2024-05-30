@@ -549,7 +549,8 @@ p.author {
 
 .Contact {
     align-items: center;
-    padding: 20px 0px;    
+    padding: 20px 0px; 
+    margin-bottom: 50px;
 }
 
 .ContactContainer {
