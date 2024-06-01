@@ -31,9 +31,9 @@ import connectText from './assets/headerText/connectText.png';
 import fit1 from './assets/monthlyMember.png';
 import fit2 from './assets/nextLevel.png';
 import fit3 from './assets/personalTraining.png';
-import box1 from './assets/1.png';
-import box2 from './assets/2.png';
-import box3 from './assets/3.png';
+import box1 from './assets/circle1.png';
+import box2 from './assets/circle2.png';
+import box3 from './assets/circle3.png';
 import photos from './assets/bg/testimonialbg.png';
 import massage from './assets/bg/massagebg-1.png';
 
@@ -333,7 +333,7 @@ const Fitness = () => {
         "16": [{ activity: "7:00am", location: "Run Club" }],
         "21": [{ activity: "6:00pm", location: "Yoga" }],
         "23": [{ activity: "6:00pm", location: "Run Club" }],
-        "28": [{ activity: "8:30am", location: "Yoga" }],
+        "28": [{ activity: "9:00am", location: "Yoga" }],
         "30": [{ activity: "7:00am", location: "Run Club" }],
             // Add other activities as needed
     };
