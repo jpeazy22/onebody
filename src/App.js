@@ -564,9 +564,8 @@ const Contact = () => {
                     <img src={logo} className="App-logo-footer" alt="logo" />
                 </div>
                 <div className="column">
-                
                     <h3>Contact us to book your appointment and explore our exclusive offers!</h3>
-                    <form name="contact" className="ContactForm" data-netlify="true">
+                    <form name="contact" className="ContactForm" netlify>
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
                         
@@ -578,9 +577,6 @@ const Contact = () => {
                         
                         <button type="submit">Send</button>
                     </form>
-                
-                
-                
                 </div>
                 <div className="column">
                     <div className="SocialLinks">
