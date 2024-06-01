@@ -796,4 +796,8 @@ p.author {
     .option-header {
         font-size: 12px;
     }
+    .Fitness .column img {
+        width: 100%;
+        height: auto;
+    }
 }
