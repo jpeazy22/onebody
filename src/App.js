@@ -566,7 +566,7 @@ const Contact = () => {
                 <div className="column">
                     <h3>Contact us to book your appointment and explore our exclusive offers!</h3>
                     <form 
-                    name="contact" 
+                    name="contact v1" 
                     className="ContactForm" 
                     method="post" 
                     data-netlify="true"
