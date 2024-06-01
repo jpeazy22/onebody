@@ -565,7 +565,13 @@ const Contact = () => {
                 </div>
                 <div className="column">
                     <h3>Contact us to book your appointment and explore our exclusive offers!</h3>
-                    <form name="contact" className="ContactForm" netlify>
+                    <form 
+                    name="contact" 
+                    className="ContactForm" 
+                    method="post" 
+                    data-netlify="true"
+                    onSubmit="submit"
+                    >
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
                         
