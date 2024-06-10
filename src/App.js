@@ -352,7 +352,7 @@ const Fitness = () => {
                     <div className="dailySchedule">
                         <h2>Weekly Workout Schedule</h2> 
                         <h3>PETER PAN PARK / McFall Park Amphitheater</h3>
-                        <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7">4801 W. 92nd Ave.<br/>
+                        <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7" target="_blank">4801 W. 92nd Ave.<br/>
                         Westminster, CO 80031</a>
                         </p>
                         <p>
@@ -391,7 +391,7 @@ const Fitness = () => {
                             <span className="times"></span>
                         </p>            
                         <h3>WESTMINSTER CITY PARK</h3>
-                        <p className="border"><a href="https://maps.app.goo.gl/yM92ZppaXvTxZd2P9">10455 Sheridan Blvd.<br/>
+                        <p className="border"><a href="https://maps.app.goo.gl/yM92ZppaXvTxZd2P9" target="_blank">10455 Sheridan Blvd.<br/>
                         Westminster, CO 80020</a>
                         </p>
                         <p className="border">
