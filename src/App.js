@@ -7,25 +7,20 @@ import './App.css';
 import './Nav.css';
 import './Carousel.css';
 
-
 import MultiItemCarousel from './MultiItemCarousel.js';
 
 // Logo and QR Code Image Imports
-import logo from './assets/logo/obLogo.png';
+import logo from './assets/logo/obLogo-white.png';
 import whiteLogo from './assets/logo/obLogo-white.png';
 import qrCode from './assets/ob-qrcode.png';
 
 // Header Text Image Imports
-// import titleText from './assets/headerText/groupFitnesstextblue.png';
 import groupFitnessText from './assets/headerText/groupFitness1.png';
 import scheduleText from './assets/headerText/workout1.png';
 import massageText from './assets/headerText/massageText.png';
 import taglineWhite from './assets/taglineWhite.png';
 import testimonial from './assets/headerText/testimonials1.png';
 import connectText from './assets/headerText/connectText.png';
-
-// import taglineBlue from './assets/taglineWhite.png';
-
 
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
@@ -36,7 +31,6 @@ import box2 from './assets/circle2.png';
 import box3 from './assets/circle3.png';
 import photos from './assets/bg/testimonialbg.png';
 import massage from './assets/bg/massagebg-1.png';
-
 
 // Icon Image Imports
 import icon1 from './assets/icons/deadlift.png';
@@ -158,10 +152,10 @@ const Home = () => {
     
     return (
         <div className="Home">
-            <video autoPlay muted loop className="BackgroundVideo">
+            {/* <video autoPlay muted loop className="BackgroundVideo">
                 <source src={skyVideo} type="video/mp4" />
                 Your browser does not support the video tag.
-            </video>
+            </video> */}
             <div className="Container">
                 <section>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -565,13 +559,7 @@ const Contact = () => {
                 </div>
                 <div className="column">
                     <h3>Contact us to book your appointment and explore our exclusive offers!</h3>
-                    <form 
-                    name="contact v1" 
-                    className="ContactForm" 
-                    method="post" 
-                    data-netlify="true"
-                    onSubmit="submit"
-                    >
+                    <form name="contact v1" className="ContactForm" action="/success" netlify>
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
                         
@@ -606,6 +594,4 @@ const Contact = () => {
     );
 }
         
-        
-        
-        export default App;
+export default App;
