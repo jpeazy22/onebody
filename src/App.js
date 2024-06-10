@@ -558,8 +558,13 @@ const Contact = () => {
                     <img src={logo} className="App-logo-footer" alt="logo" />
                 </div>
                 <div className="column">
-                    <h3>Contact us to book your appointment and explore our exclusive offers!</h3>
-                    <form name="contact v1" className="ContactForm" netlify>
+                    <h3><a href="mailto:one.body2124@gmail.com">Email us</a> to book your appointment and explore our exclusive offers!</h3>
+                    <h3><span>Curious? Try it out for free.</span></h3>
+                    <p>Scan or Click QR Code to get started</p>
+                    <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">
+                        <img src={qrCode} alt="qrCode" className="qrCode" />
+                    </a>
+                    {/*<form name="contact v1" className="ContactForm" netlify>
                         <label htmlFor="name">Name:</label>
                         <input type="text" id="name" name="name" required />
                         
@@ -570,15 +575,10 @@ const Contact = () => {
                         <textarea id="message" name="message" rows="4" required></textarea>
                         
                         <button type="submit">Send</button>
-                    </form>
+                    </form>*/}
                 </div>
                 <div className="column">
                     <div className="SocialLinks">
-                        <h3><span>Curious? Try it out for free.</span></h3>
-                        <p>Scan or Click QR Code to get started</p>
-                        <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">
-                        <img src={qrCode} alt="qrCode" className="qrCode" />
-                        </a>
                         <h2><span>Feeling Social?</span></h2>
                         <p>Follow the action</p>
                         <a href="https://www.facebook.com/gabriel.gabaldon.1" target="_blank" rel="noreferrer">
