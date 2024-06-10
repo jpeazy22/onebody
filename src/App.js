@@ -324,18 +324,21 @@ const Fitness = () => {
         "8": [{ activity: "8:30am - Manitou Incline", location: "Social" }],
         "9": [{ activity: "6:00pm", location: "Run Club" }],
         "14": [{ activity: "9:00am", location: "Yoga" }],
+        "15": [{ activity: "6:30pm - Sand Volleyball", location: "Vball" }],
         "16": [{ activity: "7:00am", location: "Run Club" }],
         "21": [{ activity: "6:00pm", location: "Yoga" }],
         "23": [{ activity: "6:00pm", location: "Run Club" }],
         "28": [{ activity: "9:00am", location: "Yoga" }],
-        "30": [{ activity: "7:00am", location: "Run Club" }],
+        "30": [{ activity: "7:00am - Brunch @ 8:00am", location: "Run Club" }],
+
             // Add other activities as needed
     };
 
     const locations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
-        "Social": "#002d62"
+        "Social": "#002d62",
+        "Vball": "#002d62"
     };
 
     const Calendar = () => {
@@ -395,7 +398,7 @@ const Fitness = () => {
                             <span className="day">Saturday -</span>
                             <span className="times"></span> 
                             <span className="times"></span> 
-                            <span className="times">9am</span> 
+                            <span className="times">8:30am</span> 
                             <span className="times"></span>
                         </p>
                     </div>
@@ -438,6 +441,7 @@ const Fitness = () => {
                             <span><a href="https://maps.app.goo.gl/uLkYNDwPKQdzhB6s9" target="_blank">9737 Wadsworth Pkwy <br />Westminster, CO 80021</a></span>
                             <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span><a href="https://maps.app.goo.gl/etWndSAs7gRAB7zH8" target="_blank">Manitou Springs, <br />Colorado 80829</a></span>
+                            <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
                         </div>
                     </div>
                 </section>
