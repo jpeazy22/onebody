@@ -45,8 +45,14 @@ import carolyn from './assets/testimonials/carolynM.jpg';
 import cecile from './assets/testimonials/Dumbbells.jpg';
 import lawrence from './assets/testimonials/before_after.png';
 
+// Image Imports
+import ppw1 from './assets/ppp_workout.png';
+import ppw2 from './assets/ppp_sunset.png';
+import grps from './assets/group_social_mountain.png';
+import yoga from './assets/yoga.png';
+import run from './assets/runclub.png';
+
 // Video Imports 
-import video from './assets/woman-working-out.mp4';
 import skyVideo from './assets/sky-background.mp4';
 
 function App() {
@@ -333,17 +339,41 @@ const Fitness = () => {
 
             // Add other activities as needed
     };
-
     const locations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
         "Social": "#002d62",
         "Vball": "#002d62"
     };
+    
+    const july = {
+        "4": [{ activity: "8:30am - Impossible Mile Workout Social", locate: "Workout" }],
+        "5": [{ activity: "6:00pm", locate: "Yoga" }],
+        "7": [{ activity: "6:30pm", locate: "Run Club" }],
+        "12": [{ activity: "9:00am", locate: "Yoga" }],
+        "13": [{ activity: "6:30pm - Sand Volleyball Social", locate: "Vball" }],
+        "14": [{ activity: "6:30am", locate: "Run Club" }],
+        "19": [{ activity: "6:00pm", locate: "Yoga" }],
+        "21": [{ activity: "6:30pm", locate: "Run Club" }],
+        "26": [{ activity: "9:00am", locate: "Yoga" }],
+        "27": [{ activity: "10:30am - Field Day Social", locate: "Field Day" }],
+        "28": [{ activity: "6:30am", locate: "Run Club" }],
+
+            // Add other activities as needed
+    };
+    const julyLocations = {
+        "Run Club": "#fdb827",
+        "Yoga": "#4b90cd",
+        "Vball": "#002d62",
+        "Field Day": "#002d62",
+        "Workout": "#002d62",
+    };
 
     const Calendar = () => {
         const days = Array.from({ length: 30 }, (_, i) => i + 1);
         const emptyDays = Array.from({ length: 6 }).fill(null); // June starts on a Wednesday in 2024
+        const julydays = Array.from({ length: 31 }, (_, i) => i + 1);
+        const julyemptyDays = Array.from({ length: 1 }).fill(null); // July starts on a Monday in 2024
 
         return (
             <div className="Schedule">
@@ -351,7 +381,7 @@ const Fitness = () => {
                 <section>
                     <div className="dailySchedule">
                         <h2>Weekly Workout Schedule</h2> 
-                        <h3>PETER PAN PARK / McFall Park Amphitheater</h3>
+                        <h3>PETER PAN PARK / McFALL PARK AMPHITHEATER</h3>
                         <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7" target="_blank">4801 W. 92nd Ave.<br/>
                         Westminster, CO 80031</a>
                         </p>
@@ -404,11 +434,30 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section>
+                    <div className="dailyScheduleImages">
+                        <img src={ppw1} className="photo" alt="workout photo" />
+                        <img src={ppw2} className="photo2" alt="group photo" />
+                    </div>
+                </section>
+                {/* JUNE CALENDAR */}
+                <section className="socialRow">
+                    <header className="calendar-header">
+                        <h2>Run Club, Yoga & Social Events</h2> 
+                        <h3>*SOCIAL EVENTS OPEN TO ALL!</h3>
+                        <h3>*Run Club & Yoga Included w/ Unlimited Memebership</h3>
+                    </header>
+                </section>
+                <section className="socialRow">
+                    <div className="socialImages">
+                        <img src={run} className="photo" alt="group photo" />
+                        <img src={yoga} className="photo" alt="group photo" />
+                        <img src={grps} className="photo" alt="workout photo" />
+                    </div>
+                </section>
+                <section className="eventCalendar">
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>June 2024 - Run Club, Yoga & Social Events</h2> 
-                            <h3>*Social Events Open to All!</h3>
-                            <h3>*Run Club & Yoga Included w/ Unlimited Memebership</h3>
+                            <h2>June 2024</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -442,6 +491,46 @@ const Fitness = () => {
                             <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span><a href="https://maps.app.goo.gl/etWndSAs7gRAB7zH8" target="_blank">Manitou Springs, <br />Colorado 80829</a></span>
                             <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
+                        </div>
+                    </div>
+                    {/* JULY CALENDAR */}
+                    <div className="calendar">
+                        <header className="calendar-header">
+                            <h2>July 2024</h2> 
+                        </header>
+                        <div className="header">
+                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                                <div key={day} className="day-header">{day}</div>
+                            ))}
+                        </div>
+                        <div className="days">
+                            {julyemptyDays.map((_, index) => (
+                                <div key={`empty-${index}`} className="daytime empty"></div>
+                            ))}
+                            {julydays.map(day => (
+                                <div key={day} className="daytime">
+                                    {day}
+                                    {july[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: julyLocations[event.locate] }}>
+                                            {event.activity}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="key">
+                            {Object.entries(julyLocations).map(([locate, color]) => (
+                                <div key={locate} className="key-item">
+                                    <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="address">
+                            <span className="july"><a href="https://maps.app.goo.gl/uLkYNDwPKQdzhB6s9" target="_blank">9737 Wadsworth Pkwy <br />Westminster, CO 80021</a></span>
+                            <span className="july"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
+                            <span className="july"><a href="https://maps.app.goo.gl/GocfpoJoqeDqibrL8" target="_blank">Ralston Valley, <br />High School</a></span>
+                            <span className="july"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
+                            <span className="july"><a href="https://maps.app.goo.gl/UHgCoZQHJq2KBGkq9" target="_blank">Field Day<br />Britton Park</a></span>
                         </div>
                     </div>
                 </section>
@@ -492,10 +581,10 @@ const Fitness = () => {
                     <h2>Massage Rates</h2>
                     <img src={massage} alt="massage" />
                     <ul>
-                        <li>⁃	$80/ hour </li>
-                        <li>⁃	$95/ 75 min </li>
-                        <li>⁃	$110/ 90 min </li>
-                        <li>⁃	$140/ 2 hour </li>
+                        <li>$80/ hour </li>
+                        <li>$95/ 75 min </li>
+                        <li>$110/ 90 min </li>
+                        <li>$140/ 2 hour </li>
                     </ul>
                     <p><em>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </em></p>
                 </section>

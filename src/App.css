@@ -334,7 +334,7 @@ span.individualButton {
 }
 /* ================================ */
 .Schedule {
-    background-image: url(./assets/bg/group-of-runners.jpg);
+    /* background-image: url(./assets/bg/group-of-runners.jpg); */
 	background-size: cover;
     background-position: bottom;
     width: 100%;
@@ -344,6 +344,8 @@ span.individualButton {
 .Schedule section {
     display: inline-block;
     vertical-align: top;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .Schedule img {
     display: block;
@@ -355,24 +357,41 @@ span.individualButton {
     display: inline-block;
     width: 500px;
     vertical-align: top;
-    border: 3px solid #e6e6e6;
-    border-bottom-width: 6px;
+    /* border: 3px solid #e6e6e6; */
+    /* border-bottom-width: 6px; */
     transition: border 1s ease-out 100ms;
 }
-.dailySchedule:hover {
+.dailyScheduleImages {
+    width: 500px;
+    vertical-align: top;
+    margin-bottom: 80px;
+}
+.dailyScheduleImages img {
+    max-width: 90%;
+}
+.dailyScheduleImages img.photo {
+    border: solid 6px #e6e6e6;
+}
+.dailyScheduleImages img.photo2 {
+    margin-top: -45px;
+    margin-left: 35px;
+    border: solid 6px #ffffff;
+    position: relative;
+}
+/* .dailySchedule:hover {
     border: 3px solid #fdb827;
     border-bottom-width: 6px;
     transition: border 1s ease-out 100ms;
-}
+} */
 .dailySchedule .border {
     border-bottom: 1px solid #e6e6e6;
     transition: border 1s ease-out 100ms;
     padding-bottom: 20px;
 }
-.dailySchedule .border:hover {
+/* .dailySchedule .border:hover {
     border-bottom: 1px solid #fdb827;
     transition: border 1s ease-out 100ms;
-}
+} */
 .dailySchedule iframe {
     padding: 30px 0px;
     max-width: 90%;
@@ -393,7 +412,19 @@ span.individualButton {
   border-radius: 5px;
   text-align: right;
 }
-
+section.socialRow {
+    display: block;
+}
+section.socialRow h2 {
+    font-size: 3em;
+}
+section.socialRow .socialImages img {
+    width: 32%;
+    margin-bottom: 30px;
+}
+section.socialRow .socialImages img:first-child {
+    padding-left: 0px;
+}
 img.photoCollage {
     max-width: 1200px;
 }
@@ -409,16 +440,23 @@ img.scheduleTitle {
 #Calendar {
     overflow: hidden;
 }
-.calendar {
-    width: 600px;
+section.eventCalendar {
+    max-width: 1200px;
     margin: 0 auto;
+}
+.calendar {
+    display: inline-block;
+    vertical-align: top;
+    width: 47%;
     font-size: 13px;
     border: 3px solid #e6e6e6;
     border-bottom-width: 6px;
     background-color: #ffffff;
     padding-bottom: 20px;
-    margin-left: 50px;
     transition: border 1s ease-out 100ms;
+}
+.calendar:first-child {
+    margin-right: 1%;
 }
 .calendar:hover {
     border: 3px solid #fdb827;
@@ -469,7 +507,13 @@ img.scheduleTitle {
 .address span {
     display: inline-block;
     width: 25%;
-    font-size: 12px;
+    font-size: 10px;
+}
+.address span.july {
+    display: inline-block;
+    width: 20%;
+    font-size: 10px;
+    vertical-align: top;
 }
 
 .key-color {
@@ -687,6 +731,15 @@ p.author {
     .Massage h2 {
         height: auto;
     }
+    .calendar {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .calendar:first-child {
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -728,11 +781,6 @@ p.author {
     .dailySchedule {
         width: 95%;
         margin: 0px auto 30px auto;
-    }
-    .calendar {
-        width: 95%;
-        padding: 20px 0px;
-        margin: 0 auto;
     }
     .signUp {
         padding: 10px;
