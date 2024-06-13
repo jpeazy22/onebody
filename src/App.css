@@ -165,14 +165,15 @@ button:hover {
     height: 400px;
 }
 .Fitness {
-    width: 100%;
+    display: none;
+    /* width: 100%;
     background-color: #002d62;
 	height: auto;
 	display: block;
 	vertical-align: top;
 	margin: 0px auto;
 	text-align: center;
-	color: #002d62;
+	color: #002d62; */
 }
 .Fitness h2 {
     color: #002d62;
@@ -263,7 +264,6 @@ button:hover {
 	display: inline-block;
 	width: 47%;
 	margin: 50px 5px;
-	height: 550px;
     vertical-align: top;
     padding: 10px;
     border: 1px solid #e6e6e6;
@@ -275,8 +275,7 @@ button:hover {
     border-bottom-width: 4px;
 }
 .InfoBlock .fitnessRateImage {
-	margin-top:30px;
-    height: 180px;
+    width: 100%;
 }
 .InfoBlock h4 {
 	text-align: left;
@@ -418,6 +417,9 @@ section.socialRow {
 section.socialRow h2 {
     font-size: 3em;
 }
+section.socialRow .socialImages {
+    display: flex;
+}
 section.socialRow .socialImages img {
     width: 32%;
     margin-bottom: 30px;
@@ -426,6 +428,7 @@ section.socialRow .socialImages img:first-child {
     padding-left: 0px;
 }
 img.photoCollage {
+    margin-top: 50px;
     max-width: 1200px;
 }
 img.qrCode {
@@ -435,6 +438,9 @@ img.qrCode {
 img.scheduleTitle {
 	max-width: 600px;
     padding: 70px 0px;
+}
+.Rates img.scheduleTitle {
+    padding-bottom: 20px;
 }
 /* ===================================== */
 #Calendar {

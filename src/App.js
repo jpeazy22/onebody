@@ -256,7 +256,12 @@ const Fitness = () => {
                 <div className="Container">
                 <section>
                     <img src={groupFitnessText} className="scheduleTitle" alt="sectionTitle" />
-                        <img src={photos} className="photoCollage" alt="" />
+                    <h2>All Fitness Levels Welcome!</h2>
+                    <h3>STRENGHT + CARDIO + HIGH INTENSITY</h3>
+                    <h2>Outdoor Bootcamps</h2>
+                    <h3>Lead by NASM Certified Personal Trainer - COACH GABRIEL GABALDON</h3>
+                    <h3>Try it out! Click for <span><a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">3 Free Classes</a></span></h3>
+                    <img src={photos} className="photoCollage" alt="" />
                     </section>
                     <div className="membership-grid">
                     <div className="features-table">
@@ -293,7 +298,7 @@ const Fitness = () => {
                             <li>Schedule varied based on upcoming competitions</li>
                             <li>Donation based for members</li>
                         </ol>
-                        <h4>
+                        <h4>Based on Event
                             <span>
                                 <a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank" rel="noreferrer">More Info</a>
                             </span>
