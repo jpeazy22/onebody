@@ -72,7 +72,7 @@ button:hover {
 }
 
 .Home {
-    background-image: url(./assets/bg/redrocksRunC.png);
+    background-image: url(./assets/bg/redrocksRunC.webp);
 	background-size: cover;
     background-position: top;
     width: 100%;
@@ -533,7 +533,7 @@ section.eventCalendar {
 /* ====================================== */
 .Carousel {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 70px auto;
     height: 800px;
     overflow: hidden;
 }

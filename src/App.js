@@ -24,13 +24,13 @@ import connectText from './assets/headerText/connectText.png';
 
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
-import fit2 from './assets/nextLevel.png';
-import fit3 from './assets/personalTraining.png';
+import fit2 from './assets/nextLevel.webp';
+import fit3 from './assets/personalTraining.webp';
 import box1 from './assets/circle1.png';
 import box2 from './assets/circle2.png';
 import box3 from './assets/circle3.png';
-import photos from './assets/bg/testimonialbg.png';
-import massage from './assets/bg/massagebg-1.png';
+import photos from './assets/bg/testimonialbg.webp';
+import massage from './assets/bg/massagebg-1.webp';
 
 // Icon Image Imports
 import icon1 from './assets/icons/deadlift.png';
@@ -42,15 +42,15 @@ import instagram from './assets/icons/instagram.png';
 
 // Testimonial Image Imports
 import carolyn from './assets/testimonials/carolynM.jpg';
-import cecile from './assets/testimonials/Dumbbells.jpg';
-import lawrence from './assets/testimonials/before_after.png';
+import cecile from './assets/testimonials/Dumbbells.webp';
+import lawrence from './assets/testimonials/before_after.webp';
 
 // Image Imports
-import ppw1 from './assets/ppp_workout.png';
+import ppw1 from './assets/ppp_workout.webp';
 import ppw2 from './assets/ppp_sunset.png';
-import grps from './assets/group_social_mountain.png';
-import yoga from './assets/yoga.png';
-import run from './assets/runclub.png';
+import grps from './assets/group_social_mountain.webp';
+import yoga from './assets/yoga.webp';
+import run from './assets/runclub.webp';
 
 // Video Imports 
 import skyVideo from './assets/sky-background.mp4';
