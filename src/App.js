@@ -369,9 +369,9 @@ const Fitness = () => {
     const julyLocations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
+        "Workout": "#002d62",
         "Vball": "#002d62",
         "Field Day": "#002d62",
-        "Workout": "#002d62",
     };
 
     const Calendar = () => {
@@ -533,9 +533,9 @@ const Fitness = () => {
                         <div className="address">
                             <span className="july"><a href="https://maps.app.goo.gl/uLkYNDwPKQdzhB6s9" target="_blank">9737 Wadsworth Pkwy <br />Westminster, CO 80021</a></span>
                             <span className="july"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                            <span className="july"><a href="https://maps.app.goo.gl/GocfpoJoqeDqibrL8" target="_blank">Ralston Valley, <br />High School</a></span>
+                            <span className="july"><a href="https://maps.app.goo.gl/GocfpoJoqeDqibrL8" target="_blank">Ralston Valley<br />High School</a></span>
                             <span className="july"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                            <span className="july"><a href="https://maps.app.goo.gl/UHgCoZQHJq2KBGkq9" target="_blank">Field Day<br />Britton Park</a></span>
+                            <span className="july"><a href="https://maps.app.goo.gl/UHgCoZQHJq2KBGkq9" target="_blank">Britton Park<br />Arvada, CO</a></span>
                         </div>
                     </div>
                 </section>
