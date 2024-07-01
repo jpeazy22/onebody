@@ -355,7 +355,6 @@ const Fitness = () => {
         "6": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
         "7": [{ activity: "6:30am", locate: "Run Club" }],
         "12": [{ activity: "9:00am", locate: "Yoga" }],
-        "13": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
         "14": [{ activity: "6:30am", locate: "Run Club" }],
         "19": [{ activity: "6:00pm", locate: "Yoga" }],
         "20": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
