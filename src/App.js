@@ -222,7 +222,7 @@ const Fitness = () => {
     const features = [
         "6 days/week program",
         "Multiple class times available",
-        "Lead by Professional Trainer",
+        "Led by Professional Trainer",
         "All Community Socials",
         "Unlimited check ins per month",
         "8 check ins per month",
@@ -257,9 +257,9 @@ const Fitness = () => {
                 <section>
                     <img src={groupFitnessText} className="scheduleTitle" alt="sectionTitle" />
                     <h2>All Fitness Levels Welcome!</h2>
-                    <h3>STRENGHT + CARDIO + HIGH INTENSITY</h3>
+                    <h3>STRENGTH + CARDIO + HIGH INTENSITY</h3>
                     <h2>Outdoor Bootcamps</h2>
-                    <h3>Lead by NASM Certified Personal Trainer - COACH GABRIEL GABALDON</h3>
+                    <h3>Led by NASM Certified Personal Trainer - COACH GABRIEL GABALDON</h3>
                     <h3>Try it out! Click for <span><a href="https://onebody.pushpress.com/open/interested/usr_3716df7673660c" target="_blank">3 Free Classes</a></span></h3>
                     <img src={photos} className="photoCollage" alt="" />
                     </section>
@@ -330,39 +330,39 @@ const Fitness = () => {
     }
     
     const activities = {
-        "2": [{ activity: "7:00am", location: "Run Club" }],
-        "7": [{ activity: "6:00pm", location: "Yoga" }],
-        "8": [{ activity: "8:30am - Manitou Incline", location: "Social" }],
-        "9": [{ activity: "6:00pm", location: "Run Club" }],
-        "14": [{ activity: "9:00am", location: "Yoga" }],
-        "15": [{ activity: "6:30pm - Sand Volleyball", location: "Vball" }],
-        "16": [{ activity: "7:00am", location: "Run Club" }],
-        "21": [{ activity: "6:00pm", location: "Yoga" }],
-        "23": [{ activity: "6:00pm", location: "Run Club" }],
-        "28": [{ activity: "9:00am", location: "Yoga" }],
-        "30": [{ activity: "7:00am - Brunch @ 8:00am", location: "Run Club" }],
+        "4": [{ activity: "6:30am", location: "Run Club" }],
+        "9": [{ activity: "6:00pm", location: "Yoga" }],
+        "10": [{ activity: "6:30pm - Sand Volleyball", location: "Vball" }],
+        "11": [{ activity: "6:30am", location: "Run Club" }],
+        "16": [{ activity: "9:00am", location: "Yoga" }],
+        "18": [{ activity: "6:30am", location: "Run Club" }],
+        "23": [{ activity: "6:00pm", location: "Yoga" }],
+        "24": [{ activity: "6:30pm - Sand Volleyball", location: "Vball" }],
+        "25": [{ activity: "7:30pm", location: "Run Club" }],
+        "30": [{ activity: "9:00am", location: "Yoga" }],
 
             // Add other activities as needed
     };
     const locations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
-        "Social": "#002d62",
         "Vball": "#002d62"
     };
     
     const july = {
         "4": [{ activity: "8:30am - Impossible Mile Workout Social", locate: "Workout" }],
         "5": [{ activity: "6:00pm", locate: "Yoga" }],
-        "7": [{ activity: "6:30pm", locate: "Run Club" }],
+        "6": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
+        "7": [{ activity: "6:30am", locate: "Run Club" }],
         "12": [{ activity: "9:00am", locate: "Yoga" }],
-        "13": [{ activity: "6:30pm - Sand Volleyball Social", locate: "Vball" }],
+        "13": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
         "14": [{ activity: "6:30am", locate: "Run Club" }],
         "19": [{ activity: "6:00pm", locate: "Yoga" }],
-        "21": [{ activity: "6:30pm", locate: "Run Club" }],
+        "20": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
+        "21": [{ activity: "6:30am", locate: "Run Club" }],
         "26": [{ activity: "9:00am", locate: "Yoga" }],
         "27": [{ activity: "10:30am - Field Day Social", locate: "Field Day" }],
-        "28": [{ activity: "6:30am", locate: "Run Club" }],
+        "28": [{ activity: "7:30pm", locate: "Run Club" }],
 
             // Add other activities as needed
     };
@@ -375,8 +375,8 @@ const Fitness = () => {
     };
 
     const Calendar = () => {
-        const days = Array.from({ length: 30 }, (_, i) => i + 1);
-        const emptyDays = Array.from({ length: 6 }).fill(null); // June starts on a Wednesday in 2024
+        const days = Array.from({ length: 31 }, (_, i) => i + 1);
+        const emptyDays = Array.from({ length: 4 }).fill(null); // June starts on a Wednesday in 2024
         const julydays = Array.from({ length: 31 }, (_, i) => i + 1);
         const julyemptyDays = Array.from({ length: 1 }).fill(null); // July starts on a Monday in 2024
 
@@ -393,35 +393,35 @@ const Fitness = () => {
                         <p>
                             <span className="day">Monday -</span>
                             <span className="times">5am</span> 
-                            <span className="times">6:30am</span> 
+                            <span className="times">6:15am</span> 
                             <span className="times">9am</span> 
-                            <span className="times">6pm</span>
+                            <span className="times">6:15pm</span>
                         </p>
                         <p>
                             <span className="day">Tuesday -</span>
                             <span className="times">5am</span> 
-                            <span className="times">6:30am</span> 
+                            <span className="times">6:15am</span> 
                             <span className="times">9am</span> 
-                            <span className="times">6pm</span>
+                            <span className="times">6:15pm</span>
                         </p>
                         <p>
                             <span className="day">Wednesday -</span>
                             <span className="times">5am</span>
                             <span className="times"></span>
                             <span className="times"></span>
-                            <span className="times">6pm</span>
+                            <span className="times">6:15pm</span>
                         </p>
                         <p>
                             <span className="day">Thursday -</span>
                             <span className="times">5am</span> 
-                            <span className="times">6:30am</span> 
+                            <span className="times">6:15am</span> 
                             <span className="times">9am</span> 
-                            <span className="times">6pm</span>
+                            <span className="times">6:15pm</span>
                         </p>
                         <p className="border">
                             <span className="day">Friday -</span>
                             <span className="times"></span> 
-                            <span className="times">6:30am</span>
+                            <span className="times">6:15am</span>
                             <span className="times">9am</span>
                             <span className="times"></span>
                         </p>            
@@ -449,7 +449,7 @@ const Fitness = () => {
                     <header className="calendar-header">
                         <h2>Run Club, Yoga & Social Events</h2> 
                         <h3>*SOCIAL EVENTS OPEN TO ALL!</h3>
-                        <h3>*Run Club & Yoga Included w/ Unlimited Memebership</h3>
+                        <h3>*Run Club & Yoga Included w/ Unlimited Membership</h3>
                     </header>
                 </section>
                 <section className="socialRow">
@@ -460,44 +460,6 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                    <div className="calendar">
-                        <header className="calendar-header">
-                            <h2>June 2024</h2> 
-                        </header>
-                        <div className="header">
-                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
-                                <div key={day} className="day-header">{day}</div>
-                            ))}
-                        </div>
-                        <div className="days">
-                            {emptyDays.map((_, index) => (
-                                <div key={`empty-${index}`} className="daytime empty"></div>
-                            ))}
-                            {days.map(day => (
-                                <div key={day} className="daytime">
-                                    {day}
-                                    {activities[day]?.map((event, index) => (
-                                        <div key={index} className="activity" style={{ backgroundColor: locations[event.location] }}>
-                                            {event.activity}
-                                        </div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="key">
-                            {Object.entries(locations).map(([location, color]) => (
-                                <div key={location} className="key-item">
-                                    <span className="key-color" style={{ backgroundColor: color }}></span> {location}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="address">
-                            <span><a href="https://maps.app.goo.gl/uLkYNDwPKQdzhB6s9" target="_blank">9737 Wadsworth Pkwy <br />Westminster, CO 80021</a></span>
-                            <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                            <span><a href="https://maps.app.goo.gl/etWndSAs7gRAB7zH8" target="_blank">Manitou Springs, <br />Colorado 80829</a></span>
-                            <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                        </div>
-                    </div>
                     {/* JULY CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
@@ -531,11 +493,49 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="address">
-                            <span className="july"><a href="https://maps.app.goo.gl/uLkYNDwPKQdzhB6s9" target="_blank">9737 Wadsworth Pkwy <br />Westminster, CO 80021</a></span>
+                            <span className="july">TBD - Check app<br />for location</span>
                             <span className="july"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span className="july"><a href="https://maps.app.goo.gl/GocfpoJoqeDqibrL8" target="_blank">Ralston Valley<br />High School</a></span>
                             <span className="july"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
                             <span className="july"><a href="https://maps.app.goo.gl/UHgCoZQHJq2KBGkq9" target="_blank">Britton Park<br />Arvada, CO</a></span>
+                        </div>
+                    </div>
+                    {/* August CALENDAR */}
+                    <div className="calendar">
+                        <header className="calendar-header">
+                            <h2>August 2024</h2> 
+                        </header>
+                        <div className="header">
+                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                                <div key={day} className="day-header">{day}</div>
+                            ))}
+                        </div>
+                        <div className="days">
+                            {emptyDays.map((_, index) => (
+                                <div key={`empty-${index}`} className="daytime empty"></div>
+                            ))}
+                            {days.map(day => (
+                                <div key={day} className="daytime">
+                                    {day}
+                                    {activities[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: locations[event.location] }}>
+                                            {event.activity}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="key">
+                            {Object.entries(locations).map(([location, color]) => (
+                                <div key={location} className="key-item">
+                                    <span className="key-color" style={{ backgroundColor: color }}></span> {location}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="address">
+                            <span>TBD - Check app<br />for location</span>
+                            <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
+                            <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
                         </div>
                     </div>
                 </section>
