@@ -332,7 +332,7 @@ const Fitness = () => {
     const activities = {
         "4": [{ activity: "6:30am", location: "Run Club" }],
         "9": [{ activity: "6:00pm", location: "Yoga" }],
-        "10": [{ activity: "6:30pm - Sand Volleyball", location: "Vball" }],
+        "10": [{ activity: "5:30pm - Pot Luck & Games", location: "Laura" }],
         "11": [{ activity: "6:30am", location: "Run Club" }],
         "16": [{ activity: "9:00am", location: "Yoga" }],
         "18": [{ activity: "6:30am", location: "Run Club" }],
@@ -346,18 +346,17 @@ const Fitness = () => {
     const locations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
-        "Vball": "#002d62"
+        "Vball": "#002d62",
+        "Laura": "#002d62"
     };
     
     const july = {
         "4": [{ activity: "8:30am - Impossible Mile Workout Social", locate: "Workout" }],
         "5": [{ activity: "6:00pm", locate: "Yoga" }],
-        "6": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
         "7": [{ activity: "6:30am", locate: "Run Club" }],
-        "12": [{ activity: "9:00am", locate: "Yoga" }],
+        "12": [{ activity: "9:00am Yoga, 6:30pm Volleyball", locate: "Yoga" }],
         "14": [{ activity: "6:30am", locate: "Run Club" }],
         "19": [{ activity: "6:00pm", locate: "Yoga" }],
-        "20": [{ activity: "6:30pm - Sand Volleyball", locate: "Vball" }],
         "21": [{ activity: "6:30am", locate: "Run Club" }],
         "26": [{ activity: "9:00am", locate: "Yoga" }],
         "27": [{ activity: "10:30am - Field Day Social", locate: "Field Day" }],
@@ -535,6 +534,8 @@ const Fitness = () => {
                             <span>TBD - Check app<br />for location</span>
                             <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
+                            <span><a href="https://maps.app.goo.gl/uMP8ZoRay2cvUrZP7" target="_blank">Laura's House <br />5466 W. 66th Ave.<br />Arvada, CO 80003</a></span>
+                            
                         </div>
                     </div>
                 </section>
