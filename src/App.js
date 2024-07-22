@@ -330,16 +330,17 @@ const Fitness = () => {
     }
     
     const activities = {
+        "2": [{ activity: "6:00pm", location: "Yoga" }],
         "4": [{ activity: "6:30am", location: "Run Club" }],
-        "9": [{ activity: "6:00pm", location: "Yoga" }],
+        "9": [{ activity: "9:00am Yoga, TBD Volleyball", location: "Yoga" }],
         "10": [{ activity: "5:30pm - Pot Luck & Games", location: "Laura" }],
         "11": [{ activity: "6:30am", location: "Run Club" }],
-        "16": [{ activity: "9:00am", location: "Yoga" }],
+        "16": [{ activity: "6:00pm", location: "Yoga" }],
         "18": [{ activity: "6:30am", location: "Run Club" }],
-        "23": [{ activity: "6:00pm", location: "Yoga" }],
-        "24": [{ activity: "6:30pm - Sand Volleyball", location: "Vball" }],
+        "21": [{ activity: "9:00am", location: "Yoga" }],
+        "23": [{ activity: "TBD Volleyball", location: "Vball" }],
         "25": [{ activity: "7:30pm", location: "Run Club" }],
-        "30": [{ activity: "9:00am", location: "Yoga" }],
+        "30": [{ activity: "6:00pm", location: "Yoga" }],
 
             // Add other activities as needed
     };
@@ -358,7 +359,7 @@ const Fitness = () => {
         "14": [{ activity: "6:30am", locate: "Run Club" }],
         "19": [{ activity: "6:00pm", locate: "Yoga" }],
         "21": [{ activity: "6:30am", locate: "Run Club" }],
-        "26": [{ activity: "9:00am", locate: "Yoga" }],
+        "26": [{ activity: "9:00am Yoga, TBD Volleyball", locate: "Yoga" }],
         "27": [{ activity: "10:30am - Field Day Social", locate: "Field Day" }],
         "28": [{ activity: "7:30pm", locate: "Run Club" }],
 
