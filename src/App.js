@@ -351,33 +351,30 @@ const Fitness = () => {
         "Laura": "#002d62"
     };
     
-    const july = {
-        "4": [{ activity: "8:30am - Impossible Mile Workout Social", locate: "Workout" }],
-        "5": [{ activity: "6:00pm", locate: "Yoga" }],
-        "7": [{ activity: "6:30am", locate: "Run Club" }],
-        "12": [{ activity: "9:00am Yoga, 6:30pm Volleyball", locate: "Yoga" }],
-        "14": [{ activity: "6:30am", locate: "Run Club" }],
-        "19": [{ activity: "6:00pm", locate: "Yoga" }],
-        "21": [{ activity: "6:30am", locate: "Run Club" }],
-        "26": [{ activity: "9:00am Yoga, TBD Volleyball", locate: "Yoga" }],
-        "27": [{ activity: "10:30am - Field Day Social", locate: "Field Day" }],
-        "28": [{ activity: "7:30pm", locate: "Run Club" }],
+    const sept = {
+        "1": [{ activity: "6:30am", locate: "Run Club" }],
+        "6": [{ activity: "6:00pm", locate: "Yoga" }],
+        "8": [{ activity: "6:30am", locate: "Run Club" }],
+        "13": [{ activity: "9:00am Yoga, 6:30pm Volleyball", locate: "Yoga" }],
+        "15": [{ activity: "6:30am", locate: "Run Club" }],
+        "20": [{ activity: "6:00pm", locate: "Yoga" }],
+        "22": [{ activity: "6:30am", locate: "Run Club" }],
+        "27": [{ activity: "9:00am Yoga, TBD Volleyball", locate: "Yoga" }],
+        "29": [{ activity: "7:30pm", locate: "Run Club" }],
 
             // Add other activities as needed
     };
-    const julyLocations = {
+    const septLocations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
-        "Workout": "#002d62",
         "Vball": "#002d62",
-        "Field Day": "#002d62",
     };
 
     const Calendar = () => {
         const days = Array.from({ length: 31 }, (_, i) => i + 1);
         const emptyDays = Array.from({ length: 4 }).fill(null); // June starts on a Wednesday in 2024
-        const julydays = Array.from({ length: 31 }, (_, i) => i + 1);
-        const julyemptyDays = Array.from({ length: 1 }).fill(null); // July starts on a Monday in 2024
+        const septdays = Array.from({ length: 30 }, (_, i) => i + 1);
+        const septemptyDays = Array.from({ length: 0 }).fill(null); // Sept starts on a Sunday in 2024
 
         return (
             <div className="Schedule">
@@ -443,7 +440,7 @@ const Fitness = () => {
                         <img src={ppw2} className="photo2" alt="group photo" />
                     </div>
                 </section>
-                {/* JUNE CALENDAR */}
+                {/* EVENT CALENDAR */}
                 <section className="socialRow">
                     <header className="calendar-header">
                         <h2>Run Club, Yoga & Social Events</h2> 
@@ -459,46 +456,6 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                    {/* JULY CALENDAR */}
-                    <div className="calendar">
-                        <header className="calendar-header">
-                            <h2>July 2024</h2> 
-                        </header>
-                        <div className="header">
-                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
-                                <div key={day} className="day-header">{day}</div>
-                            ))}
-                        </div>
-                        <div className="days">
-                            {julyemptyDays.map((_, index) => (
-                                <div key={`empty-${index}`} className="daytime empty"></div>
-                            ))}
-                            {julydays.map(day => (
-                                <div key={day} className="daytime">
-                                    {day}
-                                    {july[day]?.map((event, index) => (
-                                        <div key={index} className="activity" style={{ backgroundColor: julyLocations[event.locate] }}>
-                                            {event.activity}
-                                        </div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="key">
-                            {Object.entries(julyLocations).map(([locate, color]) => (
-                                <div key={locate} className="key-item">
-                                    <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="address">
-                            <span className="july">TBD - Check app<br />for location</span>
-                            <span className="july"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                            <span className="july"><a href="https://maps.app.goo.gl/GocfpoJoqeDqibrL8" target="_blank">Ralston Valley<br />High School</a></span>
-                            <span className="july"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                            <span className="july"><a href="https://maps.app.goo.gl/UHgCoZQHJq2KBGkq9" target="_blank">Britton Park<br />Arvada, CO</a></span>
-                        </div>
-                    </div>
                     {/* August CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
@@ -537,6 +494,44 @@ const Fitness = () => {
                             <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
                             <span><a href="https://maps.app.goo.gl/uMP8ZoRay2cvUrZP7" target="_blank">Laura's House <br />5466 W. 66th Ave.<br />Arvada, CO 80003</a></span>
                             
+                        </div>
+                    </div>
+                    {/* SEPT CALENDAR */}
+                    <div className="calendar">
+                        <header className="calendar-header">
+                            <h2>September 2024</h2> 
+                        </header>
+                        <div className="header">
+                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                                <div key={day} className="day-header">{day}</div>
+                            ))}
+                        </div>
+                        <div className="days">
+                            {septemptyDays.map((_, index) => (
+                                <div key={`empty-${index}`} className="daytime empty"></div>
+                            ))}
+                            {septdays.map(day => (
+                                <div key={day} className="daytime">
+                                    {day}
+                                    {sept[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: septLocations[event.locate] }}>
+                                            {event.activity}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="key">
+                            {Object.entries(septLocations).map(([locate, color]) => (
+                                <div key={locate} className="key-item">
+                                    <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="address">
+                            <span className="sept">TBD - Check app<br />for location</span>
+                            <span className="sept"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
+                            <span className="sept"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
                         </div>
                     </div>
                 </section>
