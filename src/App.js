@@ -330,49 +330,51 @@ const Fitness = () => {
     }
     
     const activities = {
-        "2": [{ activity: "6:00pm", location: "Yoga" }],
-        "4": [{ activity: "6:30am", location: "Run Club" }],
-        "9": [{ activity: "9:00am Yoga, TBD Volleyball", location: "Yoga" }],
-        "10": [{ activity: "5:30pm - Pot Luck & Games", location: "Laura" }],
-        "11": [{ activity: "6:30am", location: "Run Club" }],
-        "16": [{ activity: "6:00pm", location: "Yoga" }],
-        "18": [{ activity: "6:30am", location: "Run Club" }],
-        "21": [{ activity: "9:00am", location: "Yoga" }],
-        "23": [{ activity: "TBD Volleyball", location: "Vball" }],
-        "25": [{ activity: "7:30pm", location: "Run Club" }],
-        "30": [{ activity: "6:00pm", location: "Yoga" }],
+        "4": [{ activity: "9am Yoga, 5pm Vball", location: "Yoga" }],
+        "5": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
+        "6": [{ activity: "7am", location: "Run Club" }],
+        "11": [{ activity: "5:30pm Yoga", location: "Yoga" }],
+        "13": [{ activity: "7am Run Club, 4:30-6pm OBU Practice", location: "OBU Practice" }],
+        "18": [{ activity: "9am Yoga", location: "Yoga" }],
+        "20": [{ activity: "7am", location: "Run Club" }],
+        "25": [{ activity: "5:30pm Yoga", location: "Yoga" }],
+        "26": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
+        "27": [{ activity: "5:30pm", location: "Run Club" }],
 
             // Add other activities as needed
     };
     const locations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
-        "Vball": "#002d62",
-        "Laura": "#002d62"
+        "Vball": "#4b90cd",
+        "OBU Practice": "#002d62"
     };
     
     const sept = {
-        "1": [{ activity: "6:30am", locate: "Run Club" }],
-        "6": [{ activity: "6:00pm", locate: "Yoga" }],
-        "8": [{ activity: "6:30am", locate: "Run Club" }],
-        "13": [{ activity: "9:00am Yoga, 6:30pm Volleyball", locate: "Yoga" }],
-        "15": [{ activity: "6:30am", locate: "Run Club" }],
-        "20": [{ activity: "6:00pm", locate: "Yoga" }],
-        "22": [{ activity: "6:30am", locate: "Run Club" }],
-        "27": [{ activity: "9:00am Yoga, TBD Volleyball", locate: "Yoga" }],
-        "29": [{ activity: "7:30pm", locate: "Run Club" }],
+        "1": [{ activity: "7am", locate: "Run Club" }],
+        "6": [{ activity: "9am Yoga, 5:30pm VBall", locate: "Yoga" }],
+        "8": [{ activity: "7am", locate: "Run Club" }],
+        "13": [{ activity: "5:30pm Yoga, 7pm Night out - Ladies & Gents (separately)", locate: "Yoga" }],
+        "14": [{ activity: "4:30-6pm - OBU Practice", locate: "Social" }],
+        "15": [{ activity: "7am", locate: "Run Club" }],
+        "20": [{ activity: "9am Yoga, 5:30pm VBall", locate: "Yoga" }],
+        "21": [{ activity: "7am - Vitality Octa-Strong 5k", locate: "Social" }],
+        "22": [{ activity: "4:30-6pm OBU Practice, 5:30pm Run Club", locate: "Social" }],
+        "27": [{ activity: "5:30pm Yoga", locate: "Yoga" }],
+        "29": [{ activity: "6:45am - RR Workout", locate: "Social" }],
 
             // Add other activities as needed
     };
     const septLocations = {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
-        "Vball": "#002d62",
+        "Vball": "#4b90cd",
+        "Social": "#002d62",
     };
 
     const Calendar = () => {
         const days = Array.from({ length: 31 }, (_, i) => i + 1);
-        const emptyDays = Array.from({ length: 4 }).fill(null); // June starts on a Wednesday in 2024
+        const emptyDays = Array.from({ length: 2 }).fill(null); // June starts on a Wednesday in 2024
         const septdays = Array.from({ length: 30 }, (_, i) => i + 1);
         const septemptyDays = Array.from({ length: 0 }).fill(null); // Sept starts on a Sunday in 2024
 
@@ -391,28 +393,28 @@ const Fitness = () => {
                             <span className="times">5am</span> 
                             <span className="times">6:15am</span> 
                             <span className="times">9am</span> 
-                            <span className="times">6:15pm</span>
+                            <span className="times">6pm</span>
                         </p>
                         <p>
                             <span className="day">Tuesday -</span>
                             <span className="times">5am</span> 
                             <span className="times">6:15am</span> 
                             <span className="times">9am</span> 
-                            <span className="times">6:15pm</span>
+                            <span className="times">6pm</span>
                         </p>
                         <p>
                             <span className="day">Wednesday -</span>
                             <span className="times">5am</span>
                             <span className="times"></span>
                             <span className="times"></span>
-                            <span className="times">6:15pm</span>
+                            <span className="times">6pm</span>
                         </p>
                         <p>
                             <span className="day">Thursday -</span>
                             <span className="times">5am</span> 
                             <span className="times">6:15am</span> 
                             <span className="times">9am</span> 
-                            <span className="times">6:15pm</span>
+                            <span className="times">6pm</span>
                         </p>
                         <p className="border">
                             <span className="day">Friday -</span>
@@ -429,7 +431,7 @@ const Fitness = () => {
                             <span className="day">Saturday -</span>
                             <span className="times"></span> 
                             <span className="times"></span> 
-                            <span className="times">8:30am</span> 
+                            <span className="times">9am</span> 
                             <span className="times"></span>
                         </p>
                     </div>
@@ -456,10 +458,49 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                    {/* August CALENDAR */}
+                {/* SEPT CALENDAR */}
+                <div className="calendar">
+                    <header className="calendar-header">
+                        <h2>September 2024</h2> 
+                    </header>
+                    <div className="header">
+                        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                            <div key={day} className="day-header">{day}</div>
+                        ))}
+                    </div>
+                    <div className="days">
+                        {septemptyDays.map((_, index) => (
+                            <div key={`empty-${index}`} className="daytime empty"></div>
+                        ))}
+                        {septdays.map(day => (
+                            <div key={day} className="daytime">
+                                {day}
+                                {sept[day]?.map((event, index) => (
+                                    <div key={index} className="activity" style={{ backgroundColor: septLocations[event.locate] }}>
+                                        {event.activity}
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="key">
+                        {Object.entries(septLocations).map(([locate, color]) => (
+                            <div key={locate} className="key-item">
+                                <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="address">
+                        <span className="sept">TBD - Check app<br />for location</span>
+                        <span className="sept"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
+                        <span className="sept"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
+                        <span className="sept">TBD - Check app<br />for location</span>
+                    </div>
+                </div>
+                {/* October CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>August 2024</h2> 
+                            <h2>October 2024</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -492,48 +533,10 @@ const Fitness = () => {
                             <span>TBD - Check app<br />for location</span>
                             <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                            <span><a href="https://maps.app.goo.gl/uMP8ZoRay2cvUrZP7" target="_blank">Laura's House <br />5466 W. 66th Ave.<br />Arvada, CO 80003</a></span>
-                            
+                            <span>TBD - Check app<br />for location</span>
                         </div>
                     </div>
-                    {/* SEPT CALENDAR */}
-                    <div className="calendar">
-                        <header className="calendar-header">
-                            <h2>September 2024</h2> 
-                        </header>
-                        <div className="header">
-                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
-                                <div key={day} className="day-header">{day}</div>
-                            ))}
-                        </div>
-                        <div className="days">
-                            {septemptyDays.map((_, index) => (
-                                <div key={`empty-${index}`} className="daytime empty"></div>
-                            ))}
-                            {septdays.map(day => (
-                                <div key={day} className="daytime">
-                                    {day}
-                                    {sept[day]?.map((event, index) => (
-                                        <div key={index} className="activity" style={{ backgroundColor: septLocations[event.locate] }}>
-                                            {event.activity}
-                                        </div>
-                                    ))}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="key">
-                            {Object.entries(septLocations).map(([locate, color]) => (
-                                <div key={locate} className="key-item">
-                                    <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="address">
-                            <span className="sept">TBD - Check app<br />for location</span>
-                            <span className="sept"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                            <span className="sept"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                        </div>
-                    </div>
+                    
                 </section>
             </div>
         );
