@@ -25,7 +25,7 @@ import connectText from './assets/headerText/connectText.png';
 // Fitness Program Image Imports
 import fit1 from './assets/monthlyMember.png';
 import fit2 from './assets/nextLevel.webp';
-import fit3 from './assets/personalTraining.webp';
+import fit3 from './assets/personaltrainingGabe.png';
 import box1 from './assets/circle1.png';
 import box2 from './assets/circle2.png';
 import box3 from './assets/circle3.png';
@@ -334,6 +334,7 @@ const Fitness = () => {
         "5": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
         "6": [{ activity: "7am", location: "Run Club" }],
         "11": [{ activity: "5:30pm Yoga", location: "Yoga" }],
+        "12": [{ activity: "5:30pm Ladies and Guys Night Out", location: "Night Out"}],
         "13": [{ activity: "7am Run Club, 4:30-6pm OBU Practice", location: "OBU Practice" }],
         "18": [{ activity: "9am Yoga", location: "Yoga" }],
         "20": [{ activity: "7am", location: "Run Club" }],
@@ -347,7 +348,8 @@ const Fitness = () => {
         "Run Club": "#fdb827",
         "Yoga": "#4b90cd",
         "Vball": "#4b90cd",
-        "OBU Practice": "#002d62"
+        "OBU Practice": "#002d62",
+        "Night Out": "#000000",
     };
     
     const sept = {
@@ -533,6 +535,7 @@ const Fitness = () => {
                             <span>TBD - Check app<br />for location</span>
                             <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
+                            <span>TBD - Check app<br />for location</span>
                             <span>TBD - Check app<br />for location</span>
                         </div>
                     </div>
