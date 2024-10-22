@@ -352,33 +352,27 @@ const Fitness = () => {
         "Night Out": "#000000",
     };
     
-    const sept = {
-        "1": [{ activity: "7am", locate: "Run Club" }],
-        "6": [{ activity: "9am Yoga, 5:30pm VBall", locate: "Yoga" }],
-        "8": [{ activity: "7am", locate: "Run Club" }],
-        "13": [{ activity: "5:30pm Yoga, 7pm Night out - Ladies & Gents (separately)", locate: "Yoga" }],
-        "14": [{ activity: "4:30-6pm - OBU Practice", locate: "Social" }],
-        "15": [{ activity: "7am", locate: "Run Club" }],
-        "20": [{ activity: "9am Yoga, 5:30pm VBall", locate: "Yoga" }],
-        "21": [{ activity: "7am - Vitality Octa-Strong 5k", locate: "Social" }],
-        "22": [{ activity: "4:30-6pm OBU Practice, 5:30pm Run Club", locate: "Social" }],
-        "27": [{ activity: "5:30pm Yoga", locate: "Yoga" }],
-        "29": [{ activity: "6:45am - RR Workout", locate: "Social" }],
+    const nov = {
+        // "1": [{ activity: "7am", locate: "Run Club" }],
+        // "6": [{ activity: "9am Yoga", locate: "Yoga" }],
+        // "8": [{ activity: "7am", locate: "Run Club" }],
+        // "13": [{ activity: "5:30pm Yoga", locate: "Yoga" }],
+        // "15": [{ activity: "7am", locate: "Run Club" }],
+        // "20": [{ activity: "9am Yoga", locate: "Yoga" }],
+        // "27": [{ activity: "5:30pm Yoga", locate: "Yoga" }],
 
             // Add other activities as needed
     };
-    const septLocations = {
-        "Run Club": "#fdb827",
-        "Yoga": "#4b90cd",
-        "Vball": "#4b90cd",
-        "Social": "#002d62",
+    const novLocations = {
+        // "Run Club": "#fdb827",
+        // "Yoga": "#4b90cd",
     };
 
     const Calendar = () => {
         const days = Array.from({ length: 31 }, (_, i) => i + 1);
         const emptyDays = Array.from({ length: 2 }).fill(null); // June starts on a Wednesday in 2024
-        const septdays = Array.from({ length: 30 }, (_, i) => i + 1);
-        const septemptyDays = Array.from({ length: 0 }).fill(null); // Sept starts on a Sunday in 2024
+        const novdays = Array.from({ length: 30 }, (_, i) => i + 1);
+        const novemptyDays = Array.from({ length: 0 }).fill(null); // nov starts on a Sunday in 2024
 
         return (
             <div className="Schedule">
@@ -437,6 +431,60 @@ const Fitness = () => {
                             <span className="times"></span>
                         </p>
                     </div>
+                <br />
+                    <div className="dailySchedule">
+                        <h2>November - Jan Weekly Workout Schedule</h2> 
+                        <h3>ASPIRE GYM</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/P9NV6GTKckZTDPQa8" target="_blank">5850 W. Central Ave.<br/>
+                        Westminster, CO 80031</a>
+                        </p>
+                        <p>
+                            <span className="day">Monday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Tuesday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Wednesday -</span>
+                            <span className="times">5am</span>
+                            <span className="times">6:30am</span>
+                            <span className="times"></span>
+                            <span className="times">6pm</span>
+                        </p>
+                        <p>
+                            <span className="day">Thursday -</span>
+                            <span className="times">5am</span> 
+                            <span className="times">6:30am</span> 
+                            <span className="times">9am</span> 
+                            <span className="times">6pm</span>
+                        </p>
+                        <p className="border">
+                            <span className="day">Friday -</span>
+                            <span className="times"></span> 
+                            <span className="times">6:30am</span>
+                            <span className="times">9am</span>
+                            <span className="times"></span>
+                        </p>            
+                        <h3>WESTMINSTER CITY PARK</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/yM92ZppaXvTxZd2P9" target="_blank">10455 Sheridan Blvd.<br/>
+                        Westminster, CO 80020</a>
+                        </p>
+                        <p className="border">
+                            <span className="day">Saturday -</span>
+                            <span className="times"></span> 
+                            <span className="times"></span> 
+                            <span className="times">9am</span> 
+                            <span className="times"></span>
+                        </p>
+                    </div>
                 </section>
                 <section>
                     <div className="dailyScheduleImages">
@@ -460,45 +508,6 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                {/* SEPT CALENDAR */}
-                <div className="calendar">
-                    <header className="calendar-header">
-                        <h2>September 2024</h2> 
-                    </header>
-                    <div className="header">
-                        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
-                            <div key={day} className="day-header">{day}</div>
-                        ))}
-                    </div>
-                    <div className="days">
-                        {septemptyDays.map((_, index) => (
-                            <div key={`empty-${index}`} className="daytime empty"></div>
-                        ))}
-                        {septdays.map(day => (
-                            <div key={day} className="daytime">
-                                {day}
-                                {sept[day]?.map((event, index) => (
-                                    <div key={index} className="activity" style={{ backgroundColor: septLocations[event.locate] }}>
-                                        {event.activity}
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="key">
-                        {Object.entries(septLocations).map(([locate, color]) => (
-                            <div key={locate} className="key-item">
-                                <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="address">
-                        <span className="sept">TBD - Check app<br />for location</span>
-                        <span className="sept"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                        <span className="sept"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                        <span className="sept">TBD - Check app<br />for location</span>
-                    </div>
-                </div>
                 {/* October CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
@@ -539,6 +548,45 @@ const Fitness = () => {
                             <span>TBD - Check app<br />for location</span>
                         </div>
                     </div>
+                {/* nov CALENDAR */}
+                <div className="calendar">
+                    <header className="calendar-header">
+                        <h2>November 2024</h2> 
+                    </header>
+                    <div className="header">
+                        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                            <div key={day} className="day-header">{day}</div>
+                        ))}
+                    </div>
+                    <div className="days">
+                        {novemptyDays.map((_, index) => (
+                            <div key={`empty-${index}`} className="daytime empty"></div>
+                        ))}
+                        {novdays.map(day => (
+                            <div key={day} className="daytime">
+                                {day}
+                                {nov[day]?.map((event, index) => (
+                                    <div key={index} className="activity" style={{ backgroundColor: novLocations[event.locate] }}>
+                                        {event.activity}
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="key">
+                        {Object.entries(novLocations).map(([locate, color]) => (
+                            <div key={locate} className="key-item">
+                                <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
+                            </div>
+                        ))}
+                    </div>
+                    {/*<div className="address">
+                        <span className="nov">TBD - Check app<br />for location</span>
+                        <span className="nov"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
+                        <span className="nov"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
+                        <span className="nov">TBD - Check app<br />for location</span>
+                    </div>*/}
+                </div>
                     
                 </section>
             </div>
