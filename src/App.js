@@ -267,7 +267,7 @@ const Fitness = () => {
                     <div className="features-table">
                     <div className="header-row">
                         <div className="feature-header"></div> {/* Empty top-left cell */}
-                        <div className="option-header">Unlimited $89/mo</div>
+                        <div className="option-header">Unlimited $89 - $99/mo</div>
                         <div className="option-header">Mid-Tier $79/mo</div>
                         <div className="option-header">Starter Pack $59/mo</div>
                     </div>
