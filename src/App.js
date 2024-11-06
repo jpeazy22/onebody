@@ -330,55 +330,53 @@ const Fitness = () => {
     }
     
     const activities = {
-        "4": [{ activity: "9am Yoga, 5pm Vball", location: "Yoga" }],
-        "5": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
-        "6": [{ activity: "7am", location: "Run Club" }],
-        "11": [{ activity: "5:30pm Yoga", location: "Yoga" }],
-        "12": [{ activity: "5:30pm Ladies and Guys Night Out", location: "Night Out"}],
-        "13": [{ activity: "7am Run Club, 4:30-6pm OBU Practice", location: "OBU Practice" }],
-        "18": [{ activity: "9am Yoga", location: "Yoga" }],
-        "20": [{ activity: "7am", location: "Run Club" }],
-        "25": [{ activity: "5:30pm Yoga", location: "Yoga" }],
-        "26": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
-        "27": [{ activity: "5:30pm", location: "Run Club" }],
+        // "4": [{ activity: "9am Yoga, 5pm Vball", location: "Yoga" }],
+        // "5": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
+        // "6": [{ activity: "7am", location: "Run Club" }],
+        // "11": [{ activity: "5:30pm Yoga", location: "Yoga" }],
+        // "12": [{ activity: "5:30pm Ladies and Guys Night Out", location: "Night Out"}],
+        // "13": [{ activity: "7am Run Club, 4:30-6pm OBU Practice", location: "OBU Practice" }],
+        // "18": [{ activity: "9am Yoga", location: "Yoga" }],
+        // "20": [{ activity: "7am", location: "Run Club" }],
+        // "25": [{ activity: "5:30pm Yoga", location: "Yoga" }],
+        // "26": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
+        // "27": [{ activity: "5:30pm", location: "Run Club" }],
 
             // Add other activities as needed
     };
     const locations = {
-        "Run Club": "#fdb827",
-        "Yoga": "#4b90cd",
-        "Vball": "#4b90cd",
-        "OBU Practice": "#002d62",
-        "Night Out": "#000000",
+        // "Run Club": "#fdb827",
+        // "Yoga": "#4b90cd",
+        // "Vball": "#4b90cd",
+        // "OBU Practice": "#002d62",
+        // "Night Out": "#000000",
     };
     
     const nov = {
-        // "1": [{ activity: "7am", locate: "Run Club" }],
-        // "6": [{ activity: "9am Yoga", locate: "Yoga" }],
-        // "8": [{ activity: "7am", locate: "Run Club" }],
-        // "13": [{ activity: "5:30pm Yoga", locate: "Yoga" }],
-        // "15": [{ activity: "7am", locate: "Run Club" }],
-        // "20": [{ activity: "9am Yoga", locate: "Yoga" }],
-        // "27": [{ activity: "5:30pm Yoga", locate: "Yoga" }],
-
+        "10": [{ activity: "12:00pm OB Games", locate: "Broomfield Commons" }],
+        "12": [{ activity: "7:00pm Taco Tuesday", locate: "Vatos Tacos" }],
+        "23": [{ activity: "10:0am Manitou Incline", locate: "Manitou Incline" }],
+        "27": [{ activity: "6:00pm Grizzly Rose", locate: "Grizzly Rose" }],
             // Add other activities as needed
     };
     const novLocations = {
-        // "Run Club": "#fdb827",
-        // "Yoga": "#4b90cd",
+        "Broomfield Commons": "#000000",
+        "Vatos Tacos": "#4b90cd",
+        "Manitou Incline": "#002d62",
+        "Grizzly Rose": "#fdb827",
     };
 
     const Calendar = () => {
         const days = Array.from({ length: 31 }, (_, i) => i + 1);
-        const emptyDays = Array.from({ length: 2 }).fill(null); // June starts on a Wednesday in 2024
+        const emptyDays = Array.from({ length: 0 }).fill(null); // Dec starts on a Sunday in 2024
         const novdays = Array.from({ length: 30 }, (_, i) => i + 1);
-        const novemptyDays = Array.from({ length: 0 }).fill(null); // nov starts on a Sunday in 2024
+        const novemptyDays = Array.from({ length: 5 }).fill(null); // nov starts on a Sunday in 2024
 
         return (
             <div className="Schedule">
                 <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
                 <section>
-                    <div className="dailySchedule">
+                    {/*<div className="dailySchedule">
                         <h2>Weekly Workout Schedule</h2> 
                         <h3>PETER PAN PARK / McFALL PARK AMPHITHEATER</h3>
                         <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7" target="_blank">4801 W. 92nd Ave.<br/>
@@ -431,7 +429,7 @@ const Fitness = () => {
                             <span className="times"></span>
                         </p>
                     </div>
-                <br />
+                <br /> */}
                     <div className="dailySchedule">
                         <h2>November - Jan Weekly Workout Schedule</h2> 
                         <h3>ASPIRE GYM</h3>
@@ -508,10 +506,49 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                {/* October CALENDAR */}
+                {/* nov CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>October 2024</h2> 
+                            <h2>November 2024</h2> 
+                        </header>
+                        <div className="header">
+                            {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
+                                <div key={day} className="day-header">{day}</div>
+                            ))}
+                        </div>
+                        <div className="days">
+                            {novemptyDays.map((_, index) => (
+                                <div key={`empty-${index}`} className="daytime empty"></div>
+                            ))}
+                            {novdays.map(day => (
+                                <div key={day} className="daytime">
+                                    {day}
+                                    {nov[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: novLocations[event.locate] }}>
+                                            {event.activity}
+                                        </div>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="key">
+                            {Object.entries(novLocations).map(([locate, color]) => (
+                                <div key={locate} className="key-item">
+                                    <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
+                                </div>
+                            ))}
+                        </div>
+                        <div className="address">
+                            <span className="nov"><a href="https://maps.app.goo.gl/ZPttMni3639kSTx2A" target="_blank">13200 Sheridan Blvd<br />Broomfield, CO 80020</a></span>
+                            <span className="nov"><a href="https://maps.app.goo.gl/5cCfArRaicj9t4qdA" target="_blank">5815 W. 89th Ave<br />Westminster, CO 80031</a></span>
+                            <span className="nov"><a href="https://maps.app.goo.gl/DEWasgxheecLQ1rUA" target="_blank">Cascade, CO 80809</a></span>
+                            <span className="nov"><a href="https://maps.app.goo.gl/RdNBe3SGd9U8G5kR8" target="_blank">5440 Lincoln St.<br />Denver, CO 80216</a></span>
+                        </div>
+                    </div>
+                {/* December CALENDAR */}
+                    <div className="calendar">
+                        <header className="calendar-header">
+                            <h2>December 2024 - Coming soon!</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -541,53 +578,13 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="address">
-                            <span>TBD - Check app<br />for location</span>
+                            {/*<span>TBD - Check app<br />for location</span>
                             <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
                             <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
                             <span>TBD - Check app<br />for location</span>
-                            <span>TBD - Check app<br />for location</span>
+                            <span>TBD - Check app<br />for location</span> */}
                         </div>
-                    </div>
-                {/* nov CALENDAR */}
-                <div className="calendar">
-                    <header className="calendar-header">
-                        <h2>November 2024</h2> 
-                    </header>
-                    <div className="header">
-                        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
-                            <div key={day} className="day-header">{day}</div>
-                        ))}
-                    </div>
-                    <div className="days">
-                        {novemptyDays.map((_, index) => (
-                            <div key={`empty-${index}`} className="daytime empty"></div>
-                        ))}
-                        {novdays.map(day => (
-                            <div key={day} className="daytime">
-                                {day}
-                                {nov[day]?.map((event, index) => (
-                                    <div key={index} className="activity" style={{ backgroundColor: novLocations[event.locate] }}>
-                                        {event.activity}
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="key">
-                        {Object.entries(novLocations).map(([locate, color]) => (
-                            <div key={locate} className="key-item">
-                                <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
-                            </div>
-                        ))}
-                    </div>
-                    {/*<div className="address">
-                        <span className="nov">TBD - Check app<br />for location</span>
-                        <span className="nov"><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                        <span className="nov"><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                        <span className="nov">TBD - Check app<br />for location</span>
-                    </div>*/}
-                </div>
-                    
+                    </div>    
                 </section>
             </div>
         );
