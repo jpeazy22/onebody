@@ -330,47 +330,36 @@ const Fitness = () => {
     }
     
     const activities = {
-        // "4": [{ activity: "9am Yoga, 5pm Vball", location: "Yoga" }],
-        // "5": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
-        // "6": [{ activity: "7am", location: "Run Club" }],
-        // "11": [{ activity: "5:30pm Yoga", location: "Yoga" }],
-        // "12": [{ activity: "5:30pm Ladies and Guys Night Out", location: "Night Out"}],
-        // "13": [{ activity: "7am Run Club, 4:30-6pm OBU Practice", location: "OBU Practice" }],
-        // "18": [{ activity: "9am Yoga", location: "Yoga" }],
-        // "20": [{ activity: "7am", location: "Run Club" }],
-        // "25": [{ activity: "5:30pm Yoga", location: "Yoga" }],
-        // "26": [{ activity: "4:30-6pm OBU Practice", location: "OBU Practice" }],
-        // "27": [{ activity: "5:30pm", location: "Run Club" }],
-
+        "5": [{ activity: "2-5PM Gabe's Bday Party", location: "Gabes Bday" }],
+        "12": [{ activity: "Westminster City Park / 105th/Sheridan", location: "Run Club" }],
+        "19": [{ activity: "Stanley Lake - 86ht/Simms", location: "Run Club" }],
+        "26": [{ activity: "Sloans Lake - 20th/Sheridan", location: "Run Club" }],
             // Add other activities as needed
     };
     const locations = {
-        // "Run Club": "#fdb827",
-        // "Yoga": "#4b90cd",
-        // "Vball": "#4b90cd",
-        // "OBU Practice": "#002d62",
-        // "Night Out": "#000000",
+        "Run Club": "#fdb827",
+        "Gabes Bday": "#4b90cd",
     };
     
-    const nov = {
-        "10": [{ activity: "12:00pm OB Games", locate: "Broomfield Commons" }],
-        "12": [{ activity: "7:00pm Taco Tuesday", locate: "Vatos Tacos" }],
-        "23": [{ activity: "10:0am Manitou Incline", locate: "Manitou Incline" }],
-        "27": [{ activity: "6:00pm Grizzly Rose", locate: "Grizzly Rose" }],
+    const dec = {
+        "8": [{ activity: "Jim Baker - 60th/Tennyson", locate: "Run Club" }],
+        "15": [{ activity: "Westminster City Park / 105th/Sheridan", locate: "Run Club" }],
+        "16": [{ activity: "9:50AM", locate: "Superfruit Republic" }],
+        "22": [{ activity: "Stanley Lake - 86ht/Simms", locate: "Run Club" }],
+        "28": [{ activity: "10:15AM", locate: "Superfruit Republic" }],
+        "29": [{ activity: "Sloans Lake - 20th/Sheridan", locate: "Run Club" }],
             // Add other activities as needed
     };
-    const novLocations = {
-        "Broomfield Commons": "#000000",
-        "Vatos Tacos": "#4b90cd",
-        "Manitou Incline": "#002d62",
-        "Grizzly Rose": "#fdb827",
+    const decLocations = {
+        "Run Club": "#fdb827",
+        "Superfruit Republic": "#4b90cd",
     };
 
     const Calendar = () => {
         const days = Array.from({ length: 31 }, (_, i) => i + 1);
-        const emptyDays = Array.from({ length: 0 }).fill(null); // Dec starts on a Sunday in 2024
-        const novdays = Array.from({ length: 30 }, (_, i) => i + 1);
-        const novemptyDays = Array.from({ length: 5 }).fill(null); // nov starts on a Sunday in 2024
+        const emptyDays = Array.from({ length: 3 }).fill(null); // Jan starts on a Wednesday in 2025
+        const decdays = Array.from({ length: 31 }, (_, i) => i + 1);
+        const decemptyDays = Array.from({ length: 0 }).fill(null); // dec starts on a Sunday in 2024
 
         return (
             <div className="Schedule">
@@ -432,8 +421,8 @@ const Fitness = () => {
                 <br /> */}
                     <div className="dailySchedule">
                         <h2>November - Jan Weekly Workout Schedule</h2> 
-                        <h3>ASPIRE GYM</h3>
-                        <p className="border"><a href="https://maps.app.goo.gl/P9NV6GTKckZTDPQa8" target="_blank">5850 W. Central Ave.<br/>
+                        <h3>Legacy Event Center</h3>
+                        <p className="border"><a href="https://maps.app.goo.gl/dPRxfBWRRMg98Z7t8" target="_blank">9051 N Harlan St<br/>
                         Westminster, CO 80031</a>
                         </p>
                         <p>
@@ -454,7 +443,7 @@ const Fitness = () => {
                             <span className="day">Wednesday -</span>
                             <span className="times">5am</span>
                             <span className="times">6:30am</span>
-                            <span className="times"></span>
+                            <span className="times">9am</span>
                             <span className="times">6pm</span>
                         </p>
                         <p>
@@ -467,8 +456,8 @@ const Fitness = () => {
                         <p className="border">
                             <span className="day">Friday -</span>
                             <span className="times"></span> 
-                            <span className="times">6:30am</span>
-                            <span className="times">9am</span>
+                            <span className="times"></span>
+                            <span className="times"></span>
                             <span className="times"></span>
                         </p>            
                         <h3>WESTMINSTER CITY PARK</h3>
@@ -479,7 +468,7 @@ const Fitness = () => {
                             <span className="day">Saturday -</span>
                             <span className="times"></span> 
                             <span className="times"></span> 
-                            <span className="times">9am</span> 
+                            <span className="times">9:30am</span> 
                             <span className="times"></span>
                         </p>
                     </div>
@@ -506,10 +495,10 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                {/* nov CALENDAR */}
+                {/* Dec CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>November 2024</h2> 
+                            <h2>December 2024</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -517,14 +506,14 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="days">
-                            {novemptyDays.map((_, index) => (
+                            {decemptyDays.map((_, index) => (
                                 <div key={`empty-${index}`} className="daytime empty"></div>
                             ))}
-                            {novdays.map(day => (
+                            {decdays.map(day => (
                                 <div key={day} className="daytime">
                                     {day}
-                                    {nov[day]?.map((event, index) => (
-                                        <div key={index} className="activity" style={{ backgroundColor: novLocations[event.locate] }}>
+                                    {dec[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: decLocations[event.locate] }}>
                                             {event.activity}
                                         </div>
                                     ))}
@@ -532,23 +521,21 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="key">
-                            {Object.entries(novLocations).map(([locate, color]) => (
+                            {Object.entries(decLocations).map(([locate, color]) => (
                                 <div key={locate} className="key-item">
                                     <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
                                 </div>
                             ))}
                         </div>
                         <div className="address">
-                            <span className="nov"><a href="https://maps.app.goo.gl/ZPttMni3639kSTx2A" target="_blank">13200 Sheridan Blvd<br />Broomfield, CO 80020</a></span>
-                            <span className="nov"><a href="https://maps.app.goo.gl/5cCfArRaicj9t4qdA" target="_blank">5815 W. 89th Ave<br />Westminster, CO 80031</a></span>
-                            <span className="nov"><a href="https://maps.app.goo.gl/DEWasgxheecLQ1rUA" target="_blank">Cascade, CO 80809</a></span>
-                            <span className="nov"><a href="https://maps.app.goo.gl/RdNBe3SGd9U8G5kR8" target="_blank">5440 Lincoln St.<br />Denver, CO 80216</a></span>
+                            <span className="dec">Check Calendar</span>
+                            <span className="dec"><a href="https://maps.app.goo.gl/MychwhDAG4CSHJvq5" target="_blank">8940 Westminster Blvd<br />Westminster, CO 80031</a></span>
                         </div>
                     </div>
-                {/* December CALENDAR */}
+                {/* January CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>December 2024 - Coming soon!</h2> 
+                            <h2>January 2025</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -578,11 +565,8 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="address">
-                            {/*<span>TBD - Check app<br />for location</span>
-                            <span><a href="https://maps.app.goo.gl/Jd5vehbUSzeUxq846" target="_blank">4801 W. 92nd Ave.<br />Westminster, CO 80031</a></span>
-                            <span><a href="https://maps.app.goo.gl/SLwP8WfiyPqT4UNr9" target="_blank">Clear Creek <br />Valley Park</a></span>
-                            <span>TBD - Check app<br />for location</span>
-                            <span>TBD - Check app<br />for location</span> */}
+                            <span>Check Calendar</span>
+                            <span><a href="https://maps.app.goo.gl/ZUN2tTut6d34UGyWA" target="_blank">Aspire Apartments<br />Clubhouse</a></span>
                         </div>
                     </div>    
                 </section>
