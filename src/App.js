@@ -617,12 +617,14 @@ const Fitness = () => {
                     <h2>Massage Rates</h2>
                     <img src={massage} alt="massage" />
                     <ul>
-                        <li>$80/ hour </li>
-                        <li>$95/ 75 min </li>
-                        <li>$110/ 90 min </li>
-                        <li>$140/ 2 hour </li>
+                        <li>$90/ hour </li>
+                        <li>$110/ 75 min </li>
+                        <li>$120/ 90 min </li>
+                        <li>$150/ 2 hour </li>
                     </ul>
-                    <p><em>•	10% off to my fitness clients, 15% if they rebook within a month of their previous session </em></p>
+                    <p><em>•	10% off to my fitness clients, 20% if they rebook within 5 weeks<br />
+                    •	10% off non fitness clients who rebook within 5 weeks<br />
+                    •	Tips not expected or required, but of course appreciated</em></p>
                 </section>
                 <section>
                     <h3>
