@@ -513,10 +513,10 @@ section.eventCalendar {
 .address span {
     display: inline-block;
     vertical-align: top;
-    width: 35%;
+    width: 20%;
     font-size: 10px;
 }
-.address span.sept {
+.address span.mar {
     display: inline-block;
     width: 25%;
     font-size: 10px;

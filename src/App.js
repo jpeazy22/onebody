@@ -330,36 +330,66 @@ const Fitness = () => {
     }
     
     const activities = {
-        "5": [{ activity: "2-5PM Gabe's Bday Party", location: "Gabes Bday" }],
-        "12": [{ activity: "Westminster City Park / 105th/Sheridan", location: "Run Club" }],
-        "19": [{ activity: "Stanley Lake - 86ht/Simms", location: "Run Club" }],
-        "26": [{ activity: "Sloans Lake - 20th/Sheridan", location: "Run Club" }],
+        "1": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
+        "2": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
+        "3": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
+        "4": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
+        "5": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
+        "6": [{ activity: "Jim Baker - 60th/Tennyson", location: "Run Club" }],
+        "6": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "7": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "8": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "9": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "10": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "11": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "13": [{ activity: "Westminster City Park / 105th/Sheridan", location: "Run Club" }],
+        "19": [{ activity: "Deka Atlas", location: "Deka" }],
+        "20": [{ activity: "Stanley Lake - 86ht/Simms", location: "Run Club" }],
+        "26": [{ activity: "Cerus Brix Semifinals", location: "Cerus Brix Semifinals" }],
+        "27": [{ activity: "Sloans Lake - 20th/Sheridan", location: "Run Club" }],
             // Add other activities as needed
     };
     const locations = {
+        "Cerus Brix Agility": "#002d62",
+        "Cerus Brix Endurance": "#4b90cd",
         "Run Club": "#fdb827",
-        "Gabes Bday": "#4b90cd",
+        "Deka": "#000000",
+        "Cerus Brix Semifinals": "purple",
+        
     };
     
-    const dec = {
-        "8": [{ activity: "Jim Baker - 60th/Tennyson", locate: "Run Club" }],
-        "15": [{ activity: "Westminster City Park / 105th/Sheridan", locate: "Run Club" }],
-        "16": [{ activity: "9:50AM", locate: "Superfruit Republic" }],
-        "22": [{ activity: "Stanley Lake - 86ht/Simms", locate: "Run Club" }],
-        "28": [{ activity: "10:15AM", locate: "Superfruit Republic" }],
-        "29": [{ activity: "Sloans Lake - 20th/Sheridan", locate: "Run Club" }],
-            // Add other activities as needed
+    const mar = {
+        "2": [{ activity: "Jim Baker - 60th/Tennyson", locate: "Run Club" }],
+        "9": [{ activity: "Westminster City Park / 105th/Sheridan", locate: "Run Club" }],
+        "15": [{ activity: "Manitou Incline", locate: "Manitou Incline" }],
+        "16": [{ activity: "Stanley Lake - 86ht/Simms", locate: "Run Club" }],
+        "22": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "23": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "23": [{ activity: "Sloans Lake - 20th/Sheridan", locate: "Run Club" }],
+        "24": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "25": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "26": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "27": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "28": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "29": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "30": [{ activity: "Runners Choice", locate: "Run Club" }],
+        "30": [{ activity: "Cerus Brix Agility Open", locate: "Cerus Brix Agility" }],
+        "31": [{ activity: "Cerus Brix Agility Open", locate: "Cerus Brix Agility" }],
+        
     };
-    const decLocations = {
+    const marLocations = {
         "Run Club": "#fdb827",
-        "Superfruit Republic": "#4b90cd",
+        "Manitou Incline": "#000000",
+        "Cerus Brix": "#4b90cd",
+        "Cerus Brix Agility": "#002d62",
+        
     };
 
     const Calendar = () => {
-        const days = Array.from({ length: 31 }, (_, i) => i + 1);
-        const emptyDays = Array.from({ length: 3 }).fill(null); // Jan starts on a Wednesday in 2025
-        const decdays = Array.from({ length: 31 }, (_, i) => i + 1);
-        const decemptyDays = Array.from({ length: 0 }).fill(null); // dec starts on a Sunday in 2024
+        const days = Array.from({ length: 30 }, (_, i) => i + 1);
+        const emptyDays = Array.from({ length: 2 }).fill(null); // April starts on a Saturday in 2025
+        const mardays = Array.from({ length: 31 }, (_, i) => i + 1);
+        const maremptyDays = Array.from({ length: 6 }).fill(null); // March starts on a Tuesday 
 
         return (
             <div className="Schedule">
@@ -495,10 +525,10 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                {/* Dec CALENDAR */}
+                {/* March CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>December 2024</h2> 
+                            <h2>March 2025</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -506,14 +536,14 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="days">
-                            {decemptyDays.map((_, index) => (
+                            {maremptyDays.map((_, index) => (
                                 <div key={`empty-${index}`} className="daytime empty"></div>
                             ))}
-                            {decdays.map(day => (
+                            {mardays.map(day => (
                                 <div key={day} className="daytime">
                                     {day}
-                                    {dec[day]?.map((event, index) => (
-                                        <div key={index} className="activity" style={{ backgroundColor: decLocations[event.locate] }}>
+                                    {mar[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: marLocations[event.locate] }}>
                                             {event.activity}
                                         </div>
                                     ))}
@@ -521,21 +551,23 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="key">
-                            {Object.entries(decLocations).map(([locate, color]) => (
+                            {Object.entries(marLocations).map(([locate, color]) => (
                                 <div key={locate} className="key-item">
                                     <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
                                 </div>
                             ))}
                         </div>
                         <div className="address">
-                            <span className="dec">Check Calendar</span>
-                            <span className="dec"><a href="https://maps.app.goo.gl/MychwhDAG4CSHJvq5" target="_blank">8940 Westminster Blvd<br />Westminster, CO 80031</a></span>
+                            <span className="mar">Check Calendar</span>
+                            <span className="mar"><a href="https://www.google.com/maps/place/Manitou+Incline/@38.8568478,-104.9321786,1133m/data=!3m2!1e3!4b1!4m6!3m5!1s0x871351239eb32b55:0xc8d2bc4a8c964297!8m2!3d38.8568478!4d-104.9321786!16s%2Fg%2F11hmmsh0s_?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D">Colorado Springs</a></span>
+                            <span className="mar">TBD</span>
+                            <span className="mar">TBD</span>
                         </div>
                     </div>
-                {/* January CALENDAR */}
+                {/* April CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>January 2025</h2> 
+                            <h2>April 2025</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -565,8 +597,11 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="address">
+                            <span>TBD</span>
+                            <span>TBD</span>
                             <span>Check Calendar</span>
-                            <span><a href="https://maps.app.goo.gl/ZUN2tTut6d34UGyWA" target="_blank">Aspire Apartments<br />Clubhouse</a></span>
+                            <span>TBD</span>
+                            <span>TBD</span>
                         </div>
                     </div>    
                 </section>
