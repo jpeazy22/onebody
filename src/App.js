@@ -330,18 +330,12 @@ const Fitness = () => {
     }
     
     const activities = {
-        "1": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
-        "2": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
-        "3": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
-        "4": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
-        "5": [{ activity: "Cerus Brix Agility Open", location: "Cerus Brix Agility" }],
+        "2": [{ activity: "Cerus Brix Strength Open", location: "Cerus Brix Strength" }],
+        "4": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
+        "5": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
         "6": [{ activity: "Jim Baker - 60th/Tennyson", location: "Run Club" }],
-        "6": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
-        "7": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
-        "8": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
-        "9": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
-        "10": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
-        "11": [{ activity: "Cerus Brix Endurance Open", location: "Cerus Brix Endurance" }],
+        "9": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
+        "11": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
         "13": [{ activity: "Westminster City Park / 105th/Sheridan", location: "Run Club" }],
         "19": [{ activity: "Deka Atlas", location: "Deka" }],
         "20": [{ activity: "Stanley Lake - 86ht/Simms", location: "Run Club" }],
@@ -350,8 +344,8 @@ const Fitness = () => {
             // Add other activities as needed
     };
     const locations = {
-        "Cerus Brix Agility": "#002d62",
-        "Cerus Brix Endurance": "#4b90cd",
+        "Cerus Brix Strength": "#002d62",
+        "Cerus Brix Speed + Agility": "#4b90cd",
         "Run Club": "#fdb827",
         "Deka": "#000000",
         "Cerus Brix Semifinals": "purple",
@@ -363,25 +357,20 @@ const Fitness = () => {
         "9": [{ activity: "Westminster City Park / 105th/Sheridan", locate: "Run Club" }],
         "15": [{ activity: "Manitou Incline", locate: "Manitou Incline" }],
         "16": [{ activity: "Stanley Lake - 86ht/Simms", locate: "Run Club" }],
-        "22": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
-        "23": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "21": [{ activity: "Cerus Brix: Endurance Open", locate: "Cerus Brix Endurance" }],
+        "22": [{ activity: "Cerus Brix: Endurance Open", locate: "Cerus Brix Endurance" }],
         "23": [{ activity: "Sloans Lake - 20th/Sheridan", locate: "Run Club" }],
-        "24": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
-        "25": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
-        "26": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
-        "27": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
-        "28": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
-        "29": [{ activity: "Cerus Brix: Speed & Strength Open", locate: "Cerus Brix" }],
+        "26": [{ activity: "Cerus Brix: Endurance Open", locate: "Cerus Brix Endurance" }],
+        "28": [{ activity: "Cerus Brix: Strength Open", locate: "Cerus Brix Strenth" }],
+        "29": [{ activity: "Cerus Brix: Strength Open", locate: "Cerus Brix Strenth" }],
         "30": [{ activity: "Runners Choice", locate: "Run Club" }],
-        "30": [{ activity: "Cerus Brix Agility Open", locate: "Cerus Brix Agility" }],
-        "31": [{ activity: "Cerus Brix Agility Open", locate: "Cerus Brix Agility" }],
         
     };
     const marLocations = {
         "Run Club": "#fdb827",
         "Manitou Incline": "#000000",
-        "Cerus Brix": "#4b90cd",
-        "Cerus Brix Agility": "#002d62",
+        "Cerus Brix Endurance": "#4b90cd",
+        "Cerus Brix Strenth": "#002d62",
         
     };
 
@@ -514,7 +503,7 @@ const Fitness = () => {
                     <header className="calendar-header">
                         <h2>Run Club, Yoga & Social Events</h2> 
                         <h3>*SOCIAL EVENTS OPEN TO ALL!</h3>
-                        <h3>*Run Club & Yoga Included w/ Unlimited Membership</h3>
+                        <h3>*Run Club & Yoga Included w/ Unlimited Membership (Yoga is currently paused and will resume in mid May)</h3>
                     </header>
                 </section>
                 <section className="socialRow">
