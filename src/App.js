@@ -384,7 +384,7 @@ const Fitness = () => {
             <div className="Schedule">
                 <img src={scheduleText} className="scheduleTitle" alt="Schedule Title" />
                 <section>
-                    {/*<div className="dailySchedule">
+                    <div className="dailySchedule">
                         <h2>Weekly Workout Schedule</h2> 
                         <h3>PETER PAN PARK / McFALL PARK AMPHITHEATER</h3>
                         <p className="border"><a href="https://maps.app.goo.gl/CREtyUomNe7kq9qX7" target="_blank">4801 W. 92nd Ave.<br/>
@@ -392,29 +392,29 @@ const Fitness = () => {
                         </p>
                         <p>
                             <span className="day">Monday -</span>
-                            <span className="times">5am</span> 
-                            <span className="times">6:15am</span> 
+                            <span className="times">5:15am</span> 
+                            <span className="times">6:30am</span> 
                             <span className="times">9am</span> 
                             <span className="times">6pm</span>
                         </p>
                         <p>
                             <span className="day">Tuesday -</span>
-                            <span className="times">5am</span> 
-                            <span className="times">6:15am</span> 
+                            <span className="times">5:15am</span> 
+                            <span className="times">6:30am</span> 
                             <span className="times">9am</span> 
                             <span className="times">6pm</span>
                         </p>
                         <p>
                             <span className="day">Wednesday -</span>
-                            <span className="times">5am</span>
                             <span className="times"></span>
                             <span className="times"></span>
+                            <span className="times">9am</span>
                             <span className="times">6pm</span>
                         </p>
                         <p>
                             <span className="day">Thursday -</span>
-                            <span className="times">5am</span> 
-                            <span className="times">6:15am</span> 
+                            <span className="times">5:15am</span> 
+                            <span className="times">6:30am</span> 
                             <span className="times">9am</span> 
                             <span className="times">6pm</span>
                         </p>
@@ -437,7 +437,7 @@ const Fitness = () => {
                             <span className="times"></span>
                         </p>
                     </div>
-                <br /> */}
+                {/* <br />
                     <div className="dailySchedule">
                         <h2>November - Jan Weekly Workout Schedule</h2> 
                         <h3>Legacy Event Center</h3>
@@ -490,7 +490,7 @@ const Fitness = () => {
                             <span className="times">9:30am</span> 
                             <span className="times"></span>
                         </p>
-                    </div>
+                    </div> */}
                 </section>
                 <section>
                     <div className="dailyScheduleImages">
