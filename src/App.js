@@ -421,8 +421,8 @@ const Fitness = () => {
                         <p className="border">
                             <span className="day">Friday -</span>
                             <span className="times"></span> 
-                            <span className="times">6:15am</span>
-                            <span className="times">9am</span>
+                            <span className="times"></span>
+                            <span className="times"></span>
                             <span className="times"></span>
                         </p>            
                         <h3>WESTMINSTER CITY PARK</h3>
