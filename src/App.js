@@ -330,55 +330,46 @@ const Fitness = () => {
     }
     
     const activities = {
-        "2": [{ activity: "Cerus Brix Strength Open", location: "Cerus Brix Strength" }],
-        "4": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
-        "5": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
-        "6": [{ activity: "Jim Baker - 60th/Tennyson", location: "Run Club" }],
-        "9": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
-        "11": [{ activity: "Cerus Brix Speed + Agility Open", location: "Cerus Brix Speed + Agility" }],
-        "13": [{ activity: "Westminster City Park / 105th/Sheridan", location: "Run Club" }],
-        "19": [{ activity: "Deka Atlas", location: "Deka" }],
-        "20": [{ activity: "Stanley Lake - 86ht/Simms", location: "Run Club" }],
-        "26": [{ activity: "Cerus Brix Semifinals", location: "Cerus Brix Semifinals" }],
-        "27": [{ activity: "Sloans Lake - 20th/Sheridan", location: "Run Club" }],
+        "1": [{ activity: "Spartan Race", location: "TBD" }],
+        "8": [{ activity: "Jim Baker - 60th/Tennyson", location: "Run Club" }],
+        "13": [{ activity: "Volleyball", location: "Clear Creek Valley Park" }],
+        "14": [{ activity: "Deka Fit", location: "Deka" }],
+        "15": [{ activity: "Westminster City Park", location: "Run Club" }],
+        "22": [{ activity: "Stanley Lake - 86ht/Simms", location: "Run Club" }],
+        "27": [{ activity: "Volleyball", location: "Clear Creek Valley Park" }],
+        "29": [{ activity: "Sloans Lake", location: "Run Club" }],
             // Add other activities as needed
     };
     const locations = {
-        "Cerus Brix Strength": "#002d62",
-        "Cerus Brix Speed + Agility": "#4b90cd",
+        "Clear Creek Valley Park": "#002d62",
+        "TBD": "#4b90cd",
         "Run Club": "#fdb827",
         "Deka": "#000000",
-        "Cerus Brix Semifinals": "purple",
         
     };
     
-    const mar = {
-        "2": [{ activity: "Jim Baker - 60th/Tennyson", locate: "Run Club" }],
-        "9": [{ activity: "Westminster City Park / 105th/Sheridan", locate: "Run Club" }],
-        "15": [{ activity: "Manitou Incline", locate: "Manitou Incline" }],
-        "16": [{ activity: "Stanley Lake - 86ht/Simms", locate: "Run Club" }],
-        "21": [{ activity: "Cerus Brix: Endurance Open", locate: "Cerus Brix Endurance" }],
-        "22": [{ activity: "Cerus Brix: Endurance Open", locate: "Cerus Brix Endurance" }],
-        "23": [{ activity: "Sloans Lake - 20th/Sheridan", locate: "Run Club" }],
-        "26": [{ activity: "Cerus Brix: Endurance Open", locate: "Cerus Brix Endurance" }],
-        "28": [{ activity: "Cerus Brix: Strength Open", locate: "Cerus Brix Strenth" }],
-        "29": [{ activity: "Cerus Brix: Strength Open", locate: "Cerus Brix Strenth" }],
-        "30": [{ activity: "Runners Choice", locate: "Run Club" }],
-        
+    const may = {
+        "4": [{ activity: "Sunrise Red Rocks Workout", locate: "Red Rocks" }],
+        "11": [{ activity: "Westminster City Park", locate: "Run Club" }],
+        "16": [{ activity: "Volleyball", locate: "Clear Creek Valley Park" }],
+        "18": [{ activity: "Colfax Marathon Relay", locate: "TBD" }],
+        // "18": [{ activity: "86th & Simms", locate: "Run Club" }],
+        "25": [{ activity: "Sloans Lake", locate: "Run Club" }],
+        "30": [{ activity: "Volleyball", locate: "Clear Creek Valley Park" }],
     };
-    const marLocations = {
+    const mayLocations = {
         "Run Club": "#fdb827",
-        "Manitou Incline": "#000000",
-        "Cerus Brix Endurance": "#4b90cd",
-        "Cerus Brix Strenth": "#002d62",
+        "Red Rocks": "#000000",
+        "TBD": "#4b90cd",
+        "Clear Creek Valley Park": "#002d62",
         
     };
 
     const Calendar = () => {
         const days = Array.from({ length: 30 }, (_, i) => i + 1);
-        const emptyDays = Array.from({ length: 2 }).fill(null); // April starts on a Saturday in 2025
-        const mardays = Array.from({ length: 31 }, (_, i) => i + 1);
-        const maremptyDays = Array.from({ length: 6 }).fill(null); // March starts on a Tuesday 
+        const emptyDays = Array.from({ length: 0 }).fill(null); // April starts on a Saturday in 2025
+        const maydays = Array.from({ length: 31 }, (_, i) => i + 1);
+        const mayemptyDays = Array.from({ length: 4 }).fill(null); // May starts on a Thursday 
 
         return (
             <div className="Schedule">
@@ -392,8 +383,8 @@ const Fitness = () => {
                         </p>
                         <p>
                             <span className="day">Monday -</span>
-                            <span className="times">5:15am</span> 
-                            <span className="times">6:30am</span> 
+                            <span className="times"></span> 
+                            <span className="times"></span> 
                             <span className="times">9am</span> 
                             <span className="times">6pm</span>
                         </p>
@@ -408,7 +399,7 @@ const Fitness = () => {
                             <span className="day">Wednesday -</span>
                             <span className="times"></span>
                             <span className="times"></span>
-                            <span className="times">9am</span>
+                            <span className="times"></span>
                             <span className="times">6pm</span>
                         </p>
                         <p>
@@ -420,8 +411,8 @@ const Fitness = () => {
                         </p>
                         <p className="border">
                             <span className="day">Friday -</span>
-                            <span className="times"></span> 
-                            <span className="times"></span>
+                            <span className="times">5:15am</span> 
+                            <span className="times">9am</span>
                             <span className="times"></span>
                             <span className="times"></span>
                         </p>            
@@ -433,7 +424,7 @@ const Fitness = () => {
                             <span className="day">Saturday -</span>
                             <span className="times"></span> 
                             <span className="times"></span> 
-                            <span className="times">9am</span> 
+                            <span className="times">8:30am</span> 
                             <span className="times"></span>
                         </p>
                     </div>
@@ -514,10 +505,10 @@ const Fitness = () => {
                     </div>
                 </section>
                 <section className="eventCalendar">
-                {/* March CALENDAR */}
+                {/* Maych CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>March 2025</h2> 
+                            <h2>May 2025</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -525,14 +516,14 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="days">
-                            {maremptyDays.map((_, index) => (
+                            {mayemptyDays.map((_, index) => (
                                 <div key={`empty-${index}`} className="daytime empty"></div>
                             ))}
-                            {mardays.map(day => (
+                            {maydays.map(day => (
                                 <div key={day} className="daytime">
                                     {day}
-                                    {mar[day]?.map((event, index) => (
-                                        <div key={index} className="activity" style={{ backgroundColor: marLocations[event.locate] }}>
+                                    {may[day]?.map((event, index) => (
+                                        <div key={index} className="activity" style={{ backgroundColor: mayLocations[event.locate] }}>
                                             {event.activity}
                                         </div>
                                     ))}
@@ -540,23 +531,23 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="key">
-                            {Object.entries(marLocations).map(([locate, color]) => (
+                            {Object.entries(mayLocations).map(([locate, color]) => (
                                 <div key={locate} className="key-item">
                                     <span className="key-color" style={{ backgroundColor: color }}></span> {locate}
                                 </div>
                             ))}
                         </div>
                         <div className="address">
-                            <span className="mar">Check Calendar</span>
-                            <span className="mar"><a href="https://www.google.com/maps/place/Manitou+Incline/@38.8568478,-104.9321786,1133m/data=!3m2!1e3!4b1!4m6!3m5!1s0x871351239eb32b55:0xc8d2bc4a8c964297!8m2!3d38.8568478!4d-104.9321786!16s%2Fg%2F11hmmsh0s_?entry=ttu&g_ep=EgoyMDI1MDIxMi4wIKXMDSoASAFQAw%3D%3D">Colorado Springs</a></span>
-                            <span className="mar">TBD</span>
-                            <span className="mar">TBD</span>
+                            {/* <span className="may">Check Calendar</span>
+                            <span className="may">Red Rocks</span>
+                            <span className="may">TBD</span>
+                            <span className="may">TBD</span>*/}
                         </div>
                     </div>
                 {/* April CALENDAR */}
                     <div className="calendar">
                         <header className="calendar-header">
-                            <h2>April 2025</h2> 
+                            <h2>June 2025</h2> 
                         </header>
                         <div className="header">
                             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(day => (
@@ -586,11 +577,11 @@ const Fitness = () => {
                             ))}
                         </div>
                         <div className="address">
-                            <span>TBD</span>
+                            {/*<span>TBD</span>
                             <span>TBD</span>
                             <span>Check Calendar</span>
                             <span>TBD</span>
-                            <span>TBD</span>
+                            <span>TBD</span> */}
                         </div>
                     </div>    
                 </section>
