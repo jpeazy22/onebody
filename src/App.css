@@ -341,7 +341,6 @@ span.individualButton {
     margin: 0px auto;
 }
 .Schedule section {
-    display: inline-block;
     vertical-align: top;
     max-width: 1200px;
     margin: 0 auto;
@@ -450,10 +449,12 @@ section.eventCalendar {
     max-width: 1200px;
     margin: 0 auto;
 }
+iframe {
+    min-height: 885px;
+}
 .calendar {
-    display: inline-block;
     vertical-align: top;
-    width: 47%;
+    width: 95%;
     font-size: 13px;
     border: 3px solid #e6e6e6;
     border-bottom-width: 6px;

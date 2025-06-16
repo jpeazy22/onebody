@@ -506,7 +506,7 @@ const Fitness = () => {
                 </section>
                 <section className="eventCalendar">
                 {/* Maych CALENDAR */}
-                    <div className="calendar">
+                    {/* <div className="calendar">
                         <header className="calendar-header">
                             <h2>May 2025</h2> 
                         </header>
@@ -541,10 +541,10 @@ const Fitness = () => {
                             {/* <span className="may">Check Calendar</span>
                             <span className="may">Red Rocks</span>
                             <span className="may">TBD</span>
-                            <span className="may">TBD</span>*/}
+                            <span className="may">TBD</span>
                         </div>
                     </div>
-                {/* April CALENDAR */}
+                 April CALENDAR
                     <div className="calendar">
                         <header className="calendar-header">
                             <h2>June 2025</h2> 
@@ -581,9 +581,11 @@ const Fitness = () => {
                             <span>TBD</span>
                             <span>Check Calendar</span>
                             <span>TBD</span>
-                            <span>TBD</span> */}
+                            <span>TBD</span> 
                         </div>
-                    </div>    
+                    </div>*/}
+                       
+                    <iframe src="https://widgets.commoninja.com/iframe/6e4e3b3d-4b17-4b9c-8108-58d636779fed" width="100%" height="875px" frameborder="0" scrolling="no"></iframe>
                 </section>
             </div>
         );
